@@ -1,9 +1,10 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{fullpage}
+\usepackage{mathpazo}
 \usepackage{tipa}
 \usepackage{setspace}
 \usepackage{amsmath}
-\usepackage{fullpage}
 \usepackage{linguex}
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows}
@@ -18,14 +19,16 @@
   \tikz[baseline=(C.base)]\node[draw,circle,inner sep=0.5pt](C) {#1};\!
 }
 
+\makeatletter
+\newcommand\textsubscript[1]{\@textsubscript{\selectfont#1}}
+\def\@textsubscript#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
 \newcommand{\iep}{\textipa{1}}
 \newcommand{\bet}{\textipa{B}}
 \newcommand{\schwa}{\textipa{@}}
 
-\title{The perceptual dimensions of sonority-driven epenthesis} \\ \large{Generals Paper}}
+\title{The perceptual dimensions of sonority-driven epenthesis}
 \author{Michelle A. Fullwood}
 \date{July 2013}
-
 \begin{document}
 
 \maketitle
