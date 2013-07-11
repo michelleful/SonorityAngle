@@ -120,7 +120,89 @@ Assuming that the horizontal distance is 1 unit, we can compute the magnitude of
 
 \ex. \label{sonangle_formula} Formula: \textsc{SonAngle} = $arctan(V-C_1) - arctan(C_2-C_1)$
 
-In the diagram in \ref{sonangle_picture}, imagine fixing C\textsubscript{1} and lowering the sonority of C\textsubscript{2}. Intuitively, this increases the {\sc Sonority Angle}. The dependence of {\sc Sonority Angle} on this distance can also be seen in the second term in \ref{sonangle_formula}.
+Let us verify that {\sc Sonority Angle} does indeed reflect the two generalisations we wish to make:
+first, that the smaller the sonority distance between C\textsubscript{1} and C\textsubscript{2},
+the smaller the sonority angle.
+Imagine fixing C\textsubscript{1} as in \ref{sonangle_picture} and raising the sonority of C\textsubscript{2}. Intuitively, this decreases the {\sc Sonority Angle}, comparing the two below.
+
+\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % left diagram
+                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
+                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+                      \node[left] at  (0,3) {C$_1$}; 
+                      \node[right] at (5,1) {C$_2$};
+                      \node[right] at (5,6) {V};
+					  % right diagram
+                      \draw (20,4) -- (15,3) -- (20,6) ; % falling sonority
+                      \node at (17.5, 4.0) {$\theta$}; % theta label for falling sonority
+                      \node[left] at (15,3) {C$_1$}; 
+                      \node[right] at (20,4) {C$_2$};
+                      \node[right] at (20,6) {V};
+\end{tikzpicture} 
+
+The dependence of {\sc Sonority Angle} on this distance can also be seen in the second term in \ref{sonangle_formula}.
+
+The second generalisation is that the more sonorous the C\textsubscript{1}, the more likely
+epenthesis is to occur. This time, fix C\textsubscript{2} and lower the sonority of C\textsubscript{1}.
+
+\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					  % left diagram
+                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
+                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+                      \node[left] at  (0,3) {C$_1$}; 
+                      \node[right] at (5,1) {C$_2$};
+                      \node[right] at (5,6) {V};
+					  % right diagram
+                      \draw (20,1) -- (15,1) -- (20,6) ; % falling sonority
+                      \node at (17, 1.9) {$\theta$}; % theta label for falling sonority
+                      \node[left] at (15,1) {C$_1$}; 
+                      \node[right] at (20,1) {C$_2$};
+                      \node[right] at (20,6) {V};
+\end{tikzpicture} 
+
+While the difference is less clear visually, the second angle is larger. The first term in the formula confirms the relation between the sonority of C\textsubscript{1} in terms of its closeness to V, and {\sc Sonority Angle} as a whole.
+
+Given a sonority scale where classes of consonants are mapped to a numerical sonority, we can now calculate
+the {\sc Sonority Angle} for any cluster, which can be thought of as the faithfulness cost of epenthesising
+between the two consonants.  Examples of the calculation are given below.
+
+In this paper, I adopt (with, later, minor modifications) the following standard scale:
+
+\ex. \label{standardsonorityscale} 
+      \begin{tabular}{cccccc}
+         T & F & N & R & G & V \\
+         stop & fricative & nasal & liquid & glide & vowel \\
+         1 & 2 & 3 & 4 & 5 & 6 \\
+      \end{tabular}
+
+The {\sc Sonority Angles} for NT, TT and TN are calculated as follows.
+
+\ex. \a. \textsc{SonAngle}(NT) =  $arctan(6-3) - arctan(1-3)$ = 2.35
+     \b. \textsc{SonAngle}(TT) =  $arctan(6-1) - arctan(1-1)$ = 1.37
+     \c. \textsc{SonAngle}(TN) =  $arctan(6-1) - arctan(3-1)$ = 0.27
+
+The larger the {\sc Sonority Angle}, the larger the faithfulness cost. We therefore expect it to be hardest to epenthesise into NT out of these three clusters, and easiest to epenthesise into TN.
+
+We formalise the idea of the faithfulness cost by defining a family of \textsc{Ident} constraints that penalise outputs that incur faithfulness costs of greater than a certain $n$.
+
+\ex. \textsc{Ident(SonAngle)}$<n$: Assign a violation mark if the consonants in two strings C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}VC\textsubscript{2} 
+stand in correspondence, and the sonority angle between C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V is greater than $n$. % TODO: change to it being a property of C1?
+
+These faithfulness constraints have a universal ranking, with the least stringent the highest-ranked.
+
+   \ex. ... \newline
+            $\gg$ \textsc{Ident(SonAngle)}$<$1.5 \newline
+            $\gg$ \textsc{Ident(SonAngle)}$<$1.0 \newline
+            $\gg$ \textsc{Ident(SonAngle)}$<$0.5 \newline
+            $\gg$ ...
+
+Note that I do not claim that this is the only dimension of perceptual similarity relevant to epenthesis.  
+As we will see later in the paper, other faithfulness constraints may prevent epenthesis, such as a restriction on epenthesising a vowel between two obstruents, which introduces an additional region of sonorance that had previously not existed \cite{flemming.2008}.
+
 
 \section{Case study: Irish} \label{irish}
 
