@@ -76,3 +76,51 @@
 \end{tikzpicture}
 }
 
+\newsavebox{\syllablecontacthierarchy}
+\savebox{\syllablecontacthierarchy}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{vertex}=[circle]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
+  \node[vertex] (RT) at (3*3,2.0)   {RT};
+  \node[vertex] (NT) at (2*3,1.5)  {NT};
+  \node[vertex] (FT) at (1*3,1.0)  {FT};
+  \node[vertex] (TT) at (0*3,0.5)     {TT};
+  \node[vertex] (RF) at (2*3,2.0)     {RF};
+  \node[vertex] (NF) at (1*3,1.5)  {NF};
+  \node[vertex] (FF) at (0*3,1.0)   {FF};
+  \node[vertex] (TF) at (-1*3,0.5)   {TF};
+  \node[vertex] (RN) at (1*3,2.0)   {RN};
+  \node[vertex] (NN) at (0*3,1.5)   {NN};
+  \node[vertex] (FN) at (-1*3,1)  {FN};
+  \node[vertex] (TN) at (-2*3,0.5)   {TN};
+  \node[vertex] (RR) at (0*3,2.0)  {RR};
+  \node[vertex] (NR) at (-1*3,1.5)  {NR};
+  \node[vertex] (FR) at (-2*3,1.0)   {FR};
+  \node[vertex] (TR) at (-3*3,0.5)   {TR};
+  % headers
+  \node[vertex] (rising) at (2*3,2.6) {\underline{Falling sonority}};
+  \node[vertex] (level) at (0*3,2.6) {\underline{Level sonority}};
+  \node[vertex] (falling) at (-2*3,2.6) {\underline{Rising sonority}};
+  % axis
+  \node[vertex] (axisstart) at (-3.5*3,-0) {};
+  \node[vertex] (axisend)   at (3.5*3,-0) {};
+  \draw (axisstart) -- (axisend);
+  \node[point]  (0point) at (0.0,-0) {};
+  \node[point]  (1point) at (1.0*3,-0) {};
+  \node[point]  (2point) at (2.0*3,-0) {};
+  \node[point]  (3point) at (3.0*3,-0) {};
+  \node[point]  (-1point) at (-1.0*3,-0) {};
+  \node[point]  (-2point) at (-2.0*3,-0) {};
+  \node[point]  (-3point) at (-3.0*3,-0) {};
+  \node[vertex] (0pointlabel) at (0.0,-0.5) {0};
+  \node[vertex] (1pointlabel) at (1.0*3,-0.5) {1};
+  \node[vertex] (2pointlabel) at (2.0*3,-0.5) {2};
+  \node[vertex] (3pointlabel) at (3.0*3,-0.5) {3};
+  \node[vertex] (-1pointlabel) at (-1.0*3,-0.5) {-1};
+  \node[vertex] (-2pointlabel) at (-2.0*3,-0.5) {-2};
+  \node[vertex] (-3pointlabel) at (-3.0*3,-0.5) {-3};
+  \node[vertex] (xaxislabel) at (3.5*3,-0.5) {\textsc{Dis}};
+\end{tikzpicture}
+}
+

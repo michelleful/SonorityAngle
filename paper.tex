@@ -248,7 +248,40 @@ As with {\sc Sonority Angle}, this gives rise to a family of constraints {\sc Id
 \noindent \resizebox{\linewidth}{!}{\usebox{\sonorityrisehierarchycompressed}}
 
 Though in many ways similar to the {\sc Sonority Angle} hierarchy, it makes several crucially different predictions. For example, it does not share the prediction of {\sc Sonority Angle} that RN is the most likely of the falling sonority clusters to epenthesise -- rather, if RN undergoes epenthesis then we expect FT and NF to do the same. Furthermore, it predicts that if NT and RT fail to undergo epenthesis due to the high faithfulness cost of interrupting these clusters, then RF should also fail to undergo epenthesis.
- 
+
+\subsection{Syllable Contact} 
+
+The alternative markedness-based approach to sonority-driven epenthesis that I will explore in this paper is Syllable Contact, which was first stated as the Syllable Contact Law by \citet{murray.vennemann.1983}:
+
+\ex. ``The preference for a syllabic structure $A$\$$B$, where $A$ and $B$ are marginal segments and $a$ and $b$ are the Consonantal Strength
+values of $A$ and $B$ respectively, increases with the value of $b$ minus $a$'' \citep{murray.vennemann.1983}
+
+\citet{rose.2000} reformulates this as a violable, but categorical, constraint within the context of Optimality Theory and uses it in an analysis of Chaha sonority-driven epenthesis:
+
+\ex.  \textsc{SyllCon}: The first segment of the onset of a syllable must be lower in sonority than the last segment in the immediately preceding syllable.
+
+More recently, Syllable Contact has been recast as a gradient family of constraints, for example by \citet{gouskova.2002, gouskova.2004}.  She defines the distance {\sc Dis} between two consonants in a syllable contact situation as the sonority of the second minus the sonority of the first.  For example, [t.s] = +1 if [s] and [t] are only one step apart on a sonority scale.  She then defines the following family of constraints:
+
+\ex. {\sc *Dis-}$n$: Assign a violation mark if the {\sc Dis} between two adjacent heterosyllabic consonants is $n$ (adapted from \citep{gouskova.2002})
+
+This gives rise to a universal hierarchy:
+
+\ex. {\sc *Dis+7} $\gg$ {\sc *Dis+6} $\gg$ ... {\sc *Dis+0} $\gg$ {\sc *Dis-1} $\gg$ ... {\sc *Dis-7}.
+
+Thus heterosyllabic clusters that rise sharply in sonority -- that have a high {\sc Dis} -- are more marked than more falling clusters.
+
+The predicted hierarchy of susceptibility to epenthesis of the clusters is as follows:
+
+\ex. Syllable Contact hierarchy (based on {\sc *Dis}):
+
+\vspace{-3em}
+\noindent \resizebox{\linewidth}{!}{\usebox{\syllablecontacthierarchy}}
+
+
+\bigskip
+
+Syllable Contact applies only across syllable boundaries.  Therefore, when sonority-driven epenthesis occurs in onsets or codas, other sonority-based markedness constraints must be employed.  One such is {\sc Sonority Sequencing}, which we will see in the context of Rose's analysis in the next section.
+
  
 \subsection{Another dimension of sonority contour faithfulness}
 
