@@ -37,4 +37,42 @@
 \end{tikzpicture}
 }
 
+\newsavebox{\sonorityrisehierarchycompressed}
+\savebox{\sonorityrisehierarchycompressed}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{vertex}=[circle]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
+  \node[vertex] (RT) at (2.5*8, 0)  {RT};
+  \node[vertex] (NT) at (1.67*8,0)  {NT};
+  \node[vertex] (FT) at (1.25*8,0)  {FT};
+  \node[vertex] (TT) at (1*8,-0.5)     {TT};
+  \node[vertex] (RF) at (2*8,0)     {RF};
+  \node[vertex] (NF) at (1.33*8,-0.5)  {NF};
+  \node[vertex] (FF) at (1*8,0)   {FF};
+  \node[vertex] (TF) at (0.8*8,-0.5)   {TF};
+  \node[vertex] (RN) at (1.5*8,0)   {RN};
+  \node[vertex] (NN) at (1*8,0.5)     {NN};
+  \node[vertex] (FN) at (0.75*8,0)  {FN};
+  \node[vertex] (TN) at (0.6*8,0)   {TN};
+  \node[vertex] (RR) at (1*8,1.0)  {RR};
+  \node[vertex] (NR) at (0.67*8,-0.5)  {NR};
+  \node[vertex] (FR) at (0.5*8,0)   {FR};
+  \node[vertex] (TR) at (0.4*8,0)   {TR};
+  \node[vertex] (rising) at (0.5*8,2) {\underline{Rising sonority}};
+  \node[vertex] (level) at (1*8,2) {\underline{Level sonority}};
+  \node[vertex] (falling) at (1.67*8,2) {\underline{Falling sonority}};
+  % axis
+  \node[vertex] (axisstart) at (0.0,-1) {};
+  \node[vertex] (axisend)   at (2.7*8,-1) {};
+  \draw (axisstart) -- (axisend);
+  \node[point]  (0point) at (0.0,-1) {};
+  \node[point]  (1point) at (1.0*8,-1) {};
+  \node[point]  (2point) at (2.0*8,-1) {};
+  \node[vertex] (0pointlabel) at (0.0,-1.5) {0};
+  \node[vertex] (1pointlabel) at (1.0*8,-1.5) {1};
+  \node[vertex] (2pointlabel) at (2.0*8,-1.5) {2};
+  \node[vertex] (xaxislabel) at (2.7*8,-1.5) {\textsc{SonRise}};
+\end{tikzpicture}
+}
 
