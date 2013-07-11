@@ -91,7 +91,36 @@ Syllable Contact-based approach of \citet{rose.2000}.
 Section \ref{issues} looks at various issues regarding {\sc Sonority Angle}, such as its robustness.
 Section \ref{conclusion} concludes.
 
-\section{Theoretical machinery} \label{theoreticalmachinery}
+\section{Theoretical background} \label{theoreticalmachinery}
+
+This paper assumes as its basis the P-map hypothesis \cite{steriade.2001}, which states that the perceptual distance between underlying representations and potential surface forms projects a fixed ranking of faithfulness constraints.
+
+In order to determine what faithfulness constraints exist in {\sc Con} and what their rankings should be, therefore, we need to know the metrics of perceptual distance that are relevant to each change. In the case of vowel epenthesis, the perceptual distance to be measured is between two sonority contours, /C1-C2/ and [C\textsubscript{1}-V-C\textsubscript{2}].
+
+\subsection{Sonority Angle}
+
+The observation with which we started was that the more steeply rising the sonority profile of a consonant cluster, the more likely the cluster to undergo epenthesis. Thus the absolute difference in sonority between C\textsubscript{1} and C\textsubscript{2} must be factored into the metric. To this, I add the claim that the more sonorous C\textsubscript{1}, the more likely the cluster is to undergo epenthesis.
+
+These two factors are neatly captured by the metric {\sc Sonority Angle}, which is defined as the angle between the underlying C\textsubscript{1}C\textsubscript{2} sonority contour and the surface C\textsubscript{1}V contour:
+
+\ex. \label{sonangle_picture} \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
+                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+                      \node[left] at (0,3) {C$_1$}; 
+                      \node[right] at (5,1) {C$_2$};
+                      \node[right] at (5,6) {V};
+    \coordinate (A) at (0,3);
+    \coordinate (B) at (5,1);
+    \coordinate (C) at (5,6);
+\end{tikzpicture} 
+
+Assuming that the horizontal distance is 1 unit, we can compute the magnitude of this angle analytically with the following formula:
+
+\ex. \label{sonangle_formula} Formula: \textsc{SonAngle} = $arctan(V-C_1) - arctan(C_2-C_1)$
+
+In the diagram in \ref{sonangle_picture}, imagine fixing C\textsubscript{1} and lowering the sonority of C\textsubscript{2}. Intuitively, this increases the {\sc Sonority Angle}. The dependence of {\sc Sonority Angle} on this distance can also be seen in the second term in \ref{sonangle_formula}.
 
 \section{Case study: Irish} \label{irish}
 
