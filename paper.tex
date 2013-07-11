@@ -27,6 +27,8 @@
 \newcommand{\bet}{\textipa{B}}
 \newcommand{\schwa}{\textipa{@}}
 
+\include{diagrams}
+
 \title{The perceptual dimensions of \\ sonority-driven epenthesis}
 \author{Michelle A. Fullwood}
 \date{July 2013}
@@ -60,7 +62,7 @@ to than falling sonority sibilant-stop clusters.
 This faithfulness-based approach raises the question of how the perceptual distance between two sonority contours /C\textsubscript{1}C\textsubscript{2}/ and [C\textsubscript{1}VC\textsubscript{2}] should be computed in terms of the sonority of C\textsubscript{1}, C\textsubscript{2} and V.  
 Fleischhacker's analysis rested on empirical determinations of sonority contour faithfulness, and did not attempt to determine such a relation.  
 
-\citet{steriade.2006} proposed that input and output sonority contours should match in terms of whether they are rising or falling, and to what degree, but did not suggest a concrete mathematical relation.  \citet{flemming.2008} formalizes Steriade's approach with the metric {\sc Sonority Rise}, the ratio of the gradients of the two contours.
+\citet{steriade.2006} proposed that input and output sonority contours should match in terms of whether they are rising or falling, and to what degree, but did not suggest a concrete mathematical relation.  \citet{flemming.2008} formalises Steriade's approach with the metric {\sc Sonority Rise}, the ratio of the gradients of the two contours.
 
 \bigskip
 
@@ -200,8 +202,30 @@ These faithfulness constraints have a universal ranking, with the least stringen
             $\gg$ \textsc{Ident(SonAngle)}$<$0.5 \newline
             $\gg$ ...
 
-Note that I do not claim that this is the only dimension of perceptual similarity relevant to epenthesis.  
-As we will see later in the paper, other faithfulness constraints may prevent epenthesis, such as a restriction on epenthesising a vowel between two obstruents, which introduces an additional region of sonorance that had previously not existed \cite{flemming.2008}.
+The resulting hierarchy of clusters, ranked according to their resistance to epenthesis as defined
+by their {\sc Sonority Angle}, is as follows.
+
+\ex. {\sc Sonority Angle} hierarchy
+
+\vspace{-3em}
+\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityanglehierarchycompressed}}
+
+Notice that out of the falling sonority clusters, those that decrease in sonority by a single step
+-- namely RN, NF and FT -- have smaller {\sc Sonority Angles} than the ones that have a greater fall
+in sonority. Furthermore, out of these three clusters, theone with the most sonorous C\textsubscript{1}, RN, has the smallest {\sc Sonority Angle}. We thus predict that out of the falling sonority clusters,
+RN is the most likely to be broken up by epenthesis. The case study on Chaha will demonstrate that this
+is the case.
+
+Similarly, between the clusters that fall in sonority by two steps -- RF and NT -- we expect
+NT to be less likely to undergo epenthesis, since N is less sonorous than R. We expect NT and RT
+to be the clusters most resistant to epenthesis out of all the clusters. This will be crucial 
+to our analysis of Irish sonority-driven epenthesis.
+
+
+\subsection{Another dimension of sonority contour faithfulness}
+
+Note that I do not claim that sonority contour faithfulness is the only dimension of perceptual similarity relevant to epenthesis. As we will see later in the paper, other faithfulness constraints may prevent epenthesis, such as a restriction on epenthesising a vowel between two obstruents, which introduces an additional region of sonorance that had previously not existed \citep{flemming.2008}.
+
 
 
 \section{Case study: Irish} \label{irish}
