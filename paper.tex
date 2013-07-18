@@ -373,7 +373,7 @@ defined below, we can have epenthesis act only on sonorant-initial clusters.
 
 Epenthesis does not break up onset sonorant-initial clusters.  This is likely due to the fact that
 with a small number of lexical exceptions, Irish words are stress-initial \citep[26]{o.siadhail.1989}.\footnote{With the exception of Munster Irish, where stress is attracted to syllables containing
-a long vowel or diphthong (Green 1996), %TODO
+a long vowel or diphthong \citep{green.1996},
 but where onset clusters still are not broken up by
 epenthesis.  In this case, one would probably have to posit a positional faithfulness constraint
 protecting the word-initial cluster.}  
@@ -404,7 +404,7 @@ Together, these two constraints ranking above {\sc *Son-C} predict that onset ep
 
 In codas and across syllable boundaries, epenthesis does not apply to homorganic clusters.  
 I suggest that this is due to the action of the Obligatory Contour Principle (OCP).  
-I adopt Walter 2007's %TODO
+I adopt \citet{walters.2007}'s
 formulation of the OCP, which bans successive identical oral gestures.  A cluster such as [nt] would consist of a single oral constriction gesture at the alveolar ridge, and would not constitute a violation of the OCP. Splitting it by epenthesis to form [n\textipa{@}t] would require a repeated identical constriction gesture, and therefore be a violation of the OCP.
 
 \ex. OCP $\gg$ {\sc *Son-C}
@@ -511,10 +511,44 @@ which are not broken up by epenthesis.
          {\it s\'eimt} `the act of playing music', dialectal variant of {\it seinm})
      \b. [\textipa{k2r\textsuperscript{j}@m\textsuperscript{j}k\textsuperscript{j}}] \\
          {\it cuirimc} `I observe, pay attention to' (Connaught dialect) \\
-     (Words found in \citet{dinneen.2007}) %TODO
+     (Words found in \citet{dineen.2007})
 
-I conclude that in general, epenthesis does not occur in /NT/ sequences due to the large sonority angle between NT and NVT, and not to the non-existence of underlying heterorganic /NP/ clusters in the lexicon.
+I conclude that in general, epenthesis does not occur in /NT/ sequences due to the large {\sc Sonority Angle} between NT and NVT, and not to the non-existence of underlying heterorganic /NP/ clusters in the lexicon. The epenthetic facts of Irish thus support the ranking of NT and RT clusters at the bottom of the hierarchy of susceptibility to epenthesis, which is consistent with the {\sc Sonority Angle} metric.
 
+\subsection{Comparison to other approaches}
+
+Using the same revised sonority scale, the {\sc Sonority Rise} calculations are as follows for the relevant clusters:
+
+\ex. {\sc Sonority Rises} of sonorant-initial clusters using revised sonority scale
+
+ \begin{center}
+  \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
+     \tikzstyle{line} = [draw]%, -latex']
+
+        \node (NT) at (1.66666666666667 * 15, 0) {NT}; 
+        \node (ND) at (1.5 * 15, 0) {ND}; 
+        \node (NF) at (1.33333333333333 * 15, 0) {NF};
+        \node (NN) at (1 * 15, 0) {NN};
+        \node (NR) at (0.666666666666667 * 15, 0) {NR}; 
+
+        \node (RT) at (2.5 * 15, 0) {RT};
+        \node (RD) at (2.25 * 15, 0) {RD}; 
+        \node (RF) at (2 * 15, 0) {RF}; 
+        \node (RN) at (1.5 * 15, 0.7) {RN};
+        \node (RR) at (1 * 15, 0.7) {RR};
+
+    \node (axisstart) at (0.5 * 15,-1) {};
+    \node (axisend)   at (2.6 * 15,-1) {};
+    \draw (axisstart) -- (axisend);
+   \node (xaxislabel) at (2.6 * 15,-1.5) {\textsc{Sonority Rise}};
+
+    \end{tikzpicture} % TODO: draw arrow and mark 1.0, 1.5, 2.0, 2.5
+ \end{center}
+
+Note that the clusters RF and RD fall between RT and NT on this scale.  Therefore, we cannot clearly separate the clusters that undergo epenthesis
+from the ones that do not if we adopt {\sc Sonority Rise} as the relevant metric.
+        
+\bigskip
 
 
 \section{Case study: Chaha} \label{chaha}
