@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage[table]{xcolor}    %for shading*
 \usepackage{fullpage}
 \usepackage{natbib}
 \usepackage{mathpazo}
@@ -10,6 +11,9 @@
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows}
 \usepackage{slashbox}
+\usepackage{pifont}    %for pointing hand
+\usepackage{arydshln}    %for dashed lines
+\usepackage{rotating}    %for angled text
 
 \usepackage{amsfonts}
 \newcommand{\tickYes}{\checkmark}
@@ -315,7 +319,7 @@ Irish epenthesis targets sonorant-initial clusters and occurs both across syllab
      \b. /an\textsuperscript{j}m\textsuperscript{j}/ $\rightarrow$ [an\textsuperscript{j}im\textsuperscript{j}] \\
          {\it ainm} `name'
      \z.
-     (\citet{carnie.1994}:(37) and \citet{ni.chiosain.1999}:(2))
+     \citep[(37)]{carnie.1994} and \citep[(2)]{ni.chiosain.1999}
 
 The pattern of epenthesis outlined above does not apply to onset clusters.  Sonorant-initial clusters
 are attested in onsets.
@@ -325,8 +329,77 @@ are attested in onsets.
      \b. [\textipa{m\textsuperscript{j}r\textsuperscript{j}i:ra:n}] \\
          {\it mriath\'an} `sea-rods'
      \z.
-     (\citet{swingle.1992}: 456)
+     \citep[456]{swingle.1992}
 
+There are two classes of exceptions to this process.  First, homorganic clusters are not broken up by epenthesis.
+
+\ex. \a. /farno\textipa{:g}/ $\rightarrow$ [farno\textipa{:g}], *[far\textipa{@}no\textipa{:g}] \\
+         {\it fearnog} `alder'
+     \b. /bord/ $\rightarrow$ [bord], *[bor\textipa{@}d] \\
+         {\it bord} `table'
+     \b. /kalr\textipa{@}/ $\rightarrow$ [kalr\textipa{@}], *[kal\textipa{@r@}] \\
+         {\it calra} `calorie'  
+     \z. 
+     \citep[(52)]{carnie.1994}\footnote{\citet{ni.chiosain.1999} has a more complicated set of facts as to which homorganic clusters are broken up by epenthesis. As this is not the focus of this paper, I will assume the simpler dataset that Carnie presents.}
+
+Second, epenthesis does not apply when the second consonant is a voiceless stop.
+
+\ex. \a. /kork/ $\rightarrow$ [kork], *[kor\textipa{@}k] \\
+         {\it Cork} `Cork (place name)' 
+     \b. /kork\textipa{@}/ $\rightarrow$ [kork\textipa{@}], *[kor\textipa{@k@}] \\
+         {\it corca} `people' 
+     \b. /korp/  $\rightarrow$ [korp], *[kor\textipa{@p}] \\
+         {\it corp} `body' %TODO : get some NT data in here!
+     \z.
+     \citep[(39a,b,c)]{carnie.1994}
+
+\subsection{Analysis}
+
+The fact that this process of epenthesis does not target obstruent-initial clusters is not problematic under the sonority contour faithfulness approach,
+as the {\sc Ident(SonAngle)} constraints limit epenthesis, rather than trigger it.  By choosing a more limited markedness constraint such as {\sc *Son-C},
+defined below, we can have epenthesis act only on sonorant-initial clusters.
+
+\ex. {\sc *Son-C}: Assign a violation mark for every sonorant consonant preceding another consonant.
+
+\ex. {\sc *Son-C} $\gg$ {\sc Dep}
+
+\vspace{-2em}
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{gorm}/} & {\sc *Son-C} & {\sc Dep} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{gor@m} & & \cellcolor{lightgray}$\ast$ \\
+\hline b. & & \textipa{gorm} & $\ast$! & \cellcolor{lightgray} \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+Epenthesis does not break up onset sonorant-initial clusters.  This is likely due to the fact that
+with a small number of lexical exceptions, Irish words are stress-initial \citep[26]{o.siadhail.1989}.\footnote{With the exception of Munster Irish, where stress is attracted to syllables containing
+a long vowel or diphthong (Green 1996), but where onset clusters still are not broken up by
+epenthesis.  In this case, one would probably have to posit a positional faithfulness constraint
+protecting the word-initial cluster.}  
+Breaking up the onset cluster would result in an unstressable epenthetic vowel occupying the 
+preferred location of stress in Irish.
+
+I will assume initial stress is due to the following constraint, which is dominated only by 
+lexicon-specific constraints.
+
+\ex. {\sc Stress-Initial}: Assign a violation mark if the initial syllable of a word is not stressed.
+
+\citet{alderete.2000} proposes a general constraint {\sc Head-Dependence} against making an epenthetic segment a prosodic head, which I adopt and state informally here:
+
+\ex. {\sc Head-Dep}: Assign a violation mark for every stressed vowel not present in the input.
+
+Together, these two constraints ranking above {\sc *Son-C} predict that onset epenthesis does not occur.
+
+\ex. {\sc Stress-Initial}, {\sc Head-Dep} $\gg$ {\sc *Son-C}
+
+\vspace{-2em}
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c:c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{mna:}/} & {\sc Stress-Initial} & {\sc Head-Dep} & {\sc *Son-C} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{"mna:} & & & \cellcolor{lightgray}$\ast$ \\
+\hline b. & & \textipa{"m@.na:} & & $\ast$! & \cellcolor{lightgray} \\
+\hline c. & & \textipa{m@."na:} & $\ast$! & & \cellcolor{lightgray} \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
 \section{Case study: Chaha} \label{chaha}
 
