@@ -550,6 +550,67 @@ from the ones that do not if we adopt {\sc Sonority Rise} as the relevant metric
         
 \bigskip
 
+Carnie's (1994) analysis of these facts is in terms of a Minimal Distancing Constraint with various parameter settings, such as for which direction away from the nucleus it applies (to the right in the Irish case, to account for epenthesis applying to both codas and heterosyllabic clusters). His preliminary analysis has distance computed according to the following sonority scale:
+
+\ex. \label{carniesonorityscale} \a. 1 - Voiceless stops
+     \b. 2 - Voiced stops
+     \b. 3 - Voiceless fricatives
+     \b. 4 - Voiced fricatives
+     \b. 5 - Sonorants
+
+with a subsequent revision where sonority is computed in terms of the number of nodes that have to be specified to obtain the appropriate manner specification. This computation is somewhat complicated, so I will not reproduce it here. The result is that sonorant-fricative and sonorant-voiced stop clusters have a sonority distance of 0, since they are each specified for a single node in the feature geometry. Voiceless stops have no specified nodes, so sonorant-voiceless stop clusters have a sonority distance of 1, which is the minimal distance tolerated. 
+
+A sonority scale that gives nasals and liquids identical sonority values seems unlikely given measurable differences in the phonetic correlates of sonority such as intensity between liquids and nasals \citep{parker.2002}. This is especially so when the obstruents are spread so widely on the sonority scale. 
+I will therefore explore instead an alternative sonority distance-based analysis using Syllable Contact.
+
+\bigskip
+
+We quickly see that Syllable Contact on its own is insufficient as epenthesis in Irish also affects coda clusters. We will need to invoke Sonority Sequencing. 
+
+%TODO : Syllable Contact and Sonority Sequencing should not be in smallcaps unless referred to as SyllCon and SonSeq.
+
+Attempting to apply Syllable Contact to the Irish case, we immediately encounter problems. Firstly, it is difficult to see why markedness triggers epenthesis only in sonorant-initial clusters, as Syllable Contact predicts that obstruent-initial clusters should be even more marked.
+
+Secondly, we would need to invoke a separate set of constraints on sonority sequencing in coda clusters, and assume that the ranking of the faithfulness constraint {\sc Dep} with respect to both sets of constraints is coincidentally identical.
+
+Suppose we define a single markedness constraint that favours all falling sonority clusters regardless of their position in the syllable, i.e. combining Syllable Contact and Sonority Sequencing. We require a finer-grained metric to measure how marked a particular cluster is. An obvious course of action is to use \citet{gouskova.2002}'s {\sc *Dis} metric, extending its use from the heterosyllabic environment alone to all positions. 
+
+Using the defined sonority scale, we expect the following markedness hierarchy of sonorant-initial clusters.
+
+\begin{center}
+  \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
+     \tikzstyle{line} = [draw]%, -latex']
+
+        \node (NT) at (2 * 5, 0) {NT}; 
+        \node (ND) at (1.5 * 5, 0) {ND}; 
+        \node (NF) at (1 * 5, 0) {NF};
+        \node (NN) at (0 * 5, 0) {NN};
+        \node (NR) at (-1 * 5, 0) {NR}; 
+
+        \node (RT) at (3 * 5, 0) {RT};
+        \node (RD) at (2.5 * 5, 0) {RD}; 
+        \node (RF) at (2 * 5, 0.7) {RF}; 
+        \node (RN) at (1 * 5, 0.7) {RN};
+        \node (RR) at (0 * 5, 0.7) {RR};
+
+    \node (axisstart) at (-1.5 * 5,-1) {};
+    \node (axisend)   at (3.5 * 5,-1) {};
+    \draw (axisstart) -- (axisend);
+  \node (xaxislabel) at (3.5 * 5,-1.5) {\textsc{Dis}};
+
+    \end{tikzpicture} 
+ \end{center}
+
+Even ignoring the problem of the obstruent-initial clusters, we see that sonority distance
+alone does not get us the desired result. Instead, it incorrectly predicts that if NT and RT are not 
+broken up by epenthesis, then RF and RD should not either.
+
+\subsection{Interim summary}
+
+To summarise the findings of the Irish case study: a sonority contour faithfulness account explains
+the facts quite simply, because {\sc Sonority Angle} successfully achieves a linear separation of
+the NT and RT clusters from the remaining sonorant-initial clusters, explaining why they fail to undergo
+epenthesis. The {\sc Sonority Rise} metric does not have the same property. We have also seen that a markedness-based account would have to be much more complicated to explain the same facts.
 
 \section{Case study: Chaha} \label{chaha}
 
