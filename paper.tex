@@ -373,7 +373,8 @@ defined below, we can have epenthesis act only on sonorant-initial clusters.
 
 Epenthesis does not break up onset sonorant-initial clusters.  This is likely due to the fact that
 with a small number of lexical exceptions, Irish words are stress-initial \citep[26]{o.siadhail.1989}.\footnote{With the exception of Munster Irish, where stress is attracted to syllables containing
-a long vowel or diphthong (Green 1996), but where onset clusters still are not broken up by
+a long vowel or diphthong (Green 1996), %TODO
+but where onset clusters still are not broken up by
 epenthesis.  In this case, one would probably have to posit a positional faithfulness constraint
 protecting the word-initial cluster.}  
 Breaking up the onset cluster would result in an unstressable epenthetic vowel occupying the 
@@ -400,6 +401,121 @@ Together, these two constraints ranking above {\sc *Son-C} predict that onset ep
 \hline b. & & \textipa{"m@.na:} & & $\ast$! & \cellcolor{lightgray} \\
 \hline c. & & \textipa{m@."na:} & $\ast$! & & \cellcolor{lightgray} \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+In codas and across syllable boundaries, epenthesis does not apply to homorganic clusters.  
+I suggest that this is due to the action of the Obligatory Contour Principle (OCP).  
+I adopt Walter 2007's %TODO
+formulation of the OCP, which bans successive identical oral gestures.  A cluster such as [nt] would consist of a single oral constriction gesture at the alveolar ridge, and would not constitute a violation of the OCP. Splitting it by epenthesis to form [n\textipa{@}t] would require a repeated identical constriction gesture, and therefore be a violation of the OCP.
+
+\ex. OCP $\gg$ {\sc *Son-C}
+
+\vspace{-2em}
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{bord}/} & OCP & {\sc *Son-C} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{bord} & & \cellcolor{lightgray}$\ast$ \\
+\hline b. & & \textipa{bor@d} & $\ast$! & \cellcolor{lightgray} \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+Lastly, we come to the sonority-driven aspect of the analysis.  
+Epenthesis is allowed when C1 is ``followed by a voiced stop, fricative, nasal or liquid, but not when it is followed by a voiceless stop.'' \citep{carnie.1994}
+
+This requires a revision to the standard sonority scale, splitting up voiceless and voiced stops: 
+
+\ex.  \begin{center}
+   \begin{tabular}{cccccccc}
+    Voiceless stop & Voiced stop  & Fricative    & Nasal        & Liquid & Glide        & Vowel \\
+      T            &     D       &          F    &    N &    R   &   G          & V     \\
+      1            &     1.5     &          2   &    3  &    4   &   5          & 6     \\
+     \end{tabular}
+ \end{center}
+
+Now let us calculate the sonority angles for the relevant set of sonorant-initial clusters in Irish.
+
+\ex. {\sc Sonority Angles} of sonorant-initial clusters using revised sonority scale
+
+  \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
+     \tikzstyle{line} = [draw]%, -latex']
+
+        \node (NT) at (2.48619449019234 * 15, 0) {NT}; % 2.35619449019234 - repositioning for visual clarity
+        \node (ND) at (2.28183949564558 * 15, 0) {ND}; % 2.23183949564558 
+        \node (NF) at (2.03444393579570 * 15, 0) {NF};
+        \node (NN) at (1.24904577239825 * 15, 0) {NN};
+        \node (NR) at (0.60 * 15, 0) {NR}; % 0.4636476090008
+
+        \node (RT) at (2.48619449019234 * 15, 0.7) {RT};% 2.35619449019234 - repositioning for visual clarity
+        \node (RD) at (2.37743866747662 * 15, 0) {RD}; % 2.29743866747662 
+        \node (RF) at (2.19429743558818 * 15, 0) {RF}; % 2.21429743558818 
+        \node (RN) at (1.89254688119154 * 15, 0) {RN};
+        \node (RR) at (1.10714871779409 * 15, 0) {RR};
+
+    \node (axisstart) at (0.5 * 15,-1) {};
+    \node (axisend)   at (2.6 * 15,-1) {};
+    \draw (axisstart) -- (axisend);
+   \node (xaxislabel) at (2.6 * 15,-2.5) {\textsc{Sonority Angle}};
+
+  \node (dividinglinestart) at (2.43 * 15,2) {};
+  \node (dividinglineend)   at (2.43 * 15,-2) {};
+  \path [line,dashed] (dividinglinestart) -- (dividinglineend) -- cycle;
+
+  \node (2pointlabel) at (2.43 * 15,-1.5) {2.3};
+        
+
+    \end{tikzpicture} %TODO : draw arrow and mark 1.0, 1.5, 2.0, 2.5
+
+\bigskip
+
+The sonorant-voiceless stop clusters can be neatly separated from the rest of the clusters in terms of {\sc Sonority Angle}.
+The correct constraint ranking is therefore the following:
+
+\ex. {\sc Ident(SonAngle)$<$2.3} $\gg$ {\sc *Son-C} $\gg$ {\sc Ident(SonAngle)$<$2.4}
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{kork}/} & {\sc Ident(SonAngle)$<$2.3} & {\sc *Son-C} & {\sc Ident(SonAngle)$<$2.4} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{kork} & & \cellcolor{lightgray}$\ast$ & \cellcolor{lightgray} \\
+\hline b. & & \textipa{kor@k} & 2.35 $\ast$! & \cellcolor{lightgray} & \cellcolor{lightgray}2.35 $\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{alb@}/} & {\sc Ident(SonAngle)$<$2.3} & {\sc *Son-C} & {\sc Ident(SonAngle)$<$2.4} \\[0.5ex]
+\hline \hline c. & \ding{43} & \textipa{al@b@} & 2.29 & & \cellcolor{lightgray} 2.29 \\
+\hline d. & & \textipa{alb@} & & $\ast$! & \cellcolor{lightgray} \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+A note on the nasal-voiceless stop clusters is in order here: such clusters tend to be homorganic on the surface.  
+It is therefore unclear whether such clusters failed to be broken up by epenthesis because of OCP, 
+or because of the large sonority contour faithfulness violation.  
+I argue that in general, it is for the second reason.
+
+Suppose nasal-voiceless stop clusters were banned from epenthesising because of the OCP.
+Then we would expect to see surface
+sequences of [NVP] where N and P have different places of articulation and V is an epenthetic vowel, 
+just as we see [NVB] sequences:
+
+\ex. \a. [\textipa{b\textsuperscript{j}in\textsuperscript{j}ib}] \\
+         {\it binb} `venom'
+     \b. [\textipa{ban@b@}] \\
+         {\it Banba} `Banba (a name for Ireland)'
+     \z.
+     \citep[2c]{carnie.1994}
+
+To my knowledge, no [NVP] sequences with the properties stated above exist.
+
+Further, albeit marginal, evidence comes from the existence of words with heterorganic [NP] sequences,
+which are not broken up by epenthesis.
+
+\ex. \a. [\textipa{s\textsuperscript{j}e:mt}] \\
+         {\it s\'eimt} `the act of playing music', dialectal variant of {\it seinm})
+     \b. [\textipa{k2r\textsuperscript{j}@m\textsuperscript{j}k\textsuperscript{j}}] \\
+         {\it cuirimc} `I observe, pay attention to' (Connaught dialect) \\
+     (Words found in \citet{dinneen.2007}) %TODO
+
+I conclude that in general, epenthesis does not occur in /NT/ sequences due to the large sonority angle between NT and NVT, and not to the non-existence of underlying heterorganic /NP/ clusters in the lexicon.
+
+
 
 \section{Case study: Chaha} \label{chaha}
 
