@@ -14,6 +14,7 @@
 \usepackage{pifont}    %for pointing hand
 \usepackage{arydshln}    %for dashed lines
 \usepackage{rotating}    %for angled text
+\usepackage{wasysym}  % for frowny face
 
 \usepackage{amsfonts}
 \newcommand{\tickYes}{\checkmark}
@@ -402,7 +403,7 @@ Together, these two constraints ranking above {\sc *Son-C} predict that onset ep
 In codas and across syllable boundaries, epenthesis does not apply to homorganic clusters.  
 I suggest that this is due to the action of the Obligatory Contour Principle (OCP).  
 I adopt \citet{walters.2007}'s
-formulation of the OCP, which bans successive identical oral gestures.  A cluster such as [nt] would consist of a single oral constriction gesture at the alveolar ridge, and would not constitute a violation of the OCP. Splitting it by epenthesis to form [n\textipa{@}t] would require a repeated identical constriction gesture, and therefore be a violation of the OCP.
+formulation of the OCP, which bans successive identical oral gestures.  A cluster such as [nd] would consist of a single oral constriction gesture at the alveolar ridge, and would not constitute a violation of the OCP. Splitting it by epenthesis to form [n\textipa{@}d] would require a repeated identical constriction gesture, and therefore be a violation of the OCP.
 
 \ex. OCP $\gg$ {\sc *Son-C}
 
@@ -778,22 +779,254 @@ For those speakers that permit obstruent-obstruent clusters in defiance of Sonor
 
 \ex. {\sc *C-Son\#}: a word-final sonorant consonant must be preceded by a vowel or [r].
 
-Rose's approach thus requires the formulation of two constraints specifically targeting [r]. The advantage of doing so is that it avoids the difficulty of forbidding [\textipa{Bm}] clusters which we encountered above. On the other hand, the sonority contour faithfulness approach can get away without specifically mentioning [r] at all, by virtue of the {\sc Sonority Angle} hierarchy being able to group [r]-sonorant clusters together with the level and rising sonority clusters, at the expense of requiring a constraint against [\textipa{Bm}] clusters.
+Rose's approach thus requires the formulation of two constraints specifically targeting [r]. The advantage of doing so is that it avoids the difficulty of forbidding [\textipa{Bm}] clusters which we encountered above. On the other hand, the sonority contour faithfulness approach can get away without specifically mentioning [r] at all, by virtue of the ability of the {\sc Sonority Angle} hierarchy to group [r]-sonorant clusters together with the level and rising sonority clusters, at the expense of requiring a constraint against [\textipa{Bm}] clusters.
 
 \subsection{CCC clusters}
-
-\subsubsection{Data and Analysis}
 
 Triconsonantal clusters are always broken up as [CC\textipa{1}C] or [C\textipa{1}CC]. The sources of CCC clusters in Chaha are the 3rd singular masculine conjugation of the jussive form of triliteral verbs, which have the underlying form /j\textipa{@}-\underline{CCC}-o/, and
 the 3rd singular masculine conjugation of the passive/reflexive form of quadriliteral verbs,
 which have the underlying form /j-\underline{t-CC}aCaC/.
 
-As with coda clusters, there is considerable inter- and intra-speaker variability in epenthetic positioning between idiolects. The following data is from the main idiolect discussed in Section 4.3 of \citep{rose.2000}. Underlined forms have alternate forms in other idiolects.
+As with coda clusters, there is considerable inter- and intra-speaker variability in epenthetic positioning between idiolects. We begin with data from the main idiolect discussed in Section 4.3 of \citep{rose.2000}.
 
-In 
+\subsubsection{Data and Analysis}
 
+Triconsonantal clusters must be broken up via epenthesis, indicating that {\sc *CCC} $\gg$ {\sc Dep}. If epenthesis occurs either between C1-C2 or between C2-C3, {\sc *CCC} will be satisfied. We do not need a separate constraint to prevent double epenthesis occurring to produce *[C\textipa{1}C\textipa{1}C]. 
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/CCC/} & *CCC & {\sc Dep} \\[0.5ex]
+\hline \hline a. & & CCC & $\ast$! &  \\
+\hline b. & \ding{43} & CC\textipa{1}C & & $\ast$ \\
+\hline c. & \ding{43} & C\textipa{1}CC & & $\ast$ \\
+\hline d. & & C\textipa{1}C\textipa{1}C & & $\ast\ast$! \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+This holds for all the idiolects. Within each idiolect, we need only explain the location of epenthesis.
+
+\bigskip
+
+In the default idiolect, epenthesis occurs between C2 and C3 to form [CC\textipa{1}C].
+Only when C1-C2 constitutes a sonority rise or plateau, and C2-C3 constitutes a sonority fall, does epenthesis occur between C1 and C2 to form [C\textipa{1}CC]. Forms and their associated sonority angles are shown in the table below. Underlined forms have alternate forms in other idiolects.
+
+% TODO: table
+
+In this idiolect, all sonority rises and plateaus --- that is, all clusters with a {\sc Sonority Angle} less than 1.5 --- are conflated together. Similarly, all clusters with a {\sc Sonority Angle} greater than 1.5 are conflated together, with the default preference being to epenthesise on the right.
+
+Borrowing a constraint from \citet{rose.2000}, I use {\sc Align-Left} as the markedness constraint that prefers [CC\textipa{1}C] over [C\textipa{1}CC].
+
+\ex. Align-Left: every consonant must be aligned with the left edge of some prosodic word. % TODO: cite
+
+\vspace{-1cm}
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-kft-o}/} & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & & \textipa{j@kifto} & 2,4!,5 \\
+\hline b. & \ding{43} & \textipa{j@kfito} & 2,3,5 \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+
+The ranking {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc Align-Left}, with all other {\sc Ident(SonAngle)}$<$n constraints being ranked lower than markedness, is responsible for the epenthetic positioning behaviour of this idiolect, as illustrated in the following tableaux.
+
+\ex. {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc Align-Left}
+     \a. Fall-\{Rise, Plateau\}
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-wzf-o}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{j@wz1fo} & 1.33 & \cellcolor{lightgray} \\
+\hline b. & & \textipa{j@wizfo} & 2.03 $\ast$! & \cellcolor{lightgray}$\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+     \b. \{Rise, Plateau\}-\{Rise, Plateau\}
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-gdf-o}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{j@gd1fo} & 1.37 & \\
+\hline b. & & \textipa{j@g1dfo} & 0.59 & $\ast$! \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+     \c. Fall-Fall
+\begin{center} \renewcommand*\arraystretch{1.2}%h%
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j-a-mst-o}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{jams1to} & 2.11 $\ast$ & \\
+\hline b. & & \textipa{jam1sto} & 2.03 $\ast$ & $\ast$! \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+     \d. \{Rise, Plateau\}-Fall
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-kft-o}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & & \textipa{j@kfito} & 2.11 $\ast$!  & \cellcolor{lightgray} \\
+\hline b. & \ding{43} & \textipa{j@kifto} & 0.59 & \cellcolor{lightgray}$\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+
+\bigskip
+     
+In a second idiolect discussed in Section 5.2.2 of \citep{rose.2000}, clusters behave much as in the default, except that when C2 is [r] and C3 is sonorant, epenthesis occurs on the right instead.
+
+\ex. \a. \textipa{j@k'r1mo} `let them insult'
+     \b. \textipa{j@sr1Bo} `let them break'
+
+The explanation for the special behaviour of RN clusters among triconsonantal clusters in this idiolect is similar to that of RN clusters among coda clusters: the dividing line between the conflated clusters has simply shifted to the right, at 1.9, grouping RN clusters together with sonority rises and plateaus, versus all other falls. This is possible using the {\sc Sonority Angle} metric because RN clusters are expected to be the most susceptible to epenthesis of all the falling sonority clusters.
+
+% TODO: scale
+
+\ex. \a. Behaviour of clusters with C2=/r/ and C3=sonorant under idiolect 1:
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-krm-o}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & & \textipa{j@krimo} & 1.89 $\ast$! &  \\
+\hline b. & \ding{43} & \textipa{j@kirmo} & 0.12 & $\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}		 
+     \b. Behaviour of clusters with C2=/r/ and C3=sonorant under idiolect 2:
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-krm-o}/} & {\sc Ident(SonAngle)}$<$1.9 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{j@krimo} & 1.89 & \\
+\hline b. & & \textipa{j@kirmo} & 0.12 & $\ast$! \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+As a consequence of this, however, we would incorrectly expect a cluster like /rmd/ to epenthesise on the left:
+
+\ex. \begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-rmd-o}/} & {\sc Ident(SonAngle)}$<$1.9 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \frownie & \textipa{j@rmido} & 2.36 $\ast$! & \cellcolor{lightgray} \\
+\hline b. & \ding{43} & \textipa{j@rimdo} & 1.89 & \cellcolor{lightgray}$\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+Looking across the clusters, we find that all /r/-initial and /n/-initial triconsonantal clusters epenthesise as [CC\textipa{1}C]. This seems to be due to a morphophonological constraint, as Rose states that ``[t]here is an independent requirement that if the initial root consonant of a triliteral root is /r/, it must appear in a coda in the jussive, realised as [n], except where there is a nasal in the root.'' (412, fn. 20). In addition, all [n]-initial roots are underlyingly /r/ \citep[22]{banksira.2000}, and the only possible sources of /r/ or [n]-initial triconsonantal clusters in the language are jussive forms, so there is no independent evidence of how these clusters would epenthesise in the absence of this requirement.
+
+Adopting the following undominated constraint in Chaha, therefore, guarantees the correct form for all /r/ and [n]-initial clusters, including /rmd/ in this instance.
+
+\ex. {\sc Jussive-R}: if the first consonant of the input root is /r/, its output correspondent must be in the coda in the jussive.
+
+\ex. {\sc Jussive-R} $\gg$ {\sc Ident(SonAngle)}$<$1.9 $\gg$ {\sc Align-Left}
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-rmd-o}/} & {\sc Jussive-R} & {\sc Ident(SonAngle)}$<$1.9 & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & \ding{43} & \textipa{j@rmido} & & \cellcolor{lightgray}2.36 $\ast$ & \cellcolor{lightgray} \\
+\hline b. & & \textipa{j@rimdo} & $\ast$! & \cellcolor{lightgray}1.89 & \cellcolor{lightgray}$\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+This ranking explains all the forms in the second idiolect.
+
+\bigskip
+
+In the third idiolect, discussed in Section 5.2 of \citep{rose.2000}, most clusters epenthesise as [C\textipa{1}CC]. This includes clusters 
+
+\ex. TODO
+
+In other words, the default preference is to epenthesise as [C\textipa{1}CC], but this is overridden when C2-C3 constitutes a sonority rise or plateau, and C1-C2 constitutes a sonority fall. 
+
+This calls for a different active markedness constraint than {\sc Align-Left}. Again borrowing from Rose, I utilise the following constraint:
+
+\ex. Anchor-L-Root: An element at the left edge of the root corresponds to an element at the left edge of a heavy syllable. \citep[(45)]{rose.2000}
+
+Armed with this constraint, we can cast this behaviour as the following ranking in {\sc Sonority Angle} terms:
+
+\ex. {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc Anchor-L-Root}
+
+% TODO: tableaux
+
+There still remain two clusters whose alternative behaviour remains unexplained according to the rankings we have obtained so far.
+
+\ex. wizf, sigd % TODO
+
+These two datapoints can be explained by retaining the constraint ranking of idiolect 3, but moving the dividing line 
+
+% TODO: Tableau
+
+This behaviour is equivalent to the following {\sc Sonority Angle}-based ranking:
+
+\ex. {\sc Ident(SonAngle)}$<$1.0 $\gg$ {\sc Anchor-L-Root}
+
+% TODO: tableau
+
+% TODO: summary
+
+Complete tables illustrating the behaviour of the four idiolects are given in Appendix A. % TODO
+
+
+\subsubsection{Comparison with alternative approaches}
+
+The analysis of the four idiolects above was possible because the lines at which faithfulness conflation occur in Chaha correspond to linear separations of the various sets of clusters:
+
+\ex. \a. Idiolect 1: (sonority rises and plateaus) vs (sonority falls)
+     \b. Idiolect 2: (sonority rises and plateaus and RN) vs (other sonority falls)
+     \c. Idiolect 3: (sonority rises and plateaus) vs (sonority falls)
+     \d. Idiolect 4: (sonority rises) vs (sonority plateaus and falls)
+
+% TODO: diagram showing the various cut-off points.
+
+The {\sc Sonority Rise} metric can achieve the same linear separation for idiolects 1, 3 and 4, but notice that this is not possible for idiolect 2, because % TODO
+
+\bigskip
+
+\citet{rose.2000} presents a successful analysis of the same data in Chaha, from which I have liberally borrowed. Under her approach, it is Syllable Contact that triggers epenthesis. To this end, she employs two versions of Syllable Contact that achieve the grouping effect above. The first permits sonority falls, while the second, looser constraint, permits both sonority falls and plateaus.
+
+\ex. \a. {\sc SyllCon}: The first segment of the onset of a syllable must be lower in sonority 
+     \b. {\sc SyllCon(Loose}): The first segment of the onset of a syllable must not be of greater sonority than the last segment of the immediately preceding syllable.
+
+Variable placcement of these two constraints with respect to {\sc Align-Left} and {\sc Anchor-Left Root}, which themselves can be variably ranked, predict three of the four idiolects.
+
+\ex. Rose's constraint rankings for idiolects 1, 3 and 4.
+    \a. Idiolect 1: {\sc SyllCon} $\gg$ {\sc Dep} $\gg$ {\sc Align-L} $\gg$ {\sc Anchor-L Root}
+        \begin{itemize}
+          \item [CC\textipa{1}C] unless C1-C2 violates {\sc SyllCon}
+                (is a sonority rise or plateau) and C2-C3 would not.
+        \end{itemize}
+     \b. Idiolect 3: {\sc SyllCon} $\gg$ {\sc Dep} $\gg$ {\sc Anchor-L Root} $\gg$ {\sc Align-L} 
+        \begin{itemize}
+          \item [C\textipa{1}CC] unless C2-C3 violates {\sc SyllCon}
+                (is a sonority rise or plateau) and C1-C2 would not.
+        \end{itemize}
+     \c. Idiolect 4: {\sc SyllCon(Loose)} $\gg$ {\sc Dep} $\gg$ {\sc Anchor-L Root} $\gg$ {\sc Align-L} $\gg$ {\sc SyllCon}
+        \begin{itemize}
+          \item [C\textipa{1}CC] unless C2-C3 violates {\sc SyllCon(Loose)} 
+                (is a sonority rise) and C1-C2 would not.
+        \end{itemize}
+
+Thus far, the logic has been very similar to the {\sc Sonority Angle} analysis. Explaining the special behaviour of RN clusters in idiolect 2, requires invoking the {\sc *R-Son} constraint used in the analysis of idiolect ?? of coda clusters.
+
+\ex. Rose's constraint ranking for idiolect 2
+     \a. {\sc *R-Son} $\gg$ {\sc SyllCon} $\gg$ {\sc Dep} $\gg$ {\sc Align-L} $\gg$ {\sc Anchor-L Root}
+% TODO: sample tableau?
+
+In addition, the {\sc *MedialLight} constraint from Rose's analysis of the medial two-consonant clusters must be invoked to prevent double epenthesis forming [C\textipa{1}C\textipa{1}C] in the case where both C1-C2 and C2-C3 constitute violations of {\sc SyllCon}.
+% comment on need for *CCC?
+
+Overall, therefore, the {\sc Sonority Angle}-based analysis is slightly more economical than the Syllable Contact-based analysis by Rose, by not requiring any additional machinery to account for the behaviour of RN clusters in idiolect 2.
+
+\section{CCCC clusters}
+
+In this last part of our case study of Chaha, we turn to the behaviour of quadriconsonantal clusters. These epenthesise as [CC\textipa{1}CC] or [C\textipa{1}CC\textipa{1}C]. 
+I will show that the rankings already obtained for CCC clusters predict almost exactly which of the CCCC clusters should display variation and in which direction.
+
+\subsection{Predictions of CCC rankings}
+
+The undominated nature of the constraint *CCC, which we used to trigger epenthesis among the triconsonantal clusters, also triggers epenthesis in quadriconsonantal clusters. Notice that using this as the markedness constraint predicts exactly the two outcomes that are directly observed.
+
+Given the general form of the ranking {\sc Ident(SonAngle)}$<n$ $\gg$ {\sc Align-Left},
+the expected behaviour of four-consonant clusters is as follows.
+
+
+
+% Show that with the rankings we obtained for the various idiolects in the previous section, we predict all and only the clusters observed among 4Cs.
+
+
+\subsection{Data}
+
+
+\subsection{Analysis}
+
+\subsection{Comparison with alternative approaches}
+
+\section{Summary: Chaha}
 
 \section{Issues} \label{issues}
+
+
 
 \section{Conclusion} \label{conclusion}
 
