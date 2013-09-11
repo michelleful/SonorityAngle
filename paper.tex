@@ -240,7 +240,7 @@ The following sample calculations illustrate how \textsc{SonRise} distance is co
     \end{tabular}
     \end{center}
 
-As with {\sc Sonority Angle}, this gives rise to a family of constraints {\sc Ident(SonRise)}$<n$, defined similarly to {\sc Ident(SonAngle)}$<n$.
+As with {\sc Sonority Angle}, this gives rise to a family of constraints {\sc Ident(SonRise)}$<n$, defined similarly to {\sc Ident(SonAngle)}$<$n.
 
 {\sc Sonority Rise} also gives rise to a hierarchy of susceptbility of clusters.
 
@@ -874,9 +874,9 @@ I encode this preference with a markedness constraint borrowed from \citep{rose.
 \vspace{-1cm}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|} \hline 
-\multicolumn{3}{|c||}{Input:~/\textipa{j@-kft-o}/} & {\sc Align-Left} \\[0.5ex]
-\hline \hline a. & & \textipa{j@kifto} & 2,4!,5 \\
-\hline b. & \ding{43} & \textipa{j@kfito} & 2,3,5 \\
+\multicolumn{3}{|c||}{Input:~/\textipa{j@-\textnormal{CCC}-o}/} & {\sc Align-Left} \\[0.5ex]
+\hline \hline a. & & \textipa{j@\textnormal{C}i\textnormal{CC}o} & 2,4!,5 \\
+\hline b. & \ding{43} & \textipa{j@\textnormal{CC}i\textnormal{C}o} & 2,3,5 \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
 The only time that {\sc Align-Left} is overruled is when breaking up the C2-C3 cluster would be too ``expensive'' in faithfulness terms --- when the cluster consists of a sonority fall --- and breaking up the C1-C2 cluster is comparatively cheap, that is, when C1-C2 is a sonority rise or plateau. In {\sc Sonority Angle} terms, {\sc Align-Left} is overruled only when breaking the C2-C3 cluster would entail creating a {\sc Sonority Angle} greater than 1.5, when the alternative of breaking the C1-C2 cluster would create a {\sc Sonority Angle} smaller than 1.5.
@@ -915,9 +915,9 @@ The ranking {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc Align-Left}, with all other {
 
 \bigskip
 
-\noindent {\bf Remark on conflation.} Notice that all distinctions among the set of rising and level sonority clusters on the one hand, and the distinctions among the set of falling sonority clusters, are conflated. For instance, consider the cluster /mst/. {\sc SonAngle}(m,s), at 2.03, is smaller than {\sc SonAngle}(s,t), at 2.11, yet epenthesis occurs on the right, creating the larger {\sc Sonority Angle}. This is because the distinction between {\sc Sonority Angles} of 2.03 and 2.11 is irrelevant under the given  constraint ranking, since both 2.03 and 2.11 violate the relevant faithfulness constraint {\sc Ident(SonAngle)}$<$1.5. This is possible because I have adopted the position that the {\sc Ident(SonAngle)}$<n$ constraints can be freely ranked.
+\noindent {\bf Remark on conflation.} Notice that all distinctions among the set of rising and level sonority clusters on the one hand, and the distinctions among the set of falling sonority clusters, are conflated. For instance, consider the cluster /mst/. {\sc SonAngle}(m,s), at 2.03, is smaller than {\sc SonAngle}(s,t), at 2.11, yet epenthesis occurs on the right, creating the larger {\sc Sonority Angle}. This is because the distinction between {\sc Sonority Angles} of 2.03 and 2.11 is irrelevant under the given  constraint ranking, since both 2.03 and 2.11 violate the relevant faithfulness constraint {\sc Ident(SonAngle)}$<$1.5. This is possible because I have adopted the position that the {\sc Ident(SonAngle)}$<$n constraints can be freely ranked.
 
-Adopting the converse strategy --- that {\sc Ident(SonAngle)}$<n$ constraints have a universal ranking --- would not predict [\textipa{ms1t}]. Instead we would have the following situation:
+Adopting the converse strategy --- that {\sc Ident(SonAngle)}$<$n constraints have a universal ranking --- would not predict [\textipa{ms1t}]. Instead we would have the following situation:
 
 \ex. Universal ranking cannot derive [\textipa{j@ms1to}]
 
@@ -1026,6 +1026,13 @@ This calls for a different active markedness constraint than {\sc Align-Left}. A
 
 \ex. Anchor-Left Root: An element at the left edge of the root corresponds to an element at the left edge of a heavy syllable. \citep[(45)]{rose.2000}
 
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{j@}-CCC-\textipa{o}/} & {\sc Anchor-Left Rt} \\[0.5ex]
+\hline \hline a. & & \textipa{j@.\textnormal{C}1\textnormal{C}.\textnormal{C}o} &  \\
+\hline b. & \ding{43} & \textipa{j@\textnormal{C}.\textnormal{C}1.\textnormal{C}o} & $\ast$ \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
 Armed with this constraint, we can cast this behaviour as the following ranking in {\sc Sonority Angle} terms:
 
 \ex. {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc Anchor-Left Root} \label{CCiCidiolectranking}
@@ -1085,8 +1092,6 @@ This ranking predicts that fall-fall clusters should epenthesise on the left. It
 
 These two datapoints can be explained by retaining the constraint ranking of idiolect 3, but moving the dividing line to 1.0, between sonority rises on the one hand, and sonority plateaus and falls on the other.
 
-% TODO: Tableau
-
 This behaviour is equivalent to the following {\sc Sonority Angle}-based ranking:
 
 \ex. {\sc Ident(SonAngle)}$<$1.0 $\gg$ {\sc Anchor-L-Root}
@@ -1103,11 +1108,7 @@ This behaviour is equivalent to the following {\sc Sonority Angle}-based ranking
 \hline b. & & \textipa{j@sg1do} & 1.37 $\ast$ & $\ast$! \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
-% TODO: tableau
-
-% TODO: summary
-
-Complete tables illustrating the behaviour of the four idiolects are given in Appendix A. % TODO
+In summary, we were able to explain all four CCC idiolects of Chaha by ranking different {\sc Ident(SonAngle)}$<$n constraints higher than either {\sc Align-Left} or {\sc Anchor-Left Root}.
 
 
 \subsubsection{Comparison with alternative approaches}
@@ -1159,27 +1160,59 @@ In addition to these, the {\sc *MedialLight} constraint from Rose's analysis of 
 
 \section{CCCC clusters}
 
-In this last part of our case study of Chaha, we turn to the behaviour of quadriconsonantal clusters. These epenthesise as [CC\textipa{1}CC] or [C\textipa{1}CC\textipa{1}C]. 
-I will show that the rankings already obtained for CCC clusters predict almost exactly which of the CCCC clusters should display variation and in which direction.
+In this last part of our case study of Chaha, we turn to the behaviour of quadriconsonantal clusters. The only such clusters come from the imperative/jussive CCC stem followed by the consonant-initial suffix -\textipa{n@}. The underlying form is /\textipa{n-CCC-n@}/. They surface either as [\textipa{n1\underline{\textnormal{CC}1\textnormal{C}n}@}] or [\textipa{n1\underline{\textnormal{C}1\textnormal{CC}1n}@}].
+
+In this section, I will demonstrate that the rankings already obtained for CCC clusters predict almost exactly which of the CCCC clusters should display variation and in which direction.
 
 \subsection{Predictions of CCC rankings}
 
-The undominated nature of the constraint *CCC, which we used to trigger epenthesis among the triconsonantal clusters, also triggers epenthesis in quadriconsonantal clusters. Notice that using this as the markedness constraint predicts exactly the two outcomes that are directly observed.
+The undominated nature of the constraint *CCC, which we used to trigger epenthesis among the triconsonantal clusters, also triggers epenthesis in quadriconsonantal clusters.
+This excludes possible solutions such as *[C\textipa{1}CCC] and *[CCC\textipa{1}C], as these still incur a violation of *CCC.
 
+Solutions such as [C\textipa{1}C\textipa{1}CC] and [CC\textipa{1}C\textipa{1}C] are also excluded, as these incur unnecessary violations of {\sc Ident(SonAngle)} and {\sc Dep}. If the middle two consonants C2 and C3 are split up by an epenthetic vowel, there is no further need for epenthesis as *CCC is already satisfied by [CC\textipa{1}CC].
 
+Therefore, the only two possible solutions under my approach are [CC\textipa{1}CC] and [C\textipa{1}CC\textipa{1}C]. Which one is chosen depends on the sonority profile of the clusters, and which of {\sc Align-Left} and {\sc Anchor-Left Root} is dominant.
 
-Given the general form of the ranking {\sc Ident(SonAngle)}$<n$ $\gg$ {\sc Align-Left},
-the expected behaviour of four-consonant clusters is as follows.
+\ex. {\sc Align-Left} favours [CC\textipa{1}CC], but {\sc Anchor-Left Rt} favours [C\textipa{1}CC\textipa{1}C].
+
+\begin{center} \renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c:c|} \hline 
+\multicolumn{3}{|c||}{Input:~/\textipa{n-\textnormal{CCC}-n@}/} & Align-Left & Anchor-Left Root \\[0.5ex]
+\hline \hline a. & & \textipa{n1\textnormal{C.C}1\textnormal{C}.n@} & 2,3,5,6 & $\ast$ \\
+\hline b. & \ding{43} & \textipa{n1.\textnormal{C}1\textnormal{C.C}1.n@} & 2,4!,5,7 & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
+
+There are some clusters whose epenthetic behaviour is subject to other considerations. The constraint {\sc Jussive-R} still applies to these forms, for example, which ensures that the following forms epenthesise as [CC\textipa{1}CC]:
+
+\ex. \a. \textipa{n1-\underline{nk'1m-n}@}
+     \b. \textipa{n1-\underline{nf1k-n}@}
+     \c. \textipa{n1-\underline{rm1d-n}@}
+     \z. \citep[(33a,34a,34b)]{rose.2000}
+
+In addition, Chaha prohibits intramorphemic geminates, which enforces the following forms:
+
+\ex. \a. \textipa{n1-\underline{k'f1fn}@}
+     \b. \textipa{n1-\underline{sd1dn}@}
+     \z. \citep[(37a,b)]{rose.2000}
+
+I will not consider such clusters further.
+
+\bigskip
+
+Given the general form of the ranking {\sc Ident(SonAngle)}$<$n $\gg$ {\sc Align-Left} $\gg$ {\sc Anchor-Left Root}, the expected behaviour of four-consonant clusters is as follows: all /CCCC/ clusters surface as [CC\textipa{1}CC], except when {\sc SonAngle}(C2,C3) exceeds n and {\sc SonAngle}(C1,C2) and {\sc SonAngle}(C3,C4) are both smaller than n. Illustrative tableaux are shown below for n=1.5:
+
+\ex. TODO tableaux
+
+Given the general form of the ranking {\sc Ident(SonAngle)}$<$n $\gg$ {\sc Anchor-Left Root} $\gg$ {\sc Align-Left}, the default behaviour is to epenthesise as [C\textipa{1}CC\textipa{1}C]. This preference is overridden when at least one of {\sc SonAngle}(C1,C2) and {\sc SonAngle}(C3,C4) are greater than n and {\sc SonAngle}(C2,C3) is less than n.
+
+\ex. TODO tableaux
 
 
 
 % Show that with the rankings we obtained for the various idiolects in the previous section, we predict all and only the clusters observed among 4Cs.
 
+The following table shows the actual surface forms observed for each of the underlying clusters, as well as the predictions of the four idiolectal rankings. 
 
-\subsection{Data}
-
-
-\subsection{Analysis}
 
 \subsection{Comparison with alternative approaches}
 
