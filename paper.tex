@@ -947,7 +947,7 @@ which have the underlying form /j-\underline{t-CC}aCaC/.
 
 As with coda clusters, there is considerable inter- and intra-speaker variability in epenthetic positioning between idiolects. We begin with data from the main idiolect discussed in Section 4.3 of \citep{rose.2000}.
 
-\subsubsection{Data and Analysis}
+\subsubsection{Data and Analysis} \label{CCCanalysis}
 
 Triconsonantal clusters must be broken up via epenthesis, indicating that {\sc *CCC} $\gg$ {\sc Dep}. If epenthesis occurs either between C1-C2 or between C2-C3, {\sc *CCC} will be satisfied. We do not need a separate constraint to prevent double epenthesis occurring to produce *[C\textipa{1}C\textipa{1}C]. 
 
@@ -1412,11 +1412,9 @@ Given the general form of the ranking {\sc Ident(SonAngle)}$<$n $\gg$ {\sc Ancho
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
 
-% Show that with the rankings we obtained for the various idiolects in the previous section, we predict all and only the clusters observed among 4Cs.
-
 The following table shows the actual surface forms observed for each of the underlying clusters, as well as the predictions of the four idiolectal rankings. 
 
-\ex. Table of CCCC clusters, observed outcomes and predictions made by the constraint rankings proposed for the four idiolects in Section ???
+\ex. Table of CCCC clusters, observed outcomes and predictions made by the constraint rankings proposed for the four idiolects in $\S$\ref{CCCanalysis}.
 
 \begin{center}
 \begin{tabular}{|l|ccc|c|cccc|} \hline
@@ -1447,19 +1445,133 @@ In this case study, I presented an alternative analysis of Chaha epenthetic posi
 
 The prediction of {\sc Sonority Angle} that RN clusters should be the most susceptible of all the falling sonority clusters to epenthesis was borne out in the Chaha data, both in CC\# and CCC clusters. This fact made it possible for us to do without Rose's {\sc *R-Son} constraint, although at the expense of requiring a constraint against [\textipa{Bm}] clusters. Invoking another faithfulness constraint, {\sc Dep}(+son), in the analysis of CC\# clusters allowed us to eliminate the use of Rose's {\sc *C-Son} constraint, which also needed to make special reference to [r].
 
-% faithfulness conflation
+% faithfulness conflation?
 
 In the final tally, the {\sc Sonority Angle}-based approach fares worse on one datapoint and uses approximately the same number of constraints, but manages to accomplish most of the work of the analysis with the only crucial ranking being the placement of a single {\sc Ident(SonAngle)}$<$n constraint with respect to a relevant $\mathcal{M}$ constraint, while in Rose's analysis this work is spread over a number of different sonority-related constraints.
 
-\section{Issues} \label{issues}
+\section{Discussion} \label{issues}
 
+In this paper, I proposed two desiderata for a metric of sonority contour distance, and suggested {\sc Sonority Angle} as a concrete metric that fit these criteria. In this section, I examine the weaknesses of {\sc Sonority Angle} as a metric, as well as possible extensions.
+
+\subsection{Robustness of the metric}
+
+\noindent {\bf Changes in C1.} In the discussion of Chaha triconsonantal clusters in  $\S$\ref{CCCanalysis}, I glossed over how the metric should be computed if C1 changes.
+This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] due to morphophonological processes. Ultimately, this was not an issue because the behaviour of all such clusters was independently determined by {\sc Jussive-R}, but this raises the question of how {\sc Sonority Angle} should be computed if C1 changes. Currently, it is undefined, as it is unclear how to measure the angle between C1-C2=RF and C1-V=NV:
+
+%TODO : draw diagram showing what happens with the different C1's
+\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % left diagram
+                      \draw (5,2) -- (0,4);
+                      \draw (0,3) -- (5,6) ; % rising sonority
+                      \node[left] at  (0,4) {r}; 
+                      \node[left] at  (0,3) {n}; 
+                      \node[right] at (5,2) {f};
+                      \node[right] at (5,6) {\textipa{1}};
+     \end{tikzpicture}
+
+It is of course possible to define the angle as whatever is made by the intersection of the two vectors, but there is insufficient data to support this interpretation. Alternative approaches such as {\sc Sonority Rise} do not face this issue, as computing the gradients of the underlying contour /C1C2/ and the surface contour [C1V] does not depend on the two C1's being the same.
+
+\bigskip
+
+\noindent {\bf Horizontal distance.} In this paper, I assumed that the horizontal distance between C1 and C2, and C1 and V, is the same, and arbitrarily fixed at 1, in calculating {\sc Sonority Angle}. This is an arbitrary choice, and potentially an important one, as when the horizontal distance gets large, changes occur in the cluster hierarchy:
+
+\ex. TODO: stick in what happens if horizontal distance is 100 and the sonority scale remains the same
+
+Since this horizontal distance is along the dimension of time, the assumption that the two distances is the same is also likely incorrect. If we choose a different horizontal distance for C1-C2 versus C1-V, the cluster hierarchy would also be likely to change.
+
+\bigskip
+
+\noindent {\bf Arbitrariness of the sonority scale.} A third issue faced by any sonority metric is the arbitrariness of the vertical, sonority scale used in this paper. The scale adopted, which is a relatively standard scale, is rather phonological in nature, placing each sonority class at a distance of 1 from the next, and ignoring all differences between consonants within each class. From a phonetic standpoint, this seems unlikely. Observe, for example, the values obtained by \citet{parker.2002} for ???, the metric that Parker found to be the most correlated with phonological sonority:
+
+\ex. TODO: Parker sonority scale
+
+Plugging this scale into the {\sc Sonority Angle} metric, we obtain %TODO
+
+\bigskip
+
+Ultimately, the most practical course of action may be to simply attempt to experimentally determine sonority contour distances, and perhaps then fit them to a metric. To date, only a few sonority contour distances have been experimentally determined, for example between rising (TR) and falling (sT) clusters \citep{fleischhacker.2002}, but not finer-grained distances such as between the various falling sonority clusters. I leave this to future work.
+
+\bigskip
+
+\noindent {\bf Why these vectors?} In the sonority contour faithfulness approach, the relevant comparison is between C1-C2 and C1-V. But why these two vectors? In particular, why not C1-C2 versus V-C2?
+
+\ex. Left: {\sc Sonority Angle} as currently defined; right: another possible definition as the angle C1-C2-V.
+
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % left diagram
+                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
+                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+                      \node[left] at  (0,3) {C$_1$}; 
+                      \node[right] at (5,1) {C$_2$};
+                      \node[right] at (5,6) {V};
+					  % right diagram
+                      \draw (15,3) -- (20,1) -- (15,6) ; % falling sonority
+                      \node at (17.5, 2.75) {$\theta$}; % theta label for falling sonority
+                      \node[left] at (15,3) {C$_1$}; 
+                      \node[right] at (20,1) {C$_2$};
+                      \node[right] at (13,6) {V};
+\end{tikzpicture} 
+\end{center}
+
+The answer, currently, is based purely on empirical grounds: if we assume this comparison to be the relevant one, then we expect falling sonority contours to be more susceptible to epenthesis, which contradicts the cross-linguistic evidence. It would seem that there is something quite fundamental about the comparison being centred around the rightward context, or release, of C1, which may perhaps arise out of phonological processing.
+
+\subsection{Extensions of the metric}
+
+So far, I have employed the {\sc Sonority Angle} metric purely in the analysis of epenthetic processes. However, there are other possible applications.
+
+\bigskip
+
+\noindent {\bf Syncope.} We can straightforwardly adapt the sonority contour faithfulness account to analyse syncope, as pointed out by \citet{flemming.2008}. Interestingly, this makes different predictions from an account based on Syllable Contact, unlike the case of epenthesis where sonority contour faithfulness and Syllable Contact make similar predictions. 
+
+According to Syllable Contact, syncope should be blocked when it would create a marked, rising sonority, cluster. We expect syncope to preferentially create falling sonority clusters. Under a sonority contour faithfulness account, however, we expect clusters to be created when they are similar in sonority profile to the underlying C1-V contour -- that is, rising sonority clusters should be preferentially created.
+
+\citet{flemming.2008} cites two cases of sonority-sensitive syncope in English and Dutch in which rising sonority clusters are preferentially created. Illustrative examples from English are given below:
+
+\ex. \a. Syncope allowed when rising sonority cluster is created
+     \a. \textipa{Ev@ri} $\sim$ \textipa{Evri} `every'
+     \b. \textipa{mEm@ri} $\sim$ \textipa{mEmri} `memory'
+     \z.
+     \b. Syncope disallowed when level or falling sonority cluster would be created
+     \a. \textipa{pIk@tIN} $\sim$ \textipa{pIktIN} `picketing'
+     \b. \textipa{k@p\ae s@ti} $\sim$ \textipa{k@p\ae sti} `capacity'
+     \z.
+     \citep{hooper.1978}, cited in \citep{flemming.2008}
+
+On the other hand, syncope in Hebrew (and others?) is said to work according to the principles of Syllable Contact:
+
+\ex. TODO: Hebrew etc examples
+
+More work needs to be done to reconcile these two.
+
+\bigskip
+
+\noindent{\bf Consonant deletion.} The current formulation of {\sc Ident(SonAngle)}$<$n constraints restricts its application to when the consonants of a C1-C2 and C1-V-C2 sequence stand in correspondence. However, another formulation is possible, in which sonority contours are a property of C1 rather than a property of the whole contour.\footnote{Thanks to Adam Albright for this suggestion.}
+
+\ex. TODO: formulate this
+
+A possible application of this looser definition of {\sc Sonority Angle} lies in the deletion of consonants in complex onsets.
+
+% pa - pla 
+% Hawaiian loanword?
+% Sanskrit reduplication
 
 
 \section{Conclusion} \label{conclusion}
 
-% TODO
+In this paper, I argued for sonority contour faithfulness being the right way to analyse sonority-driven epenthesis, giving case studies in Irish and Chaha as examples. I additionally proposed that sonority contour distance should be computed by a metric that obeys two desiderata, % TODO
 
-\bibliographystyle{unified}
+Using {\sc Sonority Angle} as a concrete example of a metric that obeys these two desiderata, I showed that  a sonority contour faithfulness account based on {\sc Sonority Angle} worked better than a cluster markedness-based account of sonority-driven epenthesis in Irish. Firstly, the faithfulness-based analysis did not need separate constraints for heterosyllabic and coda clusters like Syllable Contact and Sonority Sequencing, which more economically accounted for the ``coincidence'' that the same clusters were allowed and disallowed in both syllabic contexts. Secondly, the markedness-based approach in Irish could not account for why obstruent-initial heterosyllabic and coda clusters are tolerated in Irish even though these should be more marked than sonorant-initial clusters under the two sonority-based markedness constraints.
+
+In addition, compared to the {\sc *Dis} metric \citep{gouskova.2002} for measuring sonority distance in Syllable Contact and Sonority Sequencing, and the alternative sonority contour faithfulness metric {\sc Sonority Rise} \citep{flemming.2008}, {\sc Sonority Angle} made the correct predictions that nasal-voiceless stop and liquid-voiceless stop clusters should be the hardest to epenthesise into in Irish, and the prediction that liquid-nasal clusters should be the most susceptible to epenthesis out of the falling sonority clusters in Chaha.
+
+{\sc Sonority Angle} was offered here as a concrete instance of the class of metrics that conform to the two desiderata. In $\S$\ref{issues}, I discussed several issues regarding the assumptions that need to be incorporated into its formulation. More perceptual experiments and cross-linguistic investigation of sonority-driven epenthesis needs to be done to pin down the specifics of the metric. In addition, I discussed two other sonority-based phenomena that may shed additional light on the true nature of sonority contour faithfulness.
+
+\bibliographystyle{apalike}
 \bibliography{sonangle}
 
 
