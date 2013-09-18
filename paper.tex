@@ -1030,7 +1030,6 @@ To summarise, coda epenthesis behaviour in Chaha can be explained by the ranking
 {\sc Sonority Rise} can explain idiolects \ref{idiolecta} and \ref{idiolectc}, where the cut-off is drawn between rising and level sonority clusters on the one hand and falling sonority clusters on the other, it is less straightforward to explain the behaviour of idiolects \ref{idiolectb} and \ref{idiolectd}. This is because the cluster hierarchy predicted by {\sc Sonority Rise} does not permit a linear separation of [r]-sonorant clusters from the other falling sonority clusters: if RN undergoes epenthesis, we expect that FT and NF should also, but FT never does.
 
 \bigskip
-
 \resizebox{\linewidth}{!}{
 \begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
   \tikzstyle{line} = [draw, -latex']
@@ -1290,8 +1289,6 @@ Adopting the converse strategy --- that {\sc Ident(SonAngle)}$<$n constraints ha
 
 The explanation for the special behaviour of RN clusters among triconsonantal clusters in this idiolect is similar to that of RN clusters among coda clusters: the dividing line between the conflated clusters has simply shifted to the right, at 1.9, grouping RN clusters together with sonority rises and plateaus, versus all other falls. This is possible using the {\sc Sonority Angle} metric because RN clusters are expected to be the most susceptible to epenthesis of all the falling sonority clusters.
 
-% TODO: scale
-
 \ex. \a. Behaviour of clusters with C2=/r/ and C3=sonorant under idiolect \ref{defaultCCCidiolect}:
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
@@ -1474,12 +1471,111 @@ The analysis of the four idiolects above was possible because the lines at which
      \c. Idiolect \ref{C1CCidiolect}: (sonority rises and plateaus) vs (sonority falls)
      \d. Idiolect \ref{wizfidiolect}: (sonority rises) vs (sonority plateaus and falls)
 
-% TODO: SonAngle diagram showing the various cut-off points.
+\bigskip
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
 
-The {\sc Sonority Rise} metric can achieve the same linear separation for idiolects 1, 3 and 4, but notice that this is not possible for idiolect \ref{CRNidiolect}, because {\sc Sonority Rise} cannot achieve a linear separation of the sonority rises, plateaus and RN from the remainder of the falling sonority clusters.
+	\node (TR) at (0.124354994547*8, 1) {TR};
+	\node (Tb) at (0.183110817262*8, 0.5) {T\textipa{B}};
+	\node (FR) at (0.218668945874*8, 1) {FR};
+	\node (TN) at (0.266252049151*8, 1.5) {TN};
+	\node (Fb) at (0.343023940421*8, 1) {F\textipa{B}};
+	\node (NR) at (0.463647609001*8, 1) {NR};
+	\node (FN) at (0.540419500271*8, 0.5) {FN};
+	\node (TF) at (0.588002603548*8, 1) {TF};
+	\node (bR) at (0.726642340682*8, 0.5) {\textipa{B}R};
+	\node (Nb) at (0.785398163397*8, 1) {N\textipa{B}};
+	\node (RR) at (1.10714871779*8, 1) {RR};
+	\node (bb) at (1.19028994968*8, 0.5) {\textipa{BB}};
+	\node (NN) at (1.2490457724*8, 1) {NN};
+	\node (FF) at (1.32581766367*8, 1.5) {FF};
+	\node (TT) at (1.37340076695*8, 1) {TT};
+	\node (Rb) at (1.57079632679*8, 1) {R\textipa{B}};
+	\node (bN) at (1.65393755868*8, 0.5) {\textipa{B}N};
+	\node (RN) at (1.84*8, 1) {RN}; %1.89254688119
+	\node (NF) at (2.0344439358*8, 1) {NF};
+%	\node (GF) at (2.0344439358*8, 1.5) {GF};
+	\node (FT) at (2.11121582707*8, 0.5) {FT};
+	\node (bF) at (2.17308367293*8, 1) {bF};
+	\node (RF) at (2.21429743559*8, 1.5) {RF};
+	\node (RT) at (2.35619449019*8, 1) {RT};
+	\node (NT) at (2.35619449019*8, 0.5) {NT};
+	\node (bT) at (2.38057989937*8, 1.5) {\textipa{B}T};
+  \node (rising) at (0.3*8,2.3) {\underline{Rising sonority}};
+  \node (level) at (1.2*8,2.3) {\underline{Level sonority}};
+  \node (falling) at (2.2*8,2.3) {\underline{Falling sonority}};
+  % axis
+  \node (axisstart) at (-0.23,0) {};
+  \node (axisend)   at (2.7*8,0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0.0*8, 0.2) -- (0.0*8, -0.2) -- cycle;
+  \draw (1.0*8, 0.2) -- (1.0*8, -0.2) -- cycle;
+  \draw (2.0*8, 0.2) -- (2.0*8, -0.2) -- cycle;
+  \node (0pointlabel) at (0.0,-0.5) {0};
+  \node (1pointlabel) at (1.0*8,-0.5) {1};
+  \node (2pointlabel) at (2.0*8,-0.5) {2};
+  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  % dividing line
+  \node (dividinglinestart) at (1.9 * 8,2) {};
+  \node (dividinglineend)   at (1.9 * 8,-0.3) {};
+  \path [line,dashed] (dividinglinestart) -- (dividinglineend) -- cycle;
+  \node (dividingpointlabel) at (1.9*8, -0.5) {1.9};
+  \node (dividingpointlabel2) at (1.9*8, -1.0) {\ref{CRNidiolect}};
+  % another dividing line
+  \node (dividingline2start) at (1.5 * 8,2) {};
+  \node (dividingline2end)   at (1.5 * 8,-0.3) {};
+  \path [line,dashed] (dividingline2start) -- (dividingline2end) -- cycle;
+  \node (dividingpoint2label) at (1.5*8, -0.5) {1.5};
+  \node (dividingpoint2label2) at (1.5*8, -1.0) {\ref{defaultCCCidiolect} \& \ref{C1CCidiolect}};
+  % third dividing line
+  \node (dividingline3start) at (1.0 * 8,2) {};
+  \node (dividingline3end)   at (1.0 * 8,-0.3) {};
+  \path [line,dashed] (dividingline3start) -- (dividingline3end) -- cycle;
+  \node (dividingpoint3label2) at (1.0*8, -1.0) {\ref{wizfidiolect}};
+\end{tikzpicture}
+}
 
-% TODO: SonRise diagram
+\bigskip
+The {\sc Sonority Rise} metric can achieve the same linear separation for idiolects \ref{defaultCCCidiolect}, \ref{C1CCidiolect} and \ref{wizfidiolect}, but notice that this is not possible for idiolect \ref{CRNidiolect}, because {\sc Sonority Rise} cannot achieve a linear separation of the sonority rises, plateaus and RN from the remainder of the falling sonority clusters.
 
+\bigskip
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{line} = [draw, -latex']
+  \node (RT) at (2.5*8, 0)  {RT};
+  \node (NT) at (1.67*8,0)  {NT};
+  \node (FT) at (1.25*8,0)  {FT};
+  \node (TT) at (1*8,-0.5)     {TT};
+  \node (RF) at (2*8,0)     {RF};
+  \node (NF) at (1.33*8,-0.5)  {NF};
+  \node (FF) at (1*8,0)   {FF};
+  \node (TF) at (0.8*8,-0.5)   {TF};
+  \node (RN) at (1.5*8,0)   {RN};
+  \node (NN) at (1*8,0.5)     {NN};
+  \node (FN) at (0.75*8,0)  {FN};
+  \node (TN) at (0.6*8,0)   {TN};
+  \node (RR) at (1*8,1.0)  {RR};
+  \node (NR) at (0.67*8,-0.5)  {NR};
+  \node (FR) at (0.5*8,0)   {FR};
+  \node (TR) at (0.4*8,0)   {TR};
+  \node (rising) at (0.5*8,2) {\underline{Rising sonority}};
+  \node (level) at (1*8,2) {\underline{Level sonority}};
+  \node (falling) at (1.67*8,2) {\underline{Falling sonority}};
+  % axis
+  \node (axisstart) at (-0.23,-1.0) {};
+  \node (axisend)   at (2.7*8,-1.0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0.0*8, -1.2) -- (0.0*8, -0.8) -- cycle;
+  \draw (1.0*8, -1.2) -- (1.0*8, -0.8) -- cycle;
+  \draw (2.0*8, -1.2) -- (2.0*8, -0.8) -- cycle;
+  \node (0pointlabel) at (0.0,-1.5) {0};
+  \node (1pointlabel) at (1.0*8,-1.5) {1};
+  \node (2pointlabel) at (2.0*8,-1.5) {2};
+  \node (xaxislabel) at (2.7*8,-1.5) {\textsc{SonRise}};
+\end{tikzpicture}
+}
 \bigskip
 
 \citet{rose.2000} presents a successful analysis of the same data in Chaha, from which I have liberally borrowed. Under her approach, it is Syllable Contact that triggers epenthesis. To this end, she employs two versions of Syllable Contact that achieve the grouping effect above. The first permits sonority falls, while the second, looser constraint, permits both sonority falls and plateaus.
@@ -1612,8 +1708,8 @@ The following table shows the actual surface forms observed for each of the unde
 
 \begin{center}
 \begin{tabular}{|l|ccc|c|cccc|} \hline
-         & \multicolumn{3}{c|}{{\sc SonAngles}} &  & \multicolumn{4}{c|}{{\sc Predictions of idiolect}} \\
- Cluster & C1,C2 & C2,C3 & C3,C4 & Observed outcomes & 1 & 2 & 3 & 4 \\ \hline % TODO: name idiolects
+         & \multicolumn{3}{c|}{{\sc SonAngles}} & Observed & \multicolumn{4}{c|}{{\sc Predictions of idiolect}} \\
+ Cluster & C1,C2 & C2,C3 & C3,C4 &  outcomes & \ref{defaultCCCidiolect} & \ref{CRNidiolect} & \ref{C1CCidiolect} & \ref{wizfidiolect} \\ \hline 
  a. \textipa{sdBn} & 2.11 & 0.18 & 1.66 & \textipa{sd1Bn} & \multicolumn{4}{c|}{\textipa{sd1Bn}} \\ 
  b. \textipa{wzfn} & 2.03 & 1.33 & 0.54 & \textipa{wz1fn}, \textipa{w1zf1n} & \multicolumn{3}{c}{\textipa{wz1fn}} & \cellcolor{lightgray}  \textipa{w1zf1n} \\
  c. \textipa{gdfn} & 1.37 & 0.59 & 0.54 & \textipa{gd1fn}, \textipa{g1df1n} & \multicolumn{2}{c}{\textipa{gd1fn}} & \cellcolor{lightgray}  \textipa{g1df1n} &  \textipa{gd1fn} \\
@@ -1647,7 +1743,7 @@ In the final tally, the {\sc Sonority Angle}-based approach fares worse on one d
 
 In this paper, I proposed two desiderata for a metric of sonority contour distance, and suggested {\sc Sonority Angle} as a concrete metric that fit these criteria. In this section, I examine first a general question regarding sonority contour faithfulness, then discuss weaknesses of {\sc Sonority Angle} as a metric, as well as possible extensions of this metric to domains beyond sonority-driven epenthesis.
 
-\section{Disregarding V-C2} 
+\subsection{Disregarding V-C2} 
 
 In the sonority contour faithfulness approach, the relevant comparison is between C1-C2 and C1-V. But why these two vectors? In particular, why not C1-C2 versus V-C2?
 
