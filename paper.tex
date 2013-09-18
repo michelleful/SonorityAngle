@@ -152,7 +152,7 @@ Imagine fixing C\textsubscript{1} as in \ref{sonangle_picture} and raising the s
 The dependence of {\sc Sonority Angle} on this distance can also be seen in the second term in \ref{sonangle_formula}.
 
 The second generalisation is that the more sonorous the C\textsubscript{1}, the more likely
-epenthesis is to occur. Let us fix the sonority distance between the two consonants of the cluster at -2, but vary their distance from V: %TODO : check if it should be -2 or +2 
+epenthesis is to occur. Let us fix the sonority distance between the two consonants of the cluster at 2, but vary their distance from V: 
 
 \ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
                       \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
@@ -1451,14 +1451,41 @@ In the final tally, the {\sc Sonority Angle}-based approach fares worse on one d
 
 \section{Discussion} \label{issues}
 
-In this paper, I proposed two desiderata for a metric of sonority contour distance, and suggested {\sc Sonority Angle} as a concrete metric that fit these criteria. In this section, I examine the weaknesses of {\sc Sonority Angle} as a metric, as well as possible extensions.
+In this paper, I proposed two desiderata for a metric of sonority contour distance, and suggested {\sc Sonority Angle} as a concrete metric that fit these criteria. In this section, I examine first a general question regarding sonority contour faithfulness, then discuss weaknesses of {\sc Sonority Angle} as a metric, as well as possible extensions of this metric to domains beyond sonority-driven epenthesis.
+
+\section{Disregarding V-C2} 
+
+In the sonority contour faithfulness approach, the relevant comparison is between C1-C2 and C1-V. But why these two vectors? In particular, why not C1-C2 versus V-C2?
+
+\ex. Left: {\sc Sonority Angle} as currently defined; right: another possible definition as the angle C1-C2-V.
+
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % left diagram
+                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
+                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+                      \node[left] at  (0,3) {C$_1$}; 
+                      \node[right] at (5,1) {C$_2$};
+                      \node[right] at (5,6) {V};
+					  % right diagram
+                      \draw (15,3) -- (20,1) -- (15,6) ; % falling sonority
+                      \node at (17.5, 2.75) {$\theta$}; % theta label for falling sonority
+                      \node[left] at (15,3) {C$_1$}; 
+                      \node[right] at (20,1) {C$_2$};
+                      \node[right] at (13,6) {V};
+\end{tikzpicture} 
+\end{center}
+
+The answer, currently, is based purely on empirical grounds: if we assume this comparison to be the relevant one, then we expect falling sonority contours to be more susceptible to epenthesis, which contradicts the cross-linguistic evidence. It would seem that there is something quite fundamental about the comparison being centred around the rightward context, or release, of C1, which may perhaps arise out of phonological processing.
+
 
 \subsection{Robustness of the metric}
 
 \noindent {\bf Changes in C1.} In the discussion of Chaha triconsonantal clusters in  $\S$\ref{CCCanalysis}, I glossed over how the metric should be computed if C1 changes.
 This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] due to morphophonological processes. Ultimately, this was not an issue because the behaviour of all such clusters was independently determined by {\sc Jussive-R}, but this raises the question of how {\sc Sonority Angle} should be computed if C1 changes. Currently, it is undefined, as it is unclear how to measure the angle between C1-C2=RF and C1-V=NV:
 
-%TODO : draw diagram showing what happens with the different C1's
 \ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
                       \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
                       \node at (-3, 7.0) {Sonority}; % axis label
@@ -1521,31 +1548,6 @@ Plugging this scale into the {\sc Sonority Angle} metric, we obtain %TODO
 Ultimately, the most practical course of action may be to simply attempt to experimentally determine sonority contour distances, and perhaps then fit them to a metric. To date, only a few sonority contour distances have been experimentally determined, for example between rising (TR) and falling (sT) clusters \citep{fleischhacker.2002}, but not finer-grained distances such as between the various falling sonority clusters. I leave this to future work.
 
 \bigskip
-
-\noindent {\bf Why these vectors?} In the sonority contour faithfulness approach, the relevant comparison is between C1-C2 and C1-V. But why these two vectors? In particular, why not C1-C2 versus V-C2?
-
-\ex. Left: {\sc Sonority Angle} as currently defined; right: another possible definition as the angle C1-C2-V.
-
-\begin{center}
-\begin{tikzpicture} [shorten >=1pt,scale=0.33]
-                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
-                      \node at (-3, 7.0) {Sonority}; % axis label
-					 % left diagram
-                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
-                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
-                      \node[left] at  (0,3) {C$_1$}; 
-                      \node[right] at (5,1) {C$_2$};
-                      \node[right] at (5,6) {V};
-					  % right diagram
-                      \draw (15,3) -- (20,1) -- (15,6) ; % falling sonority
-                      \node at (17.5, 2.75) {$\theta$}; % theta label for falling sonority
-                      \node[left] at (15,3) {C$_1$}; 
-                      \node[right] at (20,1) {C$_2$};
-                      \node[right] at (13,6) {V};
-\end{tikzpicture} 
-\end{center}
-
-The answer, currently, is based purely on empirical grounds: if we assume this comparison to be the relevant one, then we expect falling sonority contours to be more susceptible to epenthesis, which contradicts the cross-linguistic evidence. It would seem that there is something quite fundamental about the comparison being centred around the rightward context, or release, of C1, which may perhaps arise out of phonological processing.
 
 \subsection{Extensions of the metric}
 
