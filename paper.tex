@@ -942,14 +942,65 @@ I suggest that there might be an undominated markedness constraint against this 
 Proceeding to idiolect \ref{idiolectb}, we find that [r]-sonorant clusters are allowed word-finally. Because {\sc Sonority Angle} permits a linear separation of the [r]-sonorant clusters from the remainder of the falling sonority clusters, this is straightforward to explain
 by the movement of the cut-off line from 1.5 to 1.9.
 
-%\vspace{-3em}
-%\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityanglehierarchydividingline1.9}}
+\bigskip
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
 
-\ex. {\sc Ident(SonAngle)}$<$1.5 $\gg$ {\sc *ComplexCoda}
+	\node (TR) at (0.124354994547*8, 1) {TR};
+	\node (Tb) at (0.183110817262*8, 0.5) {T\textipa{B}};
+	\node (FR) at (0.218668945874*8, 1) {FR};
+	\node (TN) at (0.266252049151*8, 1.5) {TN};
+	\node (Fb) at (0.343023940421*8, 1) {F\textipa{B}};
+	\node (NR) at (0.463647609001*8, 1) {NR};
+	\node (FN) at (0.540419500271*8, 0.5) {FN};
+	\node (TF) at (0.588002603548*8, 1) {TF};
+	\node (bR) at (0.726642340682*8, 0.5) {\textipa{B}R};
+	\node (Nb) at (0.785398163397*8, 1) {N\textipa{B}};
+	\node (RR) at (1.10714871779*8, 1) {RR};
+	\node (bb) at (1.19028994968*8, 0.5) {\textipa{BB}};
+	\node (NN) at (1.2490457724*8, 1) {NN};
+	\node (FF) at (1.32581766367*8, 1.5) {FF};
+	\node (TT) at (1.37340076695*8, 1) {TT};
+	\node (Rb) at (1.57079632679*8, 1) {R\textipa{B}};
+	\node (bN) at (1.65393755868*8, 0.5) {\textipa{B}N};
+	\node (RN) at (1.84*8, 1) {RN}; %1.89254688119
+	\node (NF) at (2.0344439358*8, 1) {NF};
+%	\node (GF) at (2.0344439358*8, 1.5) {GF};
+	\node (FT) at (2.11121582707*8, 0.5) {FT};
+	\node (bF) at (2.17308367293*8, 1) {bF};
+	\node (RF) at (2.21429743559*8, 1.5) {RF};
+	\node (RT) at (2.35619449019*8, 1) {RT};
+	\node (NT) at (2.35619449019*8, 0.5) {NT};
+	\node (bT) at (2.38057989937*8, 1.5) {\textipa{B}T};
+  \node (rising) at (0.3*8,2.3) {\underline{Rising sonority}};
+  \node (level) at (1.2*8,2.3) {\underline{Level sonority}};
+  \node (falling) at (2.2*8,2.3) {\underline{Falling sonority}};
+  % axis
+  \node (axisstart) at (-0.23,0) {};
+  \node (axisend)   at (2.7*8,0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0.0*8, 0.2) -- (0.0*8, -0.2) -- cycle;
+  \draw (1.0*8, 0.2) -- (1.0*8, -0.2) -- cycle;
+  \draw (2.0*8, 0.2) -- (2.0*8, -0.2) -- cycle;
+  \node (0pointlabel) at (0.0,-0.5) {0};
+  \node (1pointlabel) at (1.0*8,-0.5) {1};
+  \node (2pointlabel) at (2.0*8,-0.5) {2};
+  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  % dividing line
+  \node (dividinglinestart) at (1.9 * 8,2) {};
+  \node (dividinglineend)   at (1.9 * 8,-0.3) {};
+  \path [line,dashed] (dividinglinestart) -- (dividinglineend) -- cycle;
+  \node (dividingpointlabel) at (1.9*8, -0.5) {1.9};
+\end{tikzpicture}
+}
+
+\ex. {\sc Ident(SonAngle)}$<$1.9 $\gg$ {\sc *ComplexCoda}
 
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
-\multicolumn{3}{|c||}{Input:~/\textipa{k1rm}/} & {\sc Ident(SonAngle)}$<$1.5 & {\sc *ComplexCoda} \\[0.5ex]
+\multicolumn{3}{|c||}{Input:~/\textipa{k1rm}/} & {\sc Ident(SonAngle)}$<$1.9 & {\sc *ComplexCoda} \\[0.5ex]
 \hline \hline a. &   & \textipa{k1rm} & & $\ast$! \\
 \hline b. & \ding{43} & \textipa{k1r1m} & 1.89 & \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
@@ -1024,7 +1075,53 @@ The fact that medial clusters are never broken up by epenthesis even when they v
 
 In addition, Sonority Sequencing does not allow a divide of the [r]-sonorant clusters versus the remainder of the clusters, whether in Rose's categorical formulation of Sonority Sequencing or a family of {\sc *Dis} constraints.
 
-% TODO: diagram
+\bigskip
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{vertex}=[circle]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
+  \node (RT) at (3*3,2.0)   {RT};
+  \node (NT) at (2*3,1.5)  {NT};
+  \node (FT) at (1*3,1.0)  {FT};
+  \node (TT) at (0*3,0.5)     {TT};
+  \node (RF) at (2*3,2.0)     {RF};
+  \node (NF) at (1*3,1.5)  {NF};
+  \node (FF) at (0*3,1.0)   {FF};
+  \node (TF) at (-1*3,0.5)   {TF};
+  \node (RN) at (1*3,2.0)   {RN};
+  \node (NN) at (0*3,1.5)   {NN};
+  \node (FN) at (-1*3,1)  {FN};
+  \node (TN) at (-2*3,0.5)   {TN};
+  \node (RR) at (0*3,2.0)  {RR};
+  \node (NR) at (-1*3,1.5)  {NR};
+  \node (FR) at (-2*3,1.0)   {FR};
+  \node (TR) at (-3*3,0.5)   {TR};
+  % headers
+  \node (rising) at (2*3,2.6) {\underline{Falling sonority}};
+  \node (level) at (0*3,2.6) {\underline{Level sonority}};
+  \node (falling) at (-2*3,2.6) {\underline{Rising sonority}};
+  % axis
+  \node (axisstart) at (-3.5*3,-0) {};
+  \node (axisend)   at (3.5*3,-0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0, 0.2) -- (0, -0.2) -- cycle;
+  \draw (1*3, 0.2) -- (1*3, -0.2) -- cycle;
+  \draw (2*3, 0.2) -- (2*3, -0.2) -- cycle;
+  \draw (3*3, 0.2) -- (3*3, -0.2) -- cycle;
+  \draw (-1*3, 0.2) -- (-1*3, -0.2) -- cycle;
+  \draw (-2*3, 0.2) -- (-2*3, -0.2) -- cycle;
+  \draw (-3*3, 0.2) -- (-3*3, -0.2) -- cycle;
+  \node (0pointlabel) at (0.0,-0.5) {0};
+  \node (1pointlabel) at (1.0*3,-0.5) {1};
+  \node (2pointlabel) at (2.0*3,-0.5) {2};
+  \node (3pointlabel) at (3.0*3,-0.5) {3};
+  \node (-1pointlabel) at (-1.0*3,-0.5) {-1};
+  \node (-2pointlabel) at (-2.0*3,-0.5) {-2};
+  \node (-3pointlabel) at (-3.0*3,-0.5) {-3};
+  \node (xaxislabel) at (3.5*3,-0.5) {\textsc{Dis}};
+\end{tikzpicture}
+}
 
 Therefore, Rose needs to invoke the following constraint to cause epenthesis in these clusters:
 
