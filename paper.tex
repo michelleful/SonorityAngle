@@ -367,6 +367,7 @@ Contrast this with the universal ranking, under which this distinction would be 
 
 \ex. Scenario: {\sc SonAngle}(C2-C3) $>$ {\sc SonAngle}(C1-C2) $>$ n \\
 
+\vspace{-3em}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
 \multicolumn{3}{|c||}{Input:~/C1C2C3/} & {\sc Ident(SonAngle)}$<$1.9 & {\sc Ident(SonAngle)}$<$1.5 &$ \mathcal{M}$  \\[0.5ex]
@@ -799,7 +800,7 @@ We will use the existing sonority scale given in \ref{standardsonorityscale}, wi
 Underlying two-consonant clusters in Chaha are obligatorily epenthesised into if initial, never broken up by epenthesis in medial position, while final clusters are epenthesised into if they are of rising or level sonority, or the cluster consists of [r] followed by a nasal.
 
 \ex. No onset clusters in Chaha
-     \a. \textipa{k1r@tam} `he lifted up'
+     \a. \textipa{k1r@tam} `he lifted up' \citep[398]{rose.2000}
      
 \ex. Tautomorphemic medial two-consonant clusters are tolerated no matter what their sonority profile
      \a. \textipa{s1rto} `cauterise ({\sc masc pl})!'
@@ -850,11 +851,66 @@ The variable setting of these two options corresponds to four attested idiolects
            [\textipa{k1r1m}], [\textipa{s1B1r}], [\textipa{k1ft}], [\textipa{k1tf}], [\textipa{s1gd}]
 
 
-\subsubsection{Sonority Angle Analysis}
+\subsubsection{Analysis}
 
 Under a sonority contour faithfulness analysis, epenthesis is triggered by a markedness constraint on the structural conditions of the cluster, not by the markedness of the underlying sonority contour profile itself. Undominated {\sc *ComplexOnset} accounts for the non-existence of initial clusters. {\sc *Coda} is ranked low, and therefore medial clusters are left intact.{\sc *ComplexCoda}, dominated by an {\sc Ident(SonAngle)} constraint, explains why some coda clusters are broken up by epenthesis while others are not.
 
 In idiolect \ref{idiolecta}, all coda clusters of rising and level sonority -- that is, those with a {\sc Sonority Angle} smaller than 1.5 -- are broken up by epenthesis, while falling sonority clusters -- those with a {\sc Sonority Angle} greater than 1.5 -- are left intact. 
+
+\ex. All clusters with a {\sc Sonority Angle} to the left of the dividing line undergo epenthesis while those to the right resist it, with one exception.
+
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{point}=[circle,fill=black!25,minimum size=12pt,inner sep=2pt]
+  \tikzstyle{line} = [draw, -latex']
+
+	\node (TR) at (0.124354994547*8, 1) {TR};
+	\node (Tb) at (0.183110817262*8, 0.5) {T\textipa{B}};
+	\node (FR) at (0.218668945874*8, 1) {FR};
+	\node (TN) at (0.266252049151*8, 1.5) {TN};
+	\node (Fb) at (0.343023940421*8, 1) {F\textipa{B}};
+	\node (NR) at (0.463647609001*8, 1) {NR};
+	\node (FN) at (0.540419500271*8, 0.5) {FN};
+	\node (TF) at (0.588002603548*8, 1) {TF};
+	\node (bR) at (0.726642340682*8, 0.5) {\textipa{B}R};
+	\node (Nb) at (0.785398163397*8, 1) {N\textipa{B}};
+	\node (RR) at (1.10714871779*8, 1) {RR};
+	\node (bb) at (1.19028994968*8, 0.5) {\textipa{BB}};
+	\node (NN) at (1.2490457724*8, 1) {NN};
+	\node (FF) at (1.32581766367*8, 1.5) {FF};
+	\node (TT) at (1.37340076695*8, 1) {TT};
+	\node (Rb) at (1.57079632679*8, 1) {R\textipa{B}};
+	\node (bN) at (1.65393755868*8, 0.5) {\textipa{B}N};
+	\node (RN) at (1.89254688119*8, 1) {RN};
+	\node (NF) at (2.0344439358*8, 1) {NF};
+%	\node (GF) at (2.0344439358*8, 1.5) {GF};
+	\node (FT) at (2.11121582707*8, 0.5) {FT};
+	\node (bF) at (2.17308367293*8, 1) {bF};
+	\node (RF) at (2.21429743559*8, 1.5) {RF};
+	\node (RT) at (2.35619449019*8, 1) {RT};
+	\node (NT) at (2.35619449019*8, 0.5) {NT};
+	\node (bT) at (2.38057989937*8, 1.5) {\textipa{B}T};
+  \node (rising) at (0.3*8,2.3) {\underline{Rising sonority}};
+  \node (level) at (1.2*8,2.3) {\underline{Level sonority}};
+  \node (falling) at (2.2*8,2.3) {\underline{Falling sonority}};
+  % axis
+  \node (axisstart) at (-0.23,0) {};
+  \node (axisend)   at (2.7*8,0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0.0*8, 0.2) -- (0.0*8, -0.2) -- cycle;
+  \draw (1.0*8, 0.2) -- (1.0*8, -0.2) -- cycle;
+  \draw (2.0*8, 0.2) -- (2.0*8, -0.2) -- cycle;
+  \node (0pointlabel) at (0.0,-0.5) {0};
+  \node (1pointlabel) at (1.0*8,-0.5) {1};
+  \node (2pointlabel) at (2.0*8,-0.5) {2};
+  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  % dividing line
+  \node (dividinglinestart) at (1.5 * 8,2) {};
+  \node (dividinglineend)   at (1.5 * 8,-0.3) {};
+  \path [line,dashed] (dividinglinestart) -- (dividinglineend) -- cycle;
+  \node (dividingpointlabel) at (1.5*8, -0.5) {1.5};
+\end{tikzpicture}
+}
 
 The constraint ranking for this idiolect is thus:
 
@@ -920,9 +976,45 @@ To summarise, coda epenthesis behaviour in Chaha can be explained by the ranking
 
 \subsubsection{Comparison to other approaches}
 
-{\sc Sonority Rise} can explain idiolects \ref{idiolecta} and \ref{idiolectc}, where the cut-off is drawn between rising and level sonority clusters on the one hand and falling sonority clusters on the other, it is less straightforward to explain the behaviour of idiolects \ref{idiolectb} and \ref{idiolectd}. This is because the cluster hierarchy predicted by {\sc Sonority Rise} does not permit a linear separation of [r]-sonorant clusters from the other falling sonority clusters.
+{\sc Sonority Rise} can explain idiolects \ref{idiolecta} and \ref{idiolectc}, where the cut-off is drawn between rising and level sonority clusters on the one hand and falling sonority clusters on the other, it is less straightforward to explain the behaviour of idiolects \ref{idiolectb} and \ref{idiolectd}. This is because the cluster hierarchy predicted by {\sc Sonority Rise} does not permit a linear separation of [r]-sonorant clusters from the other falling sonority clusters: if RN undergoes epenthesis, we expect that FT and NF should also, but FT never does.
 
-% TODO: diagram
+\bigskip
+
+\resizebox{\linewidth}{!}{
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \tikzstyle{line} = [draw, -latex']
+  \node (RT) at (2.5*8, 0)  {RT};
+  \node (NT) at (1.67*8,0)  {NT};
+  \node (FT) at (1.25*8,0)  {FT};
+  \node (TT) at (1*8,-0.5)     {TT};
+  \node (RF) at (2*8,0)     {RF};
+  \node (NF) at (1.33*8,-0.5)  {NF};
+  \node (FF) at (1*8,0)   {FF};
+  \node (TF) at (0.8*8,-0.5)   {TF};
+  \node (RN) at (1.5*8,0)   {RN};
+  \node (NN) at (1*8,0.5)     {NN};
+  \node (FN) at (0.75*8,0)  {FN};
+  \node (TN) at (0.6*8,0)   {TN};
+  \node (RR) at (1*8,1.0)  {RR};
+  \node (NR) at (0.67*8,-0.5)  {NR};
+  \node (FR) at (0.5*8,0)   {FR};
+  \node (TR) at (0.4*8,0)   {TR};
+  \node (rising) at (0.5*8,2) {\underline{Rising sonority}};
+  \node (level) at (1*8,2) {\underline{Level sonority}};
+  \node (falling) at (1.67*8,2) {\underline{Falling sonority}};
+  % axis
+  \node (axisstart) at (-0.23,-1.0) {};
+  \node (axisend)   at (2.7*8,-1.0) {};
+  \draw (axisstart) -- (axisend);
+  \draw (0.0*8, -1.2) -- (0.0*8, -0.8) -- cycle;
+  \draw (1.0*8, -1.2) -- (1.0*8, -0.8) -- cycle;
+  \draw (2.0*8, -1.2) -- (2.0*8, -0.8) -- cycle;
+  \node (0pointlabel) at (0.0,-1.5) {0};
+  \node (1pointlabel) at (1.0*8,-1.5) {1};
+  \node (2pointlabel) at (2.0*8,-1.5) {2};
+  \node (xaxislabel) at (2.7*8,-1.5) {\textsc{SonRise}};
+\end{tikzpicture}
+}
 
 \bigskip
 
