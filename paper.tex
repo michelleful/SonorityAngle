@@ -1475,11 +1475,38 @@ It is of course possible to define the angle as whatever is made by the intersec
 
 \bigskip
 
-\noindent {\bf Horizontal distance.} In this paper, I assumed that the horizontal distance between C1 and C2, and C1 and V, is the same, and arbitrarily fixed at 1, in calculating {\sc Sonority Angle}. This is an arbitrary choice, and potentially an important one, as when the horizontal distance gets large, changes occur in the cluster hierarchy:
+\noindent {\bf Horizontal distance.} In this paper, I assumed that the horizontal distance between C1 and C2, and C1 and V, is the same, and arbitrarily fixed at 1 unit, in calculating {\sc Sonority Angle}. This is an arbitrary choice, and potentially an important one, as when the horizontal distance gets large, changes occur in the cluster hierarchy, some of which violate the first desideratum for a sonority angle metric:
 
-\ex. TODO: stick in what happens if horizontal distance is 100 and the sonority scale remains the same
+\ex. {\sc Sonority Angle} hierarchy for a horizontal distance of 100 units.
 
-Since this horizontal distance is along the dimension of time, the assumption that the two distances is the same is also likely incorrect. If we choose a different horizontal distance for C1-C2 versus C1-V, the cluster hierarchy would also be likely to change.
+\begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
+  \node (RT) at (0.04998833883*300,1.5)   {RT};
+  \node (NT) at (0.04998833883*300,1.0)  {NT};
+  \node (FT) at (0.04897835381*300,0.5)  {FT}; %0.04997835381
+  \node (TT) at (0.0479583957219*300,0)     {TT}; %0.0499583957219
+  \node (RF) at (0.0399946679463*300,1.5)     {RF};
+  \node (NF) at (0.038906715435*300,1.0)  {NF}; %0.0399906715435
+  \node (TF) at (0.0379587290353*300,0.5)   {TF}; %0.0399587290353
+  \node (FF) at (0.0379587290353*300,0)   {FF};%0.0399587290353
+  \node (RN) at (0.0299970006598*300,1.5)   {RN};
+  \node (NN) at (0.0289910048569*300,1.0)   {NN}; %0.0299910048569
+  \node (FN) at (0.0279790204366*300,0.5)  {FN}; %0.0299790204366
+  \node (TN) at (0.0269610617488*300,0)   {TN}; %0.0299610617488
+  \node (RR) at (0.0199973339732*300,1.5)  {RR}; %
+  \node (NR) at (0.0189913381702*300,1.0)  {NR}; %0.0199913381702
+  \node (FR) at (0.0179813531501*300,0.5)   {FR};%0.0199813531501
+  \node (TR) at (0.0169673908651*300,0)   {TR}; %0.0199673908651
+  % axis
+  \node (axisstart) at (0.0,-0.5) {};
+  \node (axisend)   at (0.06*300,-0.5) {};
+  \draw (axisstart) -- (axisend);
+  \node  (0point) at (0.0,0) {};
+  \node (xaxislabel) at (0.06*300,-0.8) {\textsc{SonAngle}};
+\end{tikzpicture}
+
+Notice that we cannot achieve a clean separation of the rising versus level versus falling sonority clusters, as before. Compare this with {\sc Sonority Rise} which, being dimensionless (since it is the ratio of two vectors in the same plane), does not have to take into account such units.
+
+Additionally, since this horizontal distance is along the dimension of time, the assumption that the two horizontal distance for C1-C2 is the same as that for C1-V is likely incorrect. If we choose different values for these two horizontal distances, the cluster hierarchy would also be likely to change. This would also be a consideration to take into account when computing {\sc Sonority Rise}.
 
 \bigskip
 
