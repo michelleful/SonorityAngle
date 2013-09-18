@@ -195,7 +195,7 @@ The larger the {\sc Sonority Angle}, the larger the faithfulness cost. We theref
 We formalise the idea of the faithfulness cost by defining a family of \textsc{Ident} constraints that penalise outputs that incur faithfulness costs of greater than a certain $n$.
 
 \ex. \textsc{Ident(SonAngle)}$<n$: Assign a violation mark if the consonants in two strings C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}VC\textsubscript{2} 
-stand in correspondence, and the sonority angle between C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V is greater than $n$. % TODO: change to it being a property of C1?
+stand in correspondence, and the sonority angle between C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V is greater than $n$.
 
 This family of faithfulness constraints forms a stringency hierarchy. Any cluster that would, upon epenthesis, violate \textsc{Ident(SonAngle)}$<$n would also violate {\sc Ident(SonAngle)}$<$m where m$>$n.
 The resulting hierarchy of clusters, ranked according to their resistance to epenthesis as defined
@@ -404,7 +404,7 @@ As with {\sc Sonority Angle}, this gives rise to a family of constraints {\sc Id
 \vspace{-3em}
 \noindent \resizebox{\linewidth}{!}{\usebox{\sonorityrisehierarchycompressed}}
 
-Observe that of the two desiderata for such a metric, {\sc Sonority Rise} fulfills the first but not the second. Consider the falling sonority clusters. RN, NF and FT, which all have a sonority distance of -1, have a smaller {\sc Sonority Rise} than NT and RF, with a sonority distance of -2, followed by RT with a sonority distance of -3. %TODO: check if these should be + or -
+Observe that of the two desiderata for such a metric, {\sc Sonority Rise} fulfills the first but not the second. Consider the falling sonority clusters. RN, NF and FT, which all have a sonority distance of -1, have a smaller {\sc Sonority Rise} than NT and RF, with a sonority distance of 2, followed by RT with a sonority distance of 3.
 
 However, of the three, RN has the largest {\sc Sonority Rise}, and therefore is expected to be more resistant to epenthesis than NF and FT. If RN undergoes epenthesis, therefore, we predict FT and NF to do the same.
 
@@ -611,16 +611,21 @@ Now let us calculate the sonority angles for the relevant set of sonorant-initia
     \node (axisstart) at (0.5 * 15,-1) {};
     \node (axisend)   at (2.6 * 15,-1) {};
     \draw (axisstart) -- (axisend);
-   \node (xaxislabel) at (2.6 * 15,-2.5) {\textsc{Sonority Angle}};
+   \node (xaxislabel) at (2.4 * 15,-2.4) {\textsc{Sonority Angle}};
 
   \node (dividinglinestart) at (2.43 * 15,2) {};
   \node (dividinglineend)   at (2.43 * 15,-2) {};
   \path [line,dashed] (dividinglinestart) -- (dividinglineend) -- cycle;
 
-  \node (2pointlabel) at (2.43 * 15,-1.5) {2.3};
+  \path [line] (2 * 15, -1.3) -- (2 * 15, -0.7) -- cycle;
+  \path [line] (1 * 15, -1.3) -- (1 * 15, -0.7) -- cycle;
+  \node (1mark) at (1 * 15, -1.7) {1};
+  \node (2mark) at (2 * 15, -1.7) {2};
+
+  \node (2pointlabel) at (2.43 * 15,-1.7) {2.3};
         
 
-    \end{tikzpicture} %TODO : draw arrow and mark 1.0, 1.5, 2.0, 2.5
+    \end{tikzpicture}
 
 \bigskip
 
@@ -700,7 +705,7 @@ Using the same revised sonority scale, the {\sc Sonority Rise} calculations are 
     \draw (axisstart) -- (axisend);
    \node (xaxislabel) at (2.6 * 15,-1.5) {\textsc{Sonority Rise}};
 
-    \end{tikzpicture} % TODO: draw arrow and mark 1.0, 1.5, 2.0, 2.5
+    \end{tikzpicture} 
  \end{center}
 
 Note that the clusters RF and RD fall between RT and NT on this scale.  Therefore, we cannot clearly separate the clusters that undergo epenthesis
@@ -724,8 +729,6 @@ I will therefore explore instead an alternative sonority distance-based analysis
 \bigskip
 
 We quickly see that Syllable Contact on its own is insufficient as epenthesis in Irish also affects coda clusters. We will need to invoke Sonority Sequencing. 
-
-%TODO : Syllable Contact and Sonority Sequencing should not be in smallcaps unless referred to as SyllCon and SonSeq.
 
 Attempting to apply Syllable Contact to the Irish case, we immediately encounter problems. Firstly, it is difficult to see why markedness triggers epenthesis only in sonorant-initial clusters, as Syllable Contact predicts that obstruent-initial clusters should be even more marked.
 
@@ -834,7 +837,7 @@ The variability therefore lies in (1) whether epenthesis between obstruents is p
 
 The variable setting of these two options corresponds to four attested idiolects:
 
-  \ex. \label{idiolects} The four idiolects: % TODO: ref
+  \ex. \label{idiolects} The four idiolects: \citep[(43)]{rose.2000}
        \a. \label{idiolecta} \tickYes OVO, \tickNo rVN \newline % \textsc{SonSeq} $\gg$ \textsc{SyllCon} $\gg$ \textsc{Dep-IO} $\gg$ \textsc{*R-Son} \newline
            [\textipa{k1rm}], [\textipa{s1B1r}], [\textipa{k1ft}], [\textipa{k1t1f}], [\textipa{s1g1d}]
        \b. \label{idiolectb} \tickYes OVO, \tickYes rVN \newline %\label{idiolectc} \textsc{SonSeq, *R-Son} $\gg$ \textsc{SyllCon} $\gg$ \textsc{Dep-IO} \newline
@@ -871,9 +874,9 @@ The constraint ranking for this idiolect is thus:
 
 This approach does make one incorrect prediction: it predicts that /\textipa{Bm}/ should not undergo epenthesis under this ranking, since /\textipa{B}N/ has a {\sc Sonority Angle} of 1.65. But it always does:
 
-\ex. /\textipa{s@B-m}/ $\rightarrow$ \textipa{s@B1m} `people-{\sc emph}'  % TODO: ref
+\ex. /\textipa{s@B-m}/ $\rightarrow$ \textipa{s@B1m} `people-{\sc emph}'  \citep[fn. 16]{rose.2000}
 
-The only clusters that give us evidence of this are /\textipa{Bm}/ clusters. These are not seen root-internally due to a high-ranking OCP effect. % TODO: ref: Greenberg cited in Rose
+The only clusters that give us evidence of this are /\textipa{Bm}/ clusters. These are not seen root-internally due to a high-ranking OCP effect \citep[cited in \citep{rose.2000}]{greenberg.1950}.
 I suggest that there might be an undominated markedness constraint against this cluster -- either OCP(labial) or another constraint based on articulatory or perceptual difficulty -- that outranks all relevant faithfulness constraints.
 
 \bigskip
@@ -1027,7 +1030,7 @@ Only when C1-C2 constitutes a sonority rise or plateau, and C2-C3 constitutes a 
 The default preference in this idiolect is to epenthesise on the right, between C2 and C3.
 I encode this preference with a markedness constraint borrowed from \citep{rose.2000}'s analysis:
 
-\ex. Align-Left: every consonant must be aligned with the left edge of some prosodic word. % TODO: cite
+\ex. Align-Left: every consonant must be aligned with the left edge of some prosodic word. \citep[(21)]{rose.2000}
 
 \vspace{-1cm}
 \begin{center} \renewcommand*\arraystretch{1.2}
