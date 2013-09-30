@@ -170,24 +170,39 @@ The dependence of {\sc Sonority Angle} on this distance can also be seen in the 
 The second generalisation is that the more sonorous the C\textsubscript{1}, the more likely
 epenthesis is to occur. Let us fix the sonority distance between the two consonants of the cluster at 2, but vary their distance from V: 
 
-\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
-                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
-                      \node at (-3, 7.0) {Sonority}; % axis label
-					  % left diagram
-                      \draw (5,1) -- (0,3) -- (5,6) ; % 
-                      \node at (1.8, 3.2) {$\theta$}; % 
-                      \node[left] at  (0,3) {C$_1$}; 
-                      \node[right] at (5,1) {C$_2$};
-                      \node[right] at (5,6) {V};
-					  % right diagram
-                      \draw (20,3) -- (15,5) -- (20,6) ; % rising sonority
-                      \node at (18, 4.8) {$\theta$}; % theta label for falling sonority
-                      \node[left] at (15,5) {C$_1$}; 
-                      \node[right] at (20,3) {C$_2$};
-                      \node[right] at (20,6) {V};
-\end{tikzpicture} 
+\newpage
 
-When C\textsubscript{1} (and, by extension, C\textsubscript{2}) is of higher sonority, as on the right, the VC\textsubscript{1}C\textsubscript{2} angle is clearlysmaller. The first term in the formula confirms the relation between the sonority of C\textsubscript{1} in terms of its closeness to V, and {\sc Sonority Angle} as a whole.
+\ex. Illustration: keeping C\textsubscript{1} -- C\textsubscript{2} fixed at 1, raising the sonority in cluster decreases the {\sc Sonority Angle}.
+
+\vspace{-5em}
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,12) -- (-3, 0.5) ; % axis
+                      \node at (-3, 13.0) {Sonority}; % axis label
+					 % left diagram
+    \coordinate (A) at (0,4); % pivot - C1 - F * 3
+    \coordinate (B) at (15,2); % C2 - T * 3
+    \coordinate (C) at (15,12); % V
+    \draw (B) -- (A) -- (C);
+	\tkzMarkAngle[size=2.5cm](B,A,C);
+	\tkzLabelAngle[pos=4](B,A,C){$\theta_1$};
+    \coordinate (D) at (15,6); % another C2 - N * 3
+    \coordinate (E) at (0,8); % another C1 - R * 3
+    \draw (D) -- (E) -- (C);
+	\tkzMarkAngle[size=2.5cm](D,E,C);
+	\tkzLabelAngle[pos=4](D,E,C){$\theta_2$};
+    
+    \node[left] at  (A) {F}; 
+    \node[right] at (B) {T};
+    \node[right] at (C) {V};
+    \node[right] at (D) {N};
+    \node[left] at (E) {R};   
+    \draw [->,dotted] (B) -- (D);
+    \draw [->,dotted] (A) -- (E);
+\end{tikzpicture} 
+\end{center}
+
+The first term in formula \ref{sonangle_formula} confirms the relation between the sonority of C\textsubscript{1} in terms of its closeness to V, and {\sc Sonority Angle} as a whole.
 
 Given a sonority scale where classes of consonants are mapped to a numerical sonority, we can now calculate the {\sc Sonority Angle} for any cluster, which can be thought of as the faithfulness cost of epenthesising between the two consonants.  Examples of the calculation are given below.
 
