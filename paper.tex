@@ -276,7 +276,7 @@ In this paper, for ease of analysis, I will assume that all {\sc Ident(Son$\meas
 
 An example of {\sc Ident(Son$\measuredangle$)}$<$n blocking epenthesis is given in the sample tableaux below.
 
-\ex. Ident(SonAngle)$<$1.5 $\gg$ {\sc *ComplexCoda} $\gg$ {\sc Dep}
+\ex. Ident(Son$\measuredangle$)$<$1.5 $\gg$ {\sc *ComplexCoda} $\gg$ {\sc Dep}
      \a. Allows epenthesis in rising and level clusters such as stop-fricative TF:
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
@@ -600,6 +600,8 @@ defined below, we can have epenthesis act only on sonorant-initial clusters.
 
 \ex. {\sc *Son-C}: Assign a violation mark for every sonorant consonant preceding another consonant.
 
+This constraint does not duplicate the work of the {\sc Ident(Son$\measuredangle$)}$<$n constraints, but eliminates the obstruent-initial clusters from consideration, as these are not targeted for epenthesis by any high-ranking constraints.
+
 \ex. {\sc *Son-C} $\gg$ {\sc Dep}
 
 \vspace{-2em}
@@ -672,22 +674,30 @@ This requires a revision to the standard sonority scale, splitting up voiceless 
 
 Now let us calculate the sonority angles for the relevant set of sonorant-initial clusters in Irish.
 
-\ex. {\sc Sonority Angles} of sonorant-initial clusters using revised sonority scale
+\ex. {\sc Sonority Angles} of sonorant-initial clusters using revised sonority scale \label{sonorantinitial_sonangle}
 
   \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
      \tikzstyle{line} = [draw]%, -latex']
 
-        \node (NT) at (2.48619449019234 * 15, 0) {NT}; % 2.35619449019234 - repositioning for visual clarity
-        \node (ND) at (2.28183949564558 * 15, 0) {ND}; % 2.23183949564558 
-        \node (NF) at (2.03444393579570 * 15, 0) {NF};
-        \node (NN) at (1.24904577239825 * 15, 0) {NN};
-        \node (NR) at (0.60 * 15, 0) {NR}; % 0.4636476090008
-
         \node (RT) at (2.48619449019234 * 15, 0.7) {RT};% 2.35619449019234 - repositioning for visual clarity
+        \node (NT) at (2.48619449019234 * 15, 0) {NT}; % 2.35619449019234 - repositioning for visual clarity
+        \node[font=\footnotesize,opacity=0.7] (NTno) at (2.48619449019234 * 15, 1.5) {2.36};
         \node (RD) at (2.37743866747662 * 15, 0) {RD}; % 2.29743866747662 
+        \node[font=\footnotesize,opacity=0.7] (RDno) at (2.37743866747662 * 15, 1.5) {2.30};
+        \node (ND) at (2.28183949564558 * 15, 0) {ND}; % 2.23183949564558 
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (2.28183949564558 * 15, 1.5) {2.23};
         \node (RF) at (2.19429743558818 * 15, 0) {RF}; % 2.21429743558818 
+        \node[font=\footnotesize,opacity=0.7] (RFno) at (2.19429743558818 * 15, 1.5) {2.21};
+        \node (NF) at (2.03444393579570 * 15, 0) {NF};
+        \node[font=\footnotesize,opacity=0.7] (NFno) at (2.03444393579570 * 15, 1.5) {2.03};
         \node (RN) at (1.89254688119154 * 15, 0) {RN};
+        \node[font=\footnotesize,opacity=0.7] (RNno) at (1.89254688119154 * 15, 1.5) {1.89};
+        \node (NN) at (1.24904577239825 * 15, 0) {NN};
+        \node[font=\footnotesize,opacity=0.7] (NNno) at (1.24904577239825 * 15, 1.5) {1.25};
         \node (RR) at (1.10714871779409 * 15, 0) {RR};
+        \node[font=\footnotesize,opacity=0.7] (RRno) at (1.10714871779409 * 15, 1.5) {1.11};
+        \node (NR) at (0.60 * 15, 0) {NR}; % 0.4636476090008
+        \node[font=\footnotesize,opacity=0.7] (NRno) at (0.60 * 15, 1.5) {0.46};
 
     \node (axisstart) at (0.5 * 15,-1) {};
     \node (axisend)   at (2.6 * 15,-1) {};
@@ -703,7 +713,7 @@ Now let us calculate the sonority angles for the relevant set of sonorant-initia
   \node (1mark) at (1 * 15, -1.7) {1};
   \node (2mark) at (2 * 15, -1.7) {2};
 
-  \node (2pointlabel) at (2.43 * 15,-1.7) {2.3};
+  \node (2pointlabel) at (2.43 * 15,-1.7) {2.33};
         
 
     \end{tikzpicture}
@@ -713,18 +723,18 @@ Now let us calculate the sonority angles for the relevant set of sonorant-initia
 The sonorant-voiceless stop clusters can be neatly separated from the rest of the clusters in terms of {\sc Sonority Angle}.
 The correct constraint ranking is therefore the following:
 
-\ex. {\sc Ident(SonAngle)$<$2.3} $\gg$ {\sc *Son-C} $\gg$ {\sc Ident(SonAngle)$<$2.4}
+\ex. {\sc Ident(Son$\measuredangle$)$<$2.33} $\gg$ {\sc *Son-C} $\gg$ {\sc Ident(Son$\measuredangle$)$<$2.4}
 
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
-\multicolumn{3}{|c||}{Input:~/\textipa{kork}/} & {\sc Ident(SonAngle)$<$2.3} & {\sc *Son-C} & {\sc Ident(SonAngle)$<$2.4} \\[0.5ex]
+\multicolumn{3}{|c||}{Input:~/\textipa{kork}/} & {\sc Ident(Son$\measuredangle$)$<$2.33} & {\sc *Son-C} & {\sc Ident(Son$\measuredangle$)$<$2.4} \\[0.5ex]
 \hline \hline a. & \ding{43} & \textipa{kork} & & \cellcolor{lightgray}$\ast$ & \cellcolor{lightgray} \\
-\hline b. & & \textipa{kor@k} & 2.35 $\ast$! & \cellcolor{lightgray} & \cellcolor{lightgray}2.35 $\ast$ \\
+\hline b. & & \textipa{kor@k} & 2.36 $\ast$! & \cellcolor{lightgray} & \cellcolor{lightgray}2.36 $\ast$ \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|} \hline 
-\multicolumn{3}{|c||}{Input:~/\textipa{alb@}/} & {\sc Ident(SonAngle)$<$2.3} & {\sc *Son-C} & {\sc Ident(SonAngle)$<$2.4} \\[0.5ex]
+\multicolumn{3}{|c||}{Input:~/\textipa{alb@}/} & {\sc Ident(Son$\measuredangle$)$<$2.33} & {\sc *Son-C} & {\sc Ident(Son$\measuredangle$)$<$2.4} \\[0.5ex]
 \hline \hline c. & \ding{43} & \textipa{al@b@} & 2.29 & & \cellcolor{lightgray} 2.29 \\
 \hline d. & & \textipa{alb@} & & $\ast$! & \cellcolor{lightgray} \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
@@ -761,77 +771,93 @@ I conclude that in general, epenthesis does not occur in /NT/ sequences due to t
 
 \subsection{Comparison to other approaches}
 
-Using the same revised sonority scale, the {\sc Sonority Rise} calculations are as follows for the relevant clusters:
+An analysis based on {\sc Sonority Rise} \citep{flemming.2008} would be largely identical, but the cluster hierarchy would differ:
 
-\ex. {\sc Sonority Rises} of sonorant-initial clusters using revised sonority scale
+\ex. {\sc Sonority Rises}  of sonorant-initial clusters using revised sonority scale
 
  \begin{center}
   \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
      \tikzstyle{line} = [draw]%, -latex']
 
-        \node (NT) at (1.66666666666667 * 15, 0) {NT}; 
+        \node[draw,circle,dashed] (NT) at (1.66666666666667 * 15, 0) {NT}; 
+        \node[font=\footnotesize,opacity=0.7] (NTno) at (1.66666666666667  * 15, 1.5) {1.67};
         \node (ND) at (1.5 * 15, 0) {ND}; 
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (1.5 * 15, 1.5) {1.5};
         \node (NF) at (1.33333333333333 * 15, 0) {NF};
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (1.33 * 15, 1.5) {1.33};
         \node (NN) at (1 * 15, 0) {NN};
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (1 * 15, 1.5) {1.0};
         \node (NR) at (0.666666666666667 * 15, 0) {NR}; 
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (0.666666666666667* 15, 1.5) {0.67};
 
-        \node (RT) at (2.5 * 15, 0) {RT};
+        \node[draw,circle,dashed] (RT) at (2.5 * 15, 0) {RT};
+        \node[font=\footnotesize,opacity=0.7] (RTno) at (2.5 * 15, 1.5) {2.5};
         \node (RD) at (2.25 * 15, 0) {RD}; 
+        \node[font=\footnotesize,opacity=0.7] (RDno) at (2.25 * 15, 1.5) {2.25};
         \node (RF) at (2 * 15, 0) {RF}; 
+        \node[font=\footnotesize,opacity=0.7] (RFno) at (2 * 15, 1.5) {2.0};
         \node (RN) at (1.5 * 15, 0.7) {RN};
         \node (RR) at (1 * 15, 0.7) {RR};
 
-    \node (axisstart) at (0.5 * 15,-1) {};
-    \node (axisend)   at (2.6 * 15,-1) {};
+
+    \node (axisstart) at (0.5 * 15,-1.5) {};
+    \node (axisend)   at (2.6 * 15,-1.5) {};
     \draw (axisstart) -- (axisend);
-   \node (xaxislabel) at (2.6 * 15,-1.5) {\textsc{Sonority Rise}};
+   \node (xaxislabel) at (2.6 * 15,-2.0) {\textsc{Sonority Rise}};
 
     \end{tikzpicture} 
  \end{center}
 
-Note that the clusters RF and RD fall between RT and NT on this scale.  Therefore, we cannot clearly separate the clusters that undergo epenthesis
-from the ones that do not if we adopt {\sc Sonority Rise} as the relevant metric.
-        
-\bigskip
-
-Carnie's (1994) analysis of these facts is in terms of a Minimal Distancing Constraint with various parameter settings, such as for which direction away from the nucleus it applies (to the right in the Irish case, to account for epenthesis applying to both codas and heterosyllabic clusters). His preliminary analysis has distance computed according to the following sonority scale:
-
-\ex. \label{carniesonorityscale} \a. 1 - Voiceless stops
-     \b. 2 - Voiced stops
-     \b. 3 - Voiceless fricatives
-     \b. 4 - Voiced fricatives
-     \b. 5 - Sonorants
-
-with a subsequent revision where sonority is computed in terms of the number of nodes that have to be specified to obtain the appropriate manner specification. This computation is somewhat complicated, so I will not reproduce it here. The result is that sonorant-fricative and sonorant-voiced stop clusters have a sonority distance of 0, since they are each specified for a single node in the feature geometry. Voiceless stops have no specified nodes, so sonorant-voiceless stop clusters have a sonority distance of 1, which is the minimal distance tolerated. 
-
-A sonority scale that gives nasals and liquids identical sonority values seems unlikely given measurable differences in the phonetic correlates of sonority such as intensity between liquids and nasals \citep{parker.2002}. This is especially so when the obstruents are spread so widely on the sonority scale. 
-I will therefore explore instead an alternative sonority distance-based analysis using Syllable Contact.
+Note that the clusters RF and RD fall between RT and NT on this scale.  Therefore, we cannot separate the clusters that undergo epenthesis from the ones that do not if we adopt {\sc Sonority Rise} as the relevant metric, as we can when we adopt {\sc Sonority Angle} (c.f. \ref{sonorantinitial_sonangle}).
 
 \bigskip
 
-We quickly see that Syllable Contact on its own is insufficient as epenthesis in Irish also affects coda clusters. We will need to invoke Sonority Sequencing. 
+%Carnie's (1994) analysis of these facts is in terms of a Minimal Distancing Constraint with various parameter settings, such as for which direction away from the nucleus it applies (to the right in the Irish case, to account for epenthesis applying to both codas and heterosyllabic clusters). His preliminary analysis has distance computed according to the following sonority scale:
+%
+%\ex. \label{carniesonorityscale} \a. 1 - Voiceless stops
+%     \b. 2 - Voiced stops
+%     \b. 3 - Voiceless fricatives
+%     \b. 4 - Voiced fricatives
+%     \b. 5 - Sonorants
+%
+%with a subsequent revision where sonority is computed in terms of the number of nodes that have to be specified to obtain the appropriate manner specification. This computation is somewhat complicated, so I will not reproduce it here. The result is that sonorant-fricative and sonorant-voiced stop clusters have a sonority distance of 0, since they are each specified for a single node in the feature geometry. Voiceless stops have no specified nodes, so sonorant-voiceless stop clusters have a sonority distance of 1, which is the minimal distance tolerated. 
+%
+%A sonority scale that gives nasals and liquids identical sonority values seems unlikely given measurable differences in the phonetic correlates of sonority such as intensity between liquids and nasals \citep{parker.2002}. This is especially so when the obstruents are spread so widely on the sonority scale. 
+%I will therefore explore instead an alternative sonority distance-based analysis using Syllable Contact.
+
+
+Now let us construct a markedness-based analysis for the Irish data.\footnote{\cite{carnie.1994} analyses these facts with a Minimal Distancing Constraint, based on a feature-geometric notion of sonority distance. The analysis presented here adheres more closely to the phonetic interpretation of sonority (see, for example, \cite{parker.2002}.}
 
 Attempting to apply Syllable Contact to the Irish case, we immediately encounter problems. Firstly, it is difficult to see why markedness triggers epenthesis only in sonorant-initial clusters, as Syllable Contact predicts that obstruent-initial clusters should be even more marked.
 
 Secondly, we would need to invoke a separate set of constraints on sonority sequencing in coda clusters, and assume that the ranking of the faithfulness constraint {\sc Dep} with respect to both sets of constraints is coincidentally identical.
 
-Suppose we define a single markedness constraint that favours all falling sonority clusters regardless of their position in the syllable, i.e. combining Syllable Contact and Sonority Sequencing. We require a finer-grained metric to measure how marked a particular cluster is. An obvious course of action is to use \citet{gouskova.2002}'s {\sc *Dis} metric, extending its use from the heterosyllabic environment alone to all positions. 
+Suppose then that we define a single markedness constraint that favours all falling sonority clusters regardless of their position in the syllable, i.e. combining Syllable Contact and Sonority Sequencing. We require a finer-grained metric to measure how marked a particular cluster is. An obvious course of action is to use \citet{gouskova.2002}'s {\sc Dis} metric, extending its use from the heterosyllabic environment alone to all positions. 
 
 Using the defined sonority scale, we expect the following markedness hierarchy of sonorant-initial clusters.
+
+\ex. {\sc Dis} values of sonorant-initial clusters using revised sonority scale
 
 \begin{center}
   \begin{tikzpicture}[shorten >=1pt,->,scale=0.5]
      \tikzstyle{line} = [draw]%, -latex']
 
-        \node (NT) at (2 * 5, 0) {NT}; 
+        \node[draw,circle,dashed] (NT) at (2 * 5, 0) {NT}; 
+        \node[font=\footnotesize,opacity=0.7] (RTno) at (2 * 5, 2.5) {2};
         \node (ND) at (1.5 * 5, 0) {ND}; 
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (1.5 * 5, 2.5) {1.5};
         \node (NF) at (1 * 5, 0) {NF};
+        \node[font=\footnotesize,opacity=0.7] (NFno) at (1 * 5, 2.5) {1};
         \node (NN) at (0 * 5, 0) {NN};
+        \node[font=\footnotesize,opacity=0.7] (NNno) at (0 * 5, 2.5) {0};
         \node (NR) at (-1 * 5, 0) {NR}; 
+        \node[font=\footnotesize,opacity=0.7] (NRno) at (-1 * 5, 2.5) {-1};
 
-        \node (RT) at (3 * 5, 0) {RT};
+        \node[draw,circle,dashed] (RT) at (3 * 5, 0) {RT};
+        \node[font=\footnotesize,opacity=0.7] (NDno) at (3 * 5, 2.5) {3};
         \node (RD) at (2.5 * 5, 0) {RD}; 
-        \node (RF) at (2 * 5, 0.7) {RF}; 
+        \node[font=\footnotesize,opacity=0.7] (RDno) at (2.5 * 5, 2.5) {2.5};
+        \node (RF) at (2 * 5, 1.5) {RF}; 
         \node (RN) at (1 * 5, 0.7) {RN};
         \node (RR) at (0 * 5, 0.7) {RR};
 
