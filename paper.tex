@@ -67,12 +67,15 @@ to than falling sonority sibilant-stop clusters.
 
 This faithfulness-based approach raises the question of how the perceptual distance between two sonority contours /C\textsubscript{1}C\textsubscript{2}/ and [C\textsubscript{1}VC\textsubscript{2}] should be computed in terms of the sonority of C\textsubscript{1}, C\textsubscript{2} and V.  
 
-Fleischhacker's analysis rested on empirical determinations of sonority contour faithfulness, and did not attempt to determine such a relation. \citet{steriade.2006} proposed that input and output sonority contours should match in terms of whether they are rising or falling, and to what degree, but did not suggest a concrete mathematical relation.  \citet{flemming.2008} formalises Steriade's approach with the metric {\sc Sonority Rise}, the ratio of the gradients of the two contours.
+Fleischhacker's analysis rested on empirical determinations of sonority contour faithfulness of specific clusters such as stop-liquid (TR) clusters and fricative-stop (FT) clusters, and did not attempt to determine a formula for arbitrary values of C\textsubscript{1}, C\textsubscript{2}. \citet{steriade.2006} proposed that input and output sonority contours should match in terms of whether they are rising or falling, and to what degree, but did not suggest a concrete mathematical relation.  \citet{flemming.2008} formalises Steriade's approach with the metric {\sc Sonority Rise}, the ratio of the gradients of the two contours.
 
 \bigskip
 
-In this paper, I suggest that any such metric should bear two properties. The first is that suggested by previous analyses, that the more positive the gradient of the sonority contour from C\textsubscript{1} to C\textsubscript{2}, the smaller the faithfulness cost and hence the more likely epenthesis is to occur.
-The second is that for a given sonority distance between C\textsubscript{1} and C\textsubscript{2}, the more sonorous C\textsubscript{1} and C\textsubscript{2} are, the more likely epenthesis is to occur. 
+In this paper, I suggest that any such metric should bear two properties. The first is suggested by previous analyses, while the second is original to this paper.
+
+\ex. Desiderata for a sonority contour similarity metric \label{desiderata}
+     \a. The more positive the gradient of the sonority contour from C\textsubscript{1} to C\textsubscript{2}, the smaller the faithfulness cost.
+     \b. For a given sonority distance between C\textsubscript{1} and C\textsubscript{2}, the more sonorous C\textsubscript{1} and C\textsubscript{2} are, the smaller the faithfulness cost.
 
 To make things concrete, I suggest a metric that possesses these two properties, which I term {\sc Sonority Angle}. This is the magnitude of the angle made by the vectors C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V. I then explore the ramifications of this choice. 
 
@@ -84,7 +87,7 @@ I take two instances where the predictions of {\sc Sonority Angle} and {\sc Sono
 
 The other broad class of explanation for sonority-driven epenthesis is markedness-based.  Syllable Contact \citep{murray.vennemann.1983} holds that across a syllable boundary, falling sonority clusters are more harmonic than rising sonority ones.  Hence, rising sonority clusters are preferentially broken up by epenthesis.
 
-Syllable Contact forms the basis for the main existing analysis of Chaha epenthesis by \citet{rose.2000}.  I show that the faithfulness-based analysis, powered by the metric of {\sc Sonority Angle}, is slightly more economical in addressing the data. Furthermore, in the case of Irish, Syllable Contact makes incorrect predictions regarding the data.
+Syllable Contact forms the basis for the main existing analysis of Chaha epenthesis by \citet{rose.2000}.  I show that the faithfulness-based analysis, powered by the metric of {\sc Sonority Angle}, is equally capable of explaining the Chaha facts. Furthermore, in the case of Irish, Syllable Contact makes incorrect predictions regarding the data.
 
 \bigskip
 
@@ -107,9 +110,9 @@ In order to determine what faithfulness constraints exist in {\sc Con} and what 
 
 \subsection{Sonority Angle}
 
-The observation with which we started was that the more steeply rising the sonority profile of a consonant cluster, the more likely the cluster to undergo epenthesis. Thus the absolute difference in sonority between C\textsubscript{1} and C\textsubscript{2} must be factored into the metric. To this, I add the claim that the more sonorous C\textsubscript{1}, the more likely the cluster is to undergo epenthesis.
+The first desideratum with which we started was that the more steeply rising the sonority profile of a consonant cluster, the more likely the cluster to undergo epenthesis. Thus the absolute difference in sonority between C\textsubscript{1} and C\textsubscript{2} must be factored into the metric. To this, I add the claim that the more sonorous C\textsubscript{1}, the more likely the cluster is to undergo epenthesis.
 
-These two factors are neatly captured by the metric {\sc Sonority Angle}, which is defined as the angle between the underlying C\textsubscript{1}C\textsubscript{2} sonority contour and the surface C\textsubscript{1}V contour:
+These two criteria are fulfilled by the metric {\sc Sonority Angle}, which is defined as the angle between the underlying C\textsubscript{1}C\textsubscript{2} sonority contour and the surface C\textsubscript{1}V contour:
 
 \ex. Visual representation of {\sc Sonority Angle} \label{sonangle_picture} 
 
@@ -174,7 +177,7 @@ epenthesis is to occur. Let us fix the sonority distance between the two consona
 
 \ex. Illustration: keeping C\textsubscript{1} -- C\textsubscript{2} fixed at 1, raising the sonority in cluster decreases the {\sc Sonority Angle}.
 
-\vspace{-5em}
+\vspace{-9em}
 \begin{center}
 \begin{tikzpicture} [shorten >=1pt,scale=0.33]
                       \draw [<-] (-3,12) -- (-3, 0.5) ; % axis
@@ -204,6 +207,8 @@ epenthesis is to occur. Let us fix the sonority distance between the two consona
 
 The first term in formula \ref{sonangle_formula} confirms the relation between the sonority of C\textsubscript{1} in terms of its closeness to V, and {\sc Sonority Angle} as a whole.
 
+\bigskip
+
 Given a sonority scale where classes of consonants are mapped to a numerical sonority, we can now calculate the {\sc Sonority Angle} for any cluster, which can be thought of as the faithfulness cost of epenthesising between the two consonants.  Examples of the calculation are given below.
 
 In this paper, I adopt (with, later, minor modifications) the following standard scale:
@@ -223,15 +228,16 @@ The {\sc Sonority Angles} for NT, TT and TN are calculated as in the following e
 
 The larger the {\sc Sonority Angle}, the larger the faithfulness cost. We therefore expect it to be hardest to epenthesise into NT out of these three clusters, and easiest to epenthesise into TN.
 
-We formalise the idea of the faithfulness cost by defining a family of \textsc{Ident} constraints that penalise outputs that incur faithfulness costs of greater than a certain $n$.
+I formalise the idea of faithfulness cost by defining a family of \textsc{Ident} constraints that penalise outputs that incur faithfulness costs of greater than a certain $n$, following \citep{flemming.2008}.
 
 \ex. \textsc{Ident(SonAngle)}$<$n: Assign a violation mark if the consonants in two strings C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}VC\textsubscript{2} 
 stand in correspondence, and the sonority angle between C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V is greater than $n$.
 
-This family of faithfulness constraints forms a stringency hierarchy. Any cluster that would, upon epenthesis, violate \textsc{Ident(SonAngle)}$<$n would also violate {\sc Ident(SonAngle)}$<$m where m$>$n.
+This family of faithfulness constraints forms a stringency hierarchy. Any cluster that would violate \textsc{Ident(SonAngle)}$<$n, would also violate {\sc Ident(SonAngle)}$<$m, where m$>$n.
+
 The resulting hierarchy of clusters, ranked according to their resistance to epenthesis as defined
 by their {\sc Sonority Angle}, is as follows.
-
+	
 \ex. {\sc Sonority Angle} hierarchy
 
 \vspace{-3em}
@@ -240,7 +246,7 @@ by their {\sc Sonority Angle}, is as follows.
 The prediction is that when a markedness constraint targets a set of clusters for epenthesis, if a certain cluster undergoes epenthesis, then all clusters to the left of it on the hierarchy --- those with a smaller {\sc Sonority Angle} --- should also undergo epenthesis.
 
 Notice that out of the falling sonority clusters, those that decrease in sonority by a single step
--- namely RN, NF and FT -- have smaller {\sc Sonority Angles} than the ones that have a greater fall
+--- namely RN, NF and FT --- have smaller {\sc Sonority Angles} than the ones that have a greater fall
 in sonority. Furthermore, out of these three clusters, the one with the most sonorous C\textsubscript{1}, RN, has the smallest {\sc Sonority Angle}. We thus predict that out of the falling sonority clusters, RN is the most likely to be broken up by epenthesis. The case study on Chaha will demonstrate that this is the case.
 
 Similarly, between the clusters that fall in sonority by two steps -- RF and NT -- we expect
