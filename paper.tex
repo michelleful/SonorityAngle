@@ -10,6 +10,8 @@
 \usepackage{linguex}
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
 \usepackage{slashbox}	
 \usepackage{pifont}    %for pointing hand
 \usepackage{arydshln}  %for dashed lines
@@ -112,13 +114,15 @@ These two factors are neatly captured by the metric {\sc Sonority Angle}, which 
                       \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
                       \node at (-3, 7.0) {Sonority}; % axis label
                       \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
-                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+%                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
                       \node[left] at (0,3) {C$_1$}; 
                       \node[right] at (5,1) {C$_2$};
                       \node[right] at (5,6) {V};
     \coordinate (A) at (0,3);
     \coordinate (B) at (5,1);
     \coordinate (C) at (5,6);
+\tkzMarkAngle[size=1.5cm](B,A,C)
+\tkzLabelAngle[pos=2](B,A,C){$\theta$}
 \end{tikzpicture} 
 
 Assuming that the horizontal distance is 1 unit, we can compute the magnitude of this angle analytically with the following formula:
