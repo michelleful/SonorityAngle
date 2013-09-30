@@ -111,7 +111,11 @@ The observation with which we started was that the more steeply rising the sonor
 
 These two factors are neatly captured by the metric {\sc Sonority Angle}, which is defined as the angle between the underlying C\textsubscript{1}C\textsubscript{2} sonority contour and the surface C\textsubscript{1}V contour:
 
-\ex. \label{sonangle_picture} \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+\ex. Visual representation of {\sc Sonority Angle} \label{sonangle_picture} 
+
+\vspace{-3em}
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
                       \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
                       \node at (-3, 7.0) {Sonority}; % axis label
                       \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
@@ -125,32 +129,41 @@ These two factors are neatly captured by the metric {\sc Sonority Angle}, which 
 \tkzMarkAngle[size=1.5cm](B,A,C)
 \tkzLabelAngle[pos=2](B,A,C){$\theta$}
 \end{tikzpicture} 
+\end{center}
 
 Assuming that the horizontal distance is 1 unit, we can compute the magnitude of this angle analytically with the following formula:
 
 \ex. \label{sonangle_formula} Formula: \textsc{SonAngle} = $arctan(V-C_1) - arctan(C_2-C_1)$
 
-Let us verify that {\sc Sonority Angle} does indeed reflect the two generalisations we wish to make:
-first, that the smaller the sonority distance between C\textsubscript{1} and C\textsubscript{2},
-the smaller the sonority angle.
-Imagine fixing C\textsubscript{1} as in \ref{sonangle_picture} and raising the sonority of C\textsubscript{2}. Intuitively, this decreases the {\sc Sonority Angle}, comparing the two below.
+Let us verify that {\sc Sonority Angle} does indeed reflect the two generalisations we wish to make: first, that the smaller the sonority distance between C\textsubscript{1} and C\textsubscript{2}, the smaller the sonority angle.
 
-\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
-                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
-                      \node at (-3, 7.0) {Sonority}; % axis label
+\ex. Illustration: keeping C\textsubscript{1} fixed, raising the sonority of C\textsubscript{2} decreases the {\sc Sonority Angle}.
+
+\vspace{-5em}
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,12) -- (-3, 0.5) ; % axis
+                      \node at (-3, 13.0) {Sonority}; % axis label
 					 % left diagram
-                      \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
-                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
-                      \node[left] at  (0,3) {C$_1$}; 
-                      \node[right] at (5,1) {C$_2$};
-                      \node[right] at (5,6) {V};
-					  % right diagram
-                      \draw (20,4) -- (15,3) -- (20,6) ; % falling sonority
-                      \node at (17.5, 4.0) {$\theta$}; % theta label for falling sonority
-                      \node[left] at (15,3) {C$_1$}; 
-                      \node[right] at (20,4) {C$_2$};
-                      \node[right] at (20,6) {V};
+    \coordinate (A) at (0,6); % pivot - C1
+    \coordinate (B) at (15,2); % C2
+    \coordinate (C) at (15,12); % V
+    \draw (B) -- (A) -- (C);
+	\tkzMarkAngle[size=3cm](B,A,C);
+	\tkzLabelAngle[pos=4](B,A,C){$\theta_1$};
+    \coordinate (D) at (15,8); % another C2
+    \draw (D) -- (A);
+	\tkzMarkAngle[size=6cm](D,A,C);
+	\tkzLabelAngle[pos=8](D,A,C){$\theta_2$};
+    
+    \node[left] at  (A) {N}; 
+    \node[right] at (B) {T};
+    \node[right] at (C) {V};
+    \node[right] at (D) {R};
+    
+    \draw [->,dotted] (B) -- (D);
 \end{tikzpicture} 
+\end{center}
 
 The dependence of {\sc Sonority Angle} on this distance can also be seen in the second term in \ref{sonangle_formula}.
 
