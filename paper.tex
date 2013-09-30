@@ -74,9 +74,9 @@ Fleischhacker's analysis rested on empirical determinations of sonority contour 
 
 In this paper, I suggest that any such metric should bear two properties. The first is suggested by previous analyses, while the second is original to this paper.
 
-\ex. Desiderata for a sonority contour similarity metric \label{desiderata}
-     \a. The more positive the gradient of the sonority contour from C\textsubscript{1} to C\textsubscript{2}, the smaller the faithfulness cost.
-     \b. For a given sonority distance between C\textsubscript{1} and C\textsubscript{2}, the more sonorous C\textsubscript{1} and C\textsubscript{2} are, the smaller the faithfulness cost.
+\ex. Desiderata for a sonority contour faithfulness metric \label{desiderata}
+     \a. The more positive the gradient of the sonority contour from C\textsubscript{1} to C\textsubscript{2}, the smaller the faithfulness cost. \label{desideratum_a}
+     \b. For a given sonority distance between C\textsubscript{1} and C\textsubscript{2}, the more sonorous C\textsubscript{1} and C\textsubscript{2} are, the smaller the faithfulness cost. \label{desideratum_b}
 
 To make things concrete, I suggest a metric that possesses these two properties, which I term {\sc Sonority Angle}. This is the magnitude of the angle made by the vectors C\textsubscript{1}C\textsubscript{2} and C\textsubscript{1}V. I then explore the ramifications of this choice. 
 
@@ -242,7 +242,7 @@ by their {\sc Sonority Angle}, is as follows.
 \ex. {\sc Sonority Angle} hierarchy
 
 \vspace{-3em}
-\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityanglehierarchycompressed}}
+\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityanglehierarchycompressednumbers}}
 
 The prediction is that when a markedness constraint targets a set of clusters for epenthesis, if a certain cluster undergoes epenthesis, then all clusters to the left of it on the hierarchy --- those with a smaller {\sc Sonority Angle} --- should also undergo epenthesis.
 
@@ -427,7 +427,8 @@ I now turn to an alternative metric of sonority contour faithfulness proposed by
    
 The following sample calculations illustrate how \textsc{SonRise} distance is computed:
 
-\ex.    \begin{center}
+\ex. Sample calculations of {\sc SonRise}
+   \begin{center}
     \begin{tabular}{c c | c c | c}
     C\textsubscript{1}C\textsubscript{2}   & Rise & C\textsubscript{1}V & Rise & \textsc{SonRise} Distance\\ \hline
     NT &  -2  &  N\textipa{1}T & 3 & $1-\frac{1-3}{6-3}=1.7$ \\
@@ -443,23 +444,45 @@ As with {\sc Sonority Angle}, this gives rise to a family of constraints {\sc Id
 \ex. {\sc Sonority Rise} hierarchy
 
 \vspace{-3em}
-\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityrisehierarchycompressed}}
+\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityrisehierarchycompressednumbers}}
 
-Observe that of the two desiderata for such a metric, {\sc Sonority Rise} fulfills the first but not the second. Consider the falling sonority clusters. RN, NF and FT, which all have a sonority distance of -1, have a smaller {\sc Sonority Rise} than NT and RF, with a sonority distance of 2, followed by RT with a sonority distance of 3.
+Observe that of the two desiderata for sonority contour metrics outlined in \ref{desiderata}, {\sc Sonority Rise} fulfills the first but not the second. Holding C\textsubscript{1} constant, closing the sonority gap with C\textsubscript{2} does result in a smaller {\sc SonRise} --- compare RT, RF and RN, for example.
 
-However, of the three, RN has the largest {\sc Sonority Rise}, and therefore is expected to be more resistant to epenthesis than NF and FT. If RN undergoes epenthesis, therefore, we predict FT and NF to do the same.
+However, out of the three clusters with a sonority distance of -1, RN has the largest {\sc Sonority Rise}, and therefore is expected to be more resistant to epenthesis than NF and FT. This is contrary to criterion \ref{desideratum_b}. If RN undergoes epenthesis, therefore, we predict FT and NF to do the same.
 
 Another prediction is that if NT and RT fail to undergo epenthesis due to the high faithfulness cost of interrupting these clusters, then RF should also fail to undergo epenthesis. Both of these predictions are contrary to the evidence of Irish and Chaha.
 
+Let us do a more detailed comparison of the two cluster hierarchies:
+
+\ex. Detailed comparison of {\sc Sonority Rise} vs {\sc Sonority Angle} hierarchies:
+
+\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityanglehierarchycompressed}}
+
+\vspace{-2em}
+\noindent \resizebox{\linewidth}{!}{\usebox{\sonorityrisehierarchycompressed}}
+
+Within the rising sonority clusters, the predictions of the two hierarchies are identical.
+The differences in predictions are as follows:
+
+\ex. \a. More sonorous plateaus are more likely to undergo epenthesis under the {\sc Sonority Angle} metric, whereas all the level clusters should have equal likelihood of being broken up by epenthesis.
+     \b. RN is more likely to undergo epenthesis than NF under {\sc Sonority Angle}, and vice versa under {\sc Sonority Rise}.
+     \b. RN is more likely to undergo epenthesis than FT under {\sc Sonority Angle}, and vice versa under {\sc Sonority Rise}.
+     \b. NF is more likely to undergo epenthesis than FT under {\sc Sonority Angle}, and vice versa under {\sc Sonority Rise}.
+     \b. RF is more likely to undergo epenthesis than RT under {\sc Sonority Angle}, and vice versa under {\sc Sonority Rise}.
+     \b. RF is more likely to undergo epenthesis than NT under {\sc Sonority Angle}, and vice versa under {\sc Sonority Rise}.
+     \b. RT and NT are equally likely to undergo epenthesis under {\sc Sonority Angle}, but NT is more likely to undergo epenthesis than RF under {\sc Sonority Rise}.
 
 \subsection{Another dimension of sonority contour faithfulness} \label{depson}
 
 Note that I do not claim that sonority contour faithfulness is the only dimension of perceptual similarity relevant to vowel epenthesis. For instance, I will adopt \citet{flemming.2008}'s suggestion that a further dimension of perceptual similarity restricts epenthesis to sites adjacent to a sonorant, based on patterns of epenthesis in languages such as Montana Salish, where epenthesis is disallowed between two obstruents. 
 
-I will formalise this restriction with the constraint {\sc Dep}(+sonorant). The epenthesis of a vowel between two obstruents, which bear the feature [$-$sonorant], necessitates the insertion of a new [+sonorant] feature, whereas when a vowel is epenthesised adjacent to a sonorant, the sonorant's [+sonorant] feature spreads and is shared between the vowel and the sonorant.
+I will formalise this restriction with the constraint {\sc Dep}(+sonorant). 
 
-This constraint will be used in the analysis of Chaha complex coda epenthesis, which in some idiolects
-cannot occur between obstruents, while in others, it can. My proposal will be that in the former, {\sc Dep}(+sonorant) is higher-ranked, thus blocking epenthesis.
+\ex. {\sc Dep}(+sonorant): do not insert a sonorant region between two obstruents.
+
+The epenthesis of a vowel between two obstruents, which bear the feature [$-$sonorant], necessitates the insertion of a new [+sonorant] feature, whereas when a vowel is epenthesised adjacent to a sonorant, the sonorant's [+sonorant] feature spreads and is shared between the vowel and the sonorant.
+
+This constraint will be used in the analysis of Chaha complex coda epenthesis, which in some idiolects cannot occur between obstruents, while in others, it can. My proposal will be that in the former, {\sc Dep}(+sonorant) is higher-ranked, thus blocking epenthesis.
 
 \subsection{Syllable Contact} 
 
@@ -492,6 +515,8 @@ The predicted hierarchy of susceptibility to epenthesis of the clusters is as fo
 \bigskip
 
 Syllable Contact applies only across syllable boundaries.  Therefore, when sonority-driven epenthesis occurs in onsets or codas, other sonority-based markedness constraints must be employed.  One such is  Sonority Sequencing \citep{selkirk.1984}, which states that sonority must be strictly increasing in the onset and strictly decreasing in the coda. \citep{rose.2000} uses two variants of this constraint, one strict and one non-strict, in her analysis of Chaha.
+
+
 
 \section{Case study: Irish} \label{irish}
 
