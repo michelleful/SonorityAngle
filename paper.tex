@@ -38,7 +38,7 @@
 
 \title{The perceptual dimensions of \\ sonority-driven epenthesis}
 \author{Michelle A. Fullwood}
-\date{Generals Paper, MIT \\ September 2013}
+\date{Generals Paper, MIT \\ October 2013}
 \begin{document}
 
 \maketitle
@@ -1297,7 +1297,7 @@ Only when C\textsubscript{1}C\textsubscript{2} constitutes a sonority rise or pl
 
 \ex. Default idiolect \citep[(24,26,28,30,32)]{rose.2000} \label{defaultidiolectCCCforms}
 
-\begin{longtable}{ccccc}
+\begin{tabular}{ccccc}
 	& Underlying form      & Surface form & {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) & {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
     \multicolumn{5}{c}{Fall-\{Rise, Plateau\}: [CC\textipa{1}C]} \\ \hline
 	a. & \textipa{j@-rk't'-o} & \textipa{j@nk'1t'o} & 2.36 & 1.37 \\
@@ -1331,7 +1331,7 @@ Only when C\textsubscript{1}C\textsubscript{2} constitutes a sonority rise or pl
     y. & \textipa{j-t-rs@n@s} & \textipa{j1t1rs@n@s} & 0.12 & 2.21 \\
     z. & \textipa{j-t-kB@s@s} & \textipa{j1tk1B@s@s} & 1.37 & 0.12 \\
     A. & \textipa{j-t-k't'@k'@t'} & \textipa{j1tk'1t'@k'@t'} & 1.37 & 1.37 \\
-\end{longtable}
+\end{tabular}
 
 \bigskip
 
@@ -1457,7 +1457,7 @@ This ranking explains all the forms in the second idiolect.
 
 \ex. Idiolect \ref{C1CCidiolect} \label{thirdidiolectCCCforms}
 
-\begin{longtable}{ccccc}
+\begin{tabular}{ccccc}
 	& Underlying form      & Surface form & {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) & {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
     \multicolumn{5}{c}{Fall-\{Rise, Plateau\}: [CC\textipa{1}C]} \\ \hline
 	a. & \textipa{j@-rk't'-o} & \textipa{j@nk'1t'o} & 2.36 & 1.37 \\
@@ -1486,7 +1486,7 @@ This ranking explains all the forms in the second idiolect.
     u. & \textipa{j@-frt-o} & \textipa{j@f1rto} & 0.22 & 2.36 \\
     v. & \textipa{j@-sBx-o} & \textipa{j@s1Bxo} & 0.34 & 2.17 \\
     w. & \textipa{j-a-mrg-o} & \textipa{jam1rgo} & 0.46 & 2.36 \\ \hline
-\end{longtable}
+\end{tabular}
 
 \bigskip
 
@@ -1608,7 +1608,7 @@ The analysis of the four idiolects above was possible because the lines at which
 	\node (bR) at (0.726642340682*8, 0.5) {\textipa{B}R};
 	\node (Nb) at (0.785398163397*8, 1) {N\textipa{B}};
 	\node (RR) at (1.10714871779*8, 1) {RR};
-	\node (bb) at (1.19028994968*8, 0.5) {\textipa{BB}};
+%	\node (bb) at (1.19028994968*8, 0.5) {\textipa{BB}};
 	\node (NN) at (1.2490457724*8, 1) {NN};
 	\node (FF) at (1.32581766367*8, 1.5) {FF};
 	\node (TT) at (1.37340076695*8, 1) {TT};
@@ -1652,8 +1652,9 @@ The analysis of the four idiolects above was possible because the lines at which
   % third dividing line
   \node (dividingline3start) at (1.0 * 8,2) {};
   \node (dividingline3end)   at (1.0 * 8,-0.3) {};
+  \node (dividingpoint3label) at (1.0*8, -1.0) {\ref{wizfidiolect}};
   \path [line,dashed] (dividingline3start) -- (dividingline3end) -- cycle;
-  \node (dividingpoint3label2) at (1.0*8, -1.0) {\ref{wizfidiolect}};
+  
 \end{tikzpicture}
 }
 
@@ -1672,7 +1673,7 @@ The {\sc Sonority Rise} metric can achieve the same linear separation for idiole
   \node (NF) at (1.33*8,-0.5)  {NF};
   \node (FF) at (1*8,0)   {FF};
   \node (TF) at (0.8*8,-0.5)   {TF};
-  \node (RN) at (1.5*8,0)   {RN};
+  \node[draw,circle,dashed] (RN) at (1.5*8,0)   {RN};
   \node (NN) at (1*8,0.5)     {NN};
   \node (FN) at (0.75*8,0)  {FN};
   \node (TN) at (0.6*8,0)   {TN};
@@ -1694,6 +1695,11 @@ The {\sc Sonority Rise} metric can achieve the same linear separation for idiole
   \node (1pointlabel) at (1.0*8,-1.5) {1};
   \node (2pointlabel) at (2.0*8,-1.5) {2};
   \node (xaxislabel) at (2.7*8,-1.5) {\textsc{SonRise}};
+
+  % third dividing line
+  \node (dividingline3start) at (1.15 * 8,1.5) {};
+  \node (dividingline3end)   at (1.15 * 8,-1.5) {};
+  \path [line,dashed] (dividingline3start) -- (dividingline3end) -- cycle;
 \end{tikzpicture}
 }
 \bigskip
@@ -1732,7 +1738,32 @@ In addition to these, the {\sc *MedialLight} constraint from Rose's analysis of 
 
 In this last part of our case study of Chaha, we turn to the behaviour of quadriconsonantal clusters. The only such clusters come from the imperative/jussive CCC stem followed by the consonant-initial suffix -\textipa{n@}. The underlying form is /\textipa{n-\textnormal{CCC}-n@}/. They surface either as [\textipa{n1\underline{\textnormal{CC}1\textnormal{C}n}@}] or [\textipa{n1\underline{\textnormal{C}1\textnormal{CC}1n}@}].
 
-In this section, I will demonstrate that the rankings already obtained for CCC clusters predict almost exactly which of the CCCC clusters should display variation and in which direction.
+In this section, I will demonstrate that the four rankings already obtained in $\S$\ref{CCCanalysis} for the triconsonantal clusters predict almost exactly which of the quadriconsonantal clusters should display variation, and in which direction.
+
+\subsubsection{Data}
+
+The following table shows the observed behaviour of the quadriconsonantal clusters of Chaha, as reported by \cite{rose.2000}.
+
+\ex. Epenthetic behaviour of CCCC clusters
+
+\begin{center}
+\begin{tabular}{|cc|c|} \hline
+   & Underlying form & Observed surface forms \\ \hline
+ a.& \textipa{sdBn} & \textipa{sd1Bn} \\ 
+ b.& \textipa{wzfn} & \textipa{wz1fn}, \textipa{w1zf1n} \\
+ c.& \textipa{gdfn} & \textipa{gd1fn}, \textipa{g1df1n} \\
+ d.& \textipa{mstn} & \textipa{m1st1n} \\
+ e.& \textipa{dmdn} & \textipa{d1md1n} \\
+ f.& \textipa{drsn} & \textipa{d1rs1n} \\
+ g.& \textipa{sBxn} & \textipa{s1Bx1n} \\
+ h.& \textipa{kftn} & \textipa{k1ft1n}  \\
+ i.& \textipa{ktfn} & \textipa{kt1fn}, \textipa{k1tf1n} \\
+ j.& \textipa{sgdn} & \textipa{sg1dn}, \textipa{s1gd1n} \\
+ k.& \textipa{srBn} & \textipa{sr1Bn}, \textipa{s1rB1n} \\
+ l.& \textipa{krmn} & \textipa{kr1mn}, \textipa{k1rm1n}  \\ \hline
+ \end{tabular}
+\end{center}
+
 
 \subsubsection{Predictions of CCC rankings}
 
@@ -1741,14 +1772,14 @@ This excludes possible solutions such as *[C\textipa{1}CCC] and *[CCC\textipa{1}
 
 Solutions such as [C\textipa{1}C\textipa{1}CC] and [CC\textipa{1}C\textipa{1}C] are also excluded, as these incur unnecessary violations of {\sc Ident(Son$\measuredangle$)} and {\sc Dep}. If the middle two consonants C\textsubscript{2} and C\textsubscript{3} are split up by an epenthetic vowel, there is no further need for epenthesis as *CCC is already satisfied by [CC\textipa{1}CC].
 
-Therefore, the only two possible solutions under my approach are [CC\textipa{1}CC] and [C\textipa{1}CC\textipa{1}C]. Which one is chosen depends on the sonority profile of the clusters, and which of {\sc Align-Left} and {\sc Anchor-Left Root} is dominant.
+Therefore, the only two possible solutions under my approach are [CC\textipa{1}CC] and [C\textipa{1}CC\textipa{1}C]. Which one is chosen depends on the sonority profile of the clusters, and which of Rose's constraints {\sc Align-Left} and {\sc Anchor-Left Root} is dominant.
 
 \ex. {\sc Align-Left} favours [CC\textipa{1}CC], but {\sc Anchor-Left Rt} favours [C\textipa{1}CC\textipa{1}C].
 
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c:c|} \hline 
 \multicolumn{3}{|c||}{Input:~/\textipa{n-\textnormal{CCC}-n@}/} & Align-Left & Anchor-Left Root \\[0.5ex]
-\hline \hline a. & & \textipa{n1\textnormal{C.C}1\textnormal{C}.n@} & 2,3,5,6 & $\ast$ \\
+\hline \hline a. & & \textipa{n1\textnormal{C.C}1\textnormal{C}.n@} & 2,3,5,6 & $\ast$! \\
 \hline b. & \ding{43} & \textipa{n1.\textnormal{C}1\textnormal{C.C}1.n@} & 2,4!,5,7 & \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 
@@ -2081,11 +2112,17 @@ A possible application of this looser definition of {\sc Sonority Angle} lies in
 
 \section{Conclusion} \label{conclusion}
 
-In this paper, I argued for sonority contour faithfulness being the right way to analyse sonority-driven epenthesis, giving case studies in Irish and Chaha as examples. I additionally proposed that sonority contour distance should be computed by a metric that obeys two desiderata, % TODO
+In this paper, I argued for sonority contour faithfulness being the right way to analyse sonority-driven epenthesis, giving case studies in Irish and Chaha as examples. I additionally proposed that sonority contour distance should be computed by a metric that obeys two desiderata:
+
+\ex. Desiderata for a sonority contour faithfulness metric 
+     \a. The more positive the gradient of the sonority contour from C\textsubscript{1} to C\textsubscript{2}, the smaller the faithfulness cost. 
+     \b. For a given sonority distance between C\textsubscript{1} and C\textsubscript{2}, the more sonorous C\textsubscript{1} and C\textsubscript{2} are, the smaller the faithfulness cost.
 
 Using {\sc Sonority Angle} as a concrete example of a metric that obeys these two desiderata, I showed that  a sonority contour faithfulness account based on {\sc Sonority Angle} worked better than a cluster markedness-based account of sonority-driven epenthesis in Irish. Firstly, the faithfulness-based analysis did not need separate constraints for heterosyllabic and coda clusters like Syllable Contact and Sonority Sequencing, which more economically accounted for the ``coincidence'' that the same clusters were allowed and disallowed in both syllabic contexts. Secondly, the markedness-based approach in Irish could not account for why obstruent-initial heterosyllabic and coda clusters are tolerated in Irish even though these should be more marked than sonorant-initial clusters under the two sonority-based markedness constraints.
 
 In addition, compared to the {\sc *Dis} metric \citep{gouskova.2002} for measuring sonority distance in Syllable Contact and Sonority Sequencing, and the alternative sonority contour faithfulness metric {\sc Sonority Rise} \citep{flemming.2008}, {\sc Sonority Angle} made the correct predictions that nasal-voiceless stop and liquid-voiceless stop clusters should be the hardest to epenthesise into in Irish, and the prediction that liquid-nasal clusters should be the most susceptible to epenthesis out of the falling sonority clusters in Chaha.
+
+In Chaha, we saw more generally that the family of {\sc Ident(Son$\measuredangle$)}$<$n constraints, coupled with standard syllabic markedness constraints and alignment/anchor constraints preferring epenthesis on the left or right, yielded the complex and variable system of epenthesis positioning in the language with only one error in predictions, making it comparably successful to the existing Syllable Contact-based analysis by \cite{rose.2000}.
 
 {\sc Sonority Angle} was offered here as a concrete instance of the class of metrics that conform to the two desiderata. In $\S$\ref{issues}, I discussed several issues regarding the assumptions that need to be incorporated into its formulation. More perceptual experiments and cross-linguistic investigation of sonority-driven epenthesis needs to be done to pin down the specifics of the metric. In addition, I discussed two other sonority-based phenomena that may shed additional light on the true nature of sonority contour faithfulness.
 
