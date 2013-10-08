@@ -1134,7 +1134,7 @@ To summarise, coda epenthesis behaviour in Chaha can be explained by the ranking
 
 {\sc Sonority Rise} \citep{flemming.2008} can explain idiolects \ref{idiolecta} and \ref{idiolectc}, where the cut-off is drawn between rising and level sonority clusters on the one hand and falling sonority clusters on the other. It is less straightforward to explain the behaviour of idiolects \ref{idiolectb} and \ref{idiolectd}. This is because the cluster hierarchy predicted by {\sc Sonority Rise} does not permit a linear separation of [r]-sonorant clusters from the other falling sonority clusters: if RN undergoes epenthesis, we expect that FT and NF should also do so, but FT never does.
 
-\ex. TODO
+\ex. No linear separation between the rising and level sonority clusters plus RN from the rest of the falling sonority clusters under the {\sc Sonority Rise} metric.
 
 \bigskip
 \resizebox{\linewidth}{!}{
@@ -1185,7 +1185,7 @@ The fact that medial clusters are never broken up by epenthesis even when they v
 
 In addition, Sonority Sequencing does not allow a divide of the [r]-sonorant clusters versus the remainder of the clusters, whether in Rose's categorical formulation of Sonority Sequencing or a family of {\sc *Dis} constraints.
 
-\ex. TODO
+\ex. No linear separation between the rising and level sonority clusters plus RN from the rest of the falling sonority clusters under the {\sc Dis} metric.
 
 \resizebox{\linewidth}{!}{
 \begin{tikzpicture}[scale=0.8,shorten >=1pt,->]
@@ -1260,7 +1260,7 @@ As with coda clusters, there is considerable inter- and intra-speaker variabilit
 
 Triconsonantal clusters must be broken up via epenthesis, indicating that {\sc *CCC} $\gg$ {\sc Dep}. If epenthesis occurs either between C\textsubscript{1}C\textsubscript{2} or between C\textsubscript{2}C\textsubscript{3}, {\sc *CCC} will be satisfied. We do not need a separate constraint to prevent double epenthesis occurring to produce *[C\textipa{1}C\textipa{1}C]. 
 
-\ex. TODO
+\ex. {\sc *CCC} $\gg$ {\sc Dep}
 
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
@@ -1911,28 +1911,43 @@ In the sonority contour faithfulness approach, the relevant comparison is betwee
                       \node at (-3, 7.0) {Sonority}; % axis label
 					 % left diagram
                       \draw (5,1) -- (0,3) -- (5,6) ; % rising sonority
-                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
+%                      \node at (1.8, 3.2) {$\theta$}; % theta label for rising sonority
                       \node[left] at  (0,3) {C$_1$}; 
                       \node[right] at (5,1) {C$_2$};
                       \node[right] at (5,6) {V};
+    \coordinate (A) at (0,3);
+    \coordinate (B) at (5,1);
+    \coordinate (C) at (5,6);
+\tkzMarkAngle[size=1.5cm](B,A,C)
+\tkzLabelAngle[pos=2](B,A,C){$\theta$}
 					  % right diagram
                       \draw (15,3) -- (20,1) -- (15,6) ; % falling sonority
-                      \node at (17.5, 2.75) {$\theta$}; % theta label for falling sonority
+%                      \node at (17.5, 2.75) {$\theta$}; % theta label for falling sonority
                       \node[left] at (15,3) {C$_1$}; 
                       \node[right] at (20,1) {C$_2$};
                       \node[right] at (13,6) {V};
+    \coordinate (D) at (15,3);
+    \coordinate (E) at (20,1);
+    \coordinate (F) at (15,6);
+\tkzMarkAngle[size=2.5cm](F,E,D)
+\tkzLabelAngle[pos=3](D,E,F){$\theta$}
 \end{tikzpicture} 
 \end{center}
 
-The answer, currently, is based purely on empirical grounds: if we assume this comparison to be the relevant one, then we expect falling sonority contours to be more susceptible to epenthesis, which contradicts the cross-linguistic evidence. It would seem that there is something quite fundamental about the comparison being centred around the rightward context, or release, of C\textsubscript{1}, which may perhaps arise out of phonological processing.
+The answer, currently, is based purely on empirical grounds: if we assume this comparison to be the relevant one, then we expect falling sonority contours to be more susceptible to epenthesis, which contradicts the cross-linguistic evidence. It would seem that there is something quite fundamental about the comparison being centred around the offset of C\textsubscript{1} rather than the C\textsubscript{1}, which may arise out of perception or phonological processing.
 
+For instance, it is well known that CV cues are much more robust than VC cues. %TODO : citation
+This could 
 
 \subsection{Robustness of the metric}
 
 \noindent {\bf Changes in C\textsubscript{1}.} In the discussion of Chaha triconsonantal clusters in  $\S$\ref{CCCanalysis}, I glossed over how the metric should be computed if C\textsubscript{1} changes.
-This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] due to morphophonological processes. Ultimately, this was not an issue because the behaviour of all such clusters was independently determined by {\sc Jussive-R}, but this raises the question of how {\sc Sonority Angle} should be computed if C\textsubscript{1} changes. Currently, it is undefined, as it is unclear how to measure the angle between C\textsubscript{1}C\textsubscript{2}=RF and C\textsubscript{1}V=NV:
+This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] due to morphophonological processes. Ultimately, this was not an issue because the behaviour of all such clusters was independently determined by {\sc Jussive-R}, but this raises the question of how {\sc Sonority Angle} should be computed if C\textsubscript{1} changes. Currently, it is undefined, as it is unclear how to measure the angle between C\textsubscript{1}C\textsubscript{2}=RF and C\textsubscript{1}V=NV (shown below on the left). A similar situation arises if C\textsubscript{1}C\textsubscript{2}=NF and C\textsubscript{1}V=FV (shown on the right):
 
-\ex. \begin{tikzpicture} [shorten >=1pt,scale=0.33]
+\ex. Two scenarios under which {\sc Sonority Angle} is not well-defined:
+
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
                       \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
                       \node at (-3, 7.0) {Sonority}; % axis label
 					 % left diagram
@@ -1942,13 +1957,48 @@ This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] du
                       \node[left] at  (0,3) {n}; 
                       \node[right] at (5,2) {f};
                       \node[right] at (5,6) {\textipa{1}};
-     \end{tikzpicture}
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % right diagram
+                      \draw (15,2) -- (10,3);
+                      \draw (10,4) -- (15,6) ; % rising sonority
+                      \node[left] at  (10,3) {n}; 
+                      \node[left] at  (10,4) {r}; 
+                      \node[right] at (15,2) {f};
+                      \node[right] at (15,6) {\textipa{1}};
+\end{tikzpicture}
+\end{center}
 
-It is of course possible to define the angle as whatever is made by the intersection of the two vectors, but there is insufficient data to support this interpretation. Alternative approaches such as {\sc Sonority Rise} do not face this issue, as computing the gradients of the underlying contour /C\textsubscript{1}C\textsubscript{2}/ and the surface contour [C\textsubscript{1}V] does not depend on the two C\textsubscript{1}'s being the same.
+Several possibilities are possible: retain the sonority of the underlying C\textsubscript{1} for that of the output value; use the sonority of the output C\textsubscript{1} as the underlying value; or take the angle formed by the meeting of the two contours wherever it occurs. 
+
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % left diagram
+                      \draw (5,2) -- (0,4);
+                      \draw (0,3) -- (5,6) ; % rising sonority
+                      \node[left] at  (0,4) {r}; 
+                      \node[left] at  (0,3) {n}; 
+                      \node[right] at (5,2) {f};
+                      \node[right] at (5,6) {\textipa{1}};
+                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
+                      \node at (-3, 7.0) {Sonority}; % axis label
+					 % right diagram
+                      \draw (15,2) -- (10,3);
+                      \draw (10,4) -- (15,6) ; % rising sonority
+                      \node[left] at  (10,3) {n}; 
+                      \node[left] at  (10,4) {r}; 
+                      \node[right] at (15,2) {f};
+                      \node[right] at (15,6) {\textipa{1}};
+\end{tikzpicture}
+\end{center}
+
+The case studies here constitute insufficient data to conclude if any of these interpretations is correct. It is worth noting, however, that alternative approaches such as {\sc Sonority Rise} do not face this issue, as computing the gradients of the underlying contour /C\textsubscript{1}C\textsubscript{2}/ and the surface contour [C\textsubscript{1}V] does not depend on the two C\textsubscript{1}'s being the same.
 
 \bigskip
 
-\noindent {\bf Horizontal distance.} In this paper, I assumed that the horizontal distance between C\textsubscript{1} and C\textsubscript{2}, and C\textsubscript{1} and V, is the same, and arbitrarily fixed at 1 unit, in calculating {\sc Sonority Angle}. This is an arbitrary choice, and potentially an important one, as when the horizontal distance gets large, changes occur in the cluster hierarchy, some of which violate the first desideratum for a sonority angle metric:
+\noindent {\bf Choice of horizontal distance.} In this paper, I assumed that the horizontal distance between C\textsubscript{1} and C\textsubscript{2}, and C\textsubscript{1} and V, is the same, and arbitrarily fixed at 1 unit, in calculating {\sc Sonority Angle}. This is an arbitrary choice, and potentially an important one, as when the horizontal distance gets large, changes occur in the cluster hierarchy, some of which violate the first desideratum for a sonority angle metric:
 
 \ex. {\sc Sonority Angle} hierarchy for a horizontal distance of 100 units.
 
@@ -1983,7 +2033,7 @@ Additionally, since this horizontal distance is along the dimension of time, the
 
 \bigskip
 
-\noindent {\bf Arbitrariness of the sonority scale.} A third issue faced by any sonority metric is the arbitrariness of the vertical, sonority scale used in this paper. The scale adopted, which is a relatively standard scale, is rather phonological in nature, placing each sonority class at a distance of 1 from the next, and ignoring all differences between consonants within each class. From a phonetic standpoint, this seems unlikely.
+\noindent {\bf Choice of sonority scale.} A third issue faced by any sonority metric is the arbitrariness of the vertical, sonority scale used in this paper. The scale adopted, which is a relatively standard scale, is rather phonological in nature, placing each sonority class at a distance of 1 from the next, and ignoring all differences between consonants within each class. From a phonetic standpoint, this seems unlikely.
 
 Perhaps the closest thing we have to a phonetic sonority scale comes from \citet{parker.2002}, who measured various acoustic correlates of sonority and showed that phonological sonority correlates to a very high degree with intensity ({\it r} = .97--.99).
 
@@ -2130,6 +2180,10 @@ In addition, compared to the {\sc *Dis} metric \citep{gouskova.2002} for measuri
 In Chaha, we saw more generally that the family of {\sc Ident(Son$\measuredangle$)}$<$n constraints, coupled with standard syllabic markedness constraints and alignment/anchor constraints preferring epenthesis on the left or right, yielded the complex and variable system of epenthesis positioning in the language with only one error in predictions, making it comparably successful to the existing Syllable Contact-based analysis by \cite{rose.2000}.
 
 {\sc Sonority Angle} was offered here as a concrete instance of the class of metrics that conform to the two desiderata. In $\S$\ref{issues}, I discussed several issues regarding the assumptions that need to be incorporated into its formulation. More perceptual experiments and cross-linguistic investigation of sonority-driven epenthesis needs to be done to pin down the specifics of the metric. In addition, I discussed two other sonority-based phenomena that may shed additional light on the true nature of sonority contour faithfulness.
+
+\section*{Acknowledgments}
+
+I would like to thank Donca Steriade, Adam Albright, Michael Kenstowicz, Edward Flemming, Suyeon Yun, Gretchen Kern, Hrayr Khanjian, and audiences at the MIT Phonology Circle and Manchester Phonology Meeting for valuable feedback on this project. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. 1122374.
 
 \bibliographystyle{apalike}
 \bibliography{sonangle}
