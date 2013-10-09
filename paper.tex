@@ -2188,6 +2188,40 @@ Consider the kan-krand case. The sonority contours to be considered are /kr/-[ka
 
 \bigskip
 
+\noindent {\bf Choice of epenthetic vowel.} Cross-linguistically, the most common epenthetic vowels are [\textipa{1}] and [\textipa{@}], as exemplified by the two case studies here \citep{lombardi.2002}. These are also the lowest sonority vowels \citep{parker.2002}. This has also been analysed in terms of markedness of the various vowel features \citep{lombardi.2002}, although this leads to problematic implications: if [\textipa{1}] and [\textipa{@}] are so unmarked, why are they not more common across vowel inventories?
+
+Under the sonority contour faithfulness analysis of epenthesis, however, that epenthetic vowels are less sonorous falls out immediately. Keeping the height of the epenthetic along the sonority scale as low as possible guarantees the smallest possible {\sc Sonority Angle}.
+
+\ex. Illustration: keeping C\textsubscript{1} -- C\textsubscript{2} fixed, raising the sonority of V increases the {\sc Sonority Angle}
+
+\begin{center}
+\begin{tikzpicture} [shorten >=1pt,scale=0.33]
+                      \draw [<-] (-3,12) -- (-3, 0.5) ; % axis
+                      \node at (-3, 13.0) {Sonority}; % axis label
+					 % left diagram
+    \coordinate (A) at (0,4); % pivot - C1 - F * 3
+    \coordinate (B) at (15,2); % C2 - T * 3
+    \coordinate (C) at (15,12); % V
+    \coordinate (D) at (15,14); % V2
+    \draw (B) -- (A) -- (C);
+    \draw (B) -- (A) -- (D);
+	\tkzMarkAngle[size=1.5](B,A,C);
+	\tkzLabelAngle[pos=2.5](B,A,C){$\theta_1$};
+	\tkzMarkAngle[size=4](B,A,D);
+	\tkzLabelAngle[pos=5.5](B,A,D){$\theta_2$};
+    
+    \node[left] at  (A) {F}; 
+    \node[right] at (B) {T};
+    \node[right] at (C) {\textipa{1}};
+    \node[right] at (D) {\textipa{e}};
+    \draw [->,dotted] (C) -- (D);
+\end{tikzpicture} 
+\end{center}
+
+This cannot be the whole story as other vowels are permitted to be epenthetic as well, for example [a], a low and extremely sonorous vowel, is epenthetic in several languages \citep{lombardi.2002}. Still, sonority contour faithfulness can potentially explain a large swathe of the epenthetic vowel typology.
+
+\bigskip
+
 To conclude this section, we see that the possible applications of sonority contour faithfulness are broad, encompassing many sonority-sensitive phonological processes. However, to pin down the exact parameters of the metric require more work.
 
 
