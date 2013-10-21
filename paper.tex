@@ -143,7 +143,7 @@ These two criteria are fulfilled by the metric {\sc Sonority Angle}, which is de
 
 Assuming that the horizontal distance is 1 unit, we can compute the magnitude of this angle analytically with the following formula:
 
-\ex. \label{sonangle_formula} Formula: \textsc{SonAngle} = $arctan(V-C_1) - arctan(C_2-C_1)$
+\ex. \label{sonangle_formula} Formula: {\sc Son$\measuredangle$} = $arctan(V-C_1) - arctan(C_2-C_1)$
 
 Let us verify that {\sc Sonority Angle} does indeed reflect the two generalisations we wish to make: first, that the smaller the sonority distance between C\textsubscript{1} and C\textsubscript{2}, the smaller the sonority angle.
 
@@ -227,9 +227,9 @@ In this paper, I adopt (with, later, minor modifications) the following standard
 
 The {\sc Sonority Angles} for NT, TT and TN are calculated as in the following examples.
 
-\ex. \a. \textsc{SonAngle}(NT) =  $arctan(6-3) - arctan(1-3)$ = 2.35
-     \b. \textsc{SonAngle}(TT) =  $arctan(6-1) - arctan(1-1)$ = 1.37
-     \c. \textsc{SonAngle}(TN) =  $arctan(6-1) - arctan(3-1)$ = 0.27
+\ex. \a. {\sc Son$\measuredangle$}(NT) =  $arctan(6-3) - arctan(1-3)$ = 2.35
+     \b. {\sc Son$\measuredangle$}(TT) =  $arctan(6-1) - arctan(1-1)$ = 1.37
+     \c. {\sc Son$\measuredangle$}(TN) =  $arctan(6-1) - arctan(3-1)$ = 0.27
 
 The larger the {\sc Sonority Angle}, the larger the faithfulness cost. We therefore expect it to be hardest to epenthesise into NT out of these three clusters, and easiest to epenthesise into TN.
 
@@ -351,10 +351,10 @@ Thus far, we have not made any particular use of free ranking. Although ranking 
 
 \ex. The {\sc Ident(Son$\measuredangle$)}$<$n with the smallest $n$ that outranks {\sc *ComplexCoda} determines the cut-off point.
 
-\vspace{-3em}
+\vspace{-2em}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|c|c|c|} \hline 
-\multicolumn{3}{|c||}{Input:~/TF/} & {\sc Id(SA)}$<$2.0 & {\sc Id(SA)}$<$1.5 & {\sc *CompCoda} & {\sc Id(SA)}$<$1.0 & {\sc Id(SA)}$<$0.5 \\[0.5ex]
+\multicolumn{3}{|c||}{Input:~/TF/} & {\sc Id(S$\measuredangle$)}$<$2.0 & {\sc Id(S$\measuredangle$)}$<$1.5 & {\sc *CompCoda} & {\sc Id(S$\measuredangle$)}$<$1.0 & {\sc Id(S$\measuredangle$)}$<$0.5 \\[0.5ex]
 \hline \hline a. & & TF & & & $\ast$! & \cellcolor{lightgray} & \cellcolor{lightgray} \\
 \hline b. & \ding{43} & T\textipa{@}F & 0.59 & 0.59 & & \cellcolor{lightgray}0.59 & \cellcolor{lightgray}0.59 $\ast$ \\
 \hline \end{tabular}} %\renewcommand*\arraystretch{1} \end{center}
@@ -363,7 +363,7 @@ Thus far, we have not made any particular use of free ranking. Although ranking 
 %\begin{center} \renewcommand*\arraystretch{1.2}
 %\scalebox{1}[1]
 {\begin{tabular}[t]{|rrl||c|c|c|c|c|} \hline 
-\multicolumn{3}{|c||}{Input:~/FT/} & {\sc Id(SA)}$<$2.5 & {\sc Id(SA)}$<$1.5 & {\sc *CompCoda} & {\sc Id(SA)}$<$1.0 & {\sc Id(SA)}$<$0.5 \\[0.5ex]
+\multicolumn{3}{|c||}{Input:~/FT/} & {\sc Id(S$\measuredangle$)}$<$2.5 & {\sc Id(S$\measuredangle$)}$<$1.5 & {\sc *CompCoda} & {\sc Id(S$\measuredangle$)}$<$1.0 & {\sc Id(S$\measuredangle$)}$<$0.5 \\[0.5ex]
 \hline \hline c. & \ding{43}& FT & & & \cellcolor{lightgray} $\ast$ & \cellcolor{lightgray} & \cellcolor{lightgray} \\
 \hline d. &  & F\textipa{@}T & 2.11 & 2.11 $\ast$! & \cellcolor{lightgray} & \cellcolor{lightgray} 2.11 $\ast$ & \cellcolor{lightgray}2.11 $\ast$ \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
@@ -374,7 +374,7 @@ Where free ranking comes into play is when two output candidates break up differ
 Suppose a triconsonantal cluster /CCC/ has to be broken up either as [C\textipa{@}CC] or [CC\textipa{@}C], and further that [C\textipa{@}CC] violates some additional markedness constraint $\mathcal{M}$. Which {\sc Ident(Son$\measuredangle$)}$<$n constraint outranks $\mathcal{M}$ will then determine the positioning of the epenthetic vowel.
 
 \ex. {\sc Ident(Son$\measuredangle$)}$<$n $\gg$ $\mathcal{M}$
-     \a. Scenario 1: {\sc SonAngle}(C\textsubscript{1}C\textsubscript{2}), {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3})$<$n \\
+     \a. Scenario 1: {\sc Son$\measuredangle$}(C\textsubscript{1}C\textsubscript{2}), {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3})$<$n \\
          Since neither violates {\sc Ident(Son$\measuredangle$)}$<$n, $\mathcal{M}$ determines output.
 \vspace{-0.5em}
 \begin{center} \renewcommand*\arraystretch{1.2}
@@ -384,7 +384,7 @@ Suppose a triconsonantal cluster /CCC/ has to be broken up either as [C\textipa{
 \hline b. & & C\textsubscript{1}\textipa{@}C\textsubscript{2}C\textsubscript{3} & $<$n & $\ast$! \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 \vspace{0.5em}
-      \b. Scenario 2: {\sc SonAngle}(C\textsubscript{1}C\textsubscript{2})$>$n, {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3})$<$n \\
+      \b. Scenario 2: {\sc Son$\measuredangle$}(C\textsubscript{1}C\textsubscript{2})$>$n, {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3})$<$n \\
           C\textsubscript{1}\textipa{@}C\textsubscript{2}C\textsubscript{3} harmonically bound by C\textsubscript{1}C\textsubscript{2}\textipa{@}C\textsubscript{3} candidate.
 \vspace{-0.5em}
 \begin{center} \renewcommand*\arraystretch{1.2}
@@ -394,7 +394,7 @@ Suppose a triconsonantal cluster /CCC/ has to be broken up either as [C\textipa{
 \hline d. & & C\textsubscript{1}\textipa{@}C\textsubscript{2}C\textsubscript{3} & $>$n $\ast$! & \cellcolor{lightgray}$\ast$ \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 \vspace{0.5em} \newpage
-     \c. Scenario 3: {\sc SonAngle}(C\textsubscript{1}C\textsubscript{2})$<$n, {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3})$>$n \\
+     \c. Scenario 3: {\sc Son$\measuredangle$}(C\textsubscript{1}C\textsubscript{2})$<$n, {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3})$>$n \\
          {\sc Ident(Son$\measuredangle$)}$<$n determines output, overruling $\mathcal{M}$.
 \vspace{-0.5em}
 \begin{center} \renewcommand*\arraystretch{1.2}
@@ -404,7 +404,7 @@ Suppose a triconsonantal cluster /CCC/ has to be broken up either as [C\textipa{
 \hline f. & \ding{43} & C\textsubscript{1}\textipa{@}C\textsubscript{2}C\textsubscript{3}& $<$n  & \cellcolor{lightgray}$\ast$ \\
 \hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
 \vspace{0.5em}
-     \d. Scenario 4: {\sc SonAngle}(C\textsubscript{1}C\textsubscript{2}), {\sc SonAngle}(C\textsubscript{2}C\textsubscript{3}) $>$ n \\
+     \d. Scenario 4: {\sc Son$\measuredangle$}(C\textsubscript{1}C\textsubscript{2}), {\sc Son$\measuredangle$}(C\textsubscript{2}C\textsubscript{3}) $>$ n \\
          Since both candidates violate {\sc Ident(Son$\measuredangle$)}$<$n, $\mathcal{M}$ determines output.
 \vspace{-0.5em}
 \begin{center} \renewcommand*\arraystretch{1.2}
@@ -419,7 +419,7 @@ Because we have assumed that all other {\sc Ident(Son$\measuredangle$)}$<$n cons
 
 Contrast this with the universal ranking, under which this distinction would be relevant. Numbers are given for clarity.
 
-\ex. Scenario: {\sc SonAngle}(C\textsubscript{2}C\textsubscript{3}) $>$ {\sc SonAngle}(C\textsubscript{1}C\textsubscript{2}) $>$ n \\
+\ex. Scenario: {\sc Son$\measuredangle$}(C\textsubscript{2}C\textsubscript{3}) $>$ {\sc Son$\measuredangle$}(C\textsubscript{1}C\textsubscript{2}) $>$ n \\
 
 \vspace{-3em}
 \begin{center} \renewcommand*\arraystretch{1.2}
@@ -1024,7 +1024,7 @@ In idiolect \ref{idiolecta}, all coda clusters of rising and level sonority -- t
   \node (0pointlabel) at (0.0,-0.5) {0};
   \node (1pointlabel) at (1.0*8,-0.5) {1};
   \node (2pointlabel) at (2.0*8,-0.5) {2};
-  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  \node (xaxislabel) at (2.7*8,-0.5) {{\sc Son$\measuredangle$}};
   % dividing line
   \node (dividinglinestart) at (1.5 * 8,2) {};
   \node (dividinglineend)   at (1.5 * 8,-0.3) {};
@@ -1108,7 +1108,7 @@ by the movement of the cut-off line from 1.5 to 1.9.
   \node (0pointlabel) at (0.0,-0.5) {0};
   \node (1pointlabel) at (1.0*8,-0.5) {1};
   \node (2pointlabel) at (2.0*8,-0.5) {2};
-  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  \node (xaxislabel) at (2.7*8,-0.5) {{\sc Son$\measuredangle$}};
   % dividing line
   \node (dividinglinestart) at (1.9 * 8,2) {};
   \node (dividinglineend)   at (1.9 * 8,-0.3) {};
@@ -1318,7 +1318,7 @@ Only when C\textsubscript{1}C\textsubscript{2} constitutes a sonority rise or pl
 \ex. Default idiolect \citep[(24,26,28,30,32)]{rose.2000} \label{defaultidiolectCCCforms}
 
 \begin{longtable}{ccccc}
-	& Underlying form      & Surface form & {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) & {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
+	& Underlying form      & Surface form & {\sc Son$\measuredangle$}(C\textsubscript{1},C\textsubscript{2}) & {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
     \multicolumn{5}{c}{Fall-\{Rise, Plateau\}: [CC\textipa{1}C]} \\ \hline
 	a. & \textipa{j@-rk't'-o} & \textipa{j@nk'1t'o} & 2.36 & 1.37 \\
 	b. & \textipa{j@-rks-o}   & \textipa{j@nk1so}   & 2.36 & 0.59 \\
@@ -1404,7 +1404,7 @@ The ranking {\sc Ident(Son$\measuredangle$)}$<$1.5 $\gg$ {\sc Align-Left}, with 
 
 \bigskip
 
-\noindent {\bf Remark on conflation.} Notice that all distinctions among the set of rising and level sonority clusters on the one hand, and the distinctions among the set of falling sonority clusters, are conflated. For instance, consider the cluster /mst/. {\sc SonAngle}(m,s), at 2.03, is smaller than {\sc SonAngle}(s,t), at 2.11, yet epenthesis occurs on the right, creating the larger {\sc Sonority Angle}. This is because the distinction between {\sc Sonority Angles} of 2.03 and 2.11 is irrelevant under the given  constraint ranking, since both 2.03 and 2.11 violate the relevant faithfulness constraint {\sc Ident(Son$\measuredangle$)}$<$1.5. This is possible because I have adopted the position that the {\sc Ident(Son$\measuredangle$)}$<$n constraints can be freely ranked, following \cite{de.lacy.2004}.
+\noindent {\bf Remark on conflation.} Notice that all distinctions among the set of rising and level sonority clusters on the one hand, and the distinctions among the set of falling sonority clusters, are conflated. For instance, consider the cluster /mst/. {\sc Son$\measuredangle$}(m,s), at 2.03, is smaller than {\sc Son$\measuredangle$}(s,t), at 2.11, yet epenthesis occurs on the right, creating the larger {\sc Sonority Angle}. This is because the distinction between {\sc Sonority Angles} of 2.03 and 2.11 is irrelevant under the given  constraint ranking, since both 2.03 and 2.11 violate the relevant faithfulness constraint {\sc Ident(Son$\measuredangle$)}$<$1.5. This is possible because I have adopted the position that the {\sc Ident(Son$\measuredangle$)}$<$n constraints can be freely ranked, following \cite{de.lacy.2004}.
 
 Adopting the converse strategy --- that {\sc Ident(Son$\measuredangle$)}$<$n constraints have a universal ranking --- would not predict [\textipa{ms1t}]. Instead we would have the following situation:
 
@@ -1488,7 +1488,7 @@ This ranking explains all the forms in the second idiolect.
 
 \vspace{-1em}
 \begin{longtable}{ccccc}
-	& Underlying form      & Surface form & {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) & {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
+	& Underlying form      & Surface form & {\sc Son$\measuredangle$}(C\textsubscript{1},C\textsubscript{2}) & {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3}) \\ \hline
     \multicolumn{5}{c}{Fall-\{Rise, Plateau\}: [CC\textipa{1}C]} \\ \hline
 	a. & \textipa{j@-rk't'-o} & \textipa{j@nk'1t'o} & 2.36 & 1.37 \\
 	b. & \textipa{j@-rks-o}   & \textipa{j@nk1so}   & 2.36 & 0.59 \\
@@ -1682,7 +1682,7 @@ The analysis of the four idiolects above was possible because the lines at which
   \node (0pointlabel) at (0.0,-0.5) {0};
   \node (1pointlabel) at (1.0*8,-0.5) {1};
   \node (2pointlabel) at (2.0*8,-0.5) {2};
-  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  \node (xaxislabel) at (2.7*8,-0.5) {{\sc Son$\measuredangle$}};
   % dividing line
   \node (dividinglinestart) at (1.9 * 8,2) {};
   \node (dividinglineend)   at (1.9 * 8,-0.3) {};
@@ -1853,7 +1853,7 @@ I will not consider such clusters further.
 
 \bigskip
 
-Given the general form of the ranking {\sc Ident(Son$\measuredangle$)}$<$n $\gg$ {\sc Align-Left} $\gg$ {\sc Anchor-Left Root}, the expected behaviour of four-consonant clusters is as follows: all /CCCC/ clusters surface as [CC\textipa{1}CC], except when {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) exceeds n and {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) and {\sc SonAngle}(C\textsubscript{3},C\textsubscript{4}) are both smaller than n. Illustrative tableaux are shown below for n=1.5:
+Given the general form of the ranking {\sc Ident(Son$\measuredangle$)}$<$n $\gg$ {\sc Align-Left} $\gg$ {\sc Anchor-Left Root}, the expected behaviour of four-consonant clusters is as follows: all /CCCC/ clusters surface as [CC\textipa{1}CC], except when {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3}) exceeds n and {\sc Son$\measuredangle$}(C\textsubscript{1},C\textsubscript{2}) and {\sc Son$\measuredangle$}(C\textsubscript{3},C\textsubscript{4}) are both smaller than n. Illustrative tableaux are shown below for n=1.5:
 
 \ex. {\sc Ident(Son$\measuredangle$)}$<$1.5 $\gg$ {\sc Align-Left}
 \vspace{-0.5em}
@@ -1885,7 +1885,7 @@ Given the general form of the ranking {\sc Ident(Son$\measuredangle$)}$<$n $\gg$
 
 \bigskip
 
-Given the general form of the ranking {\sc Ident(Son$\measuredangle$)}$<$n $\gg$ {\sc Anchor-Left Root} $\gg$ {\sc Align-Left}, the default behaviour is to epenthesise as [C\textipa{1}CC\textipa{1}C]. This preference is overridden when at least one of {\sc SonAngle}(C\textsubscript{1},C\textsubscript{2}) and {\sc SonAngle}(C\textsubscript{3},C\textsubscript{4}) are greater than n and {\sc SonAngle}(C\textsubscript{2},C\textsubscript{3}) is less than n.
+Given the general form of the ranking {\sc Ident(Son$\measuredangle$)}$<$n $\gg$ {\sc Anchor-Left Root} $\gg$ {\sc Align-Left}, the default behaviour is to epenthesise as [C\textipa{1}CC\textipa{1}C]. This preference is overridden when at least one of {\sc Son$\measuredangle$}(C\textsubscript{1},C\textsubscript{2}) and {\sc Son$\measuredangle$}(C\textsubscript{3},C\textsubscript{4}) are greater than n and {\sc Son$\measuredangle$}(C\textsubscript{2},C\textsubscript{3}) is less than n.
 
 \newpage
 \ex. {\sc Ident(Son$\measuredangle$)}$<$1.5 $\gg$ {\sc Anchor-Left Rt}
@@ -1923,7 +1923,7 @@ The following table shows the actual surface forms observed for each of the unde
 
 \begin{center}
 \begin{tabular}{|l|ccc|c|cccc|} \hline
-         & \multicolumn{3}{c|}{{\sc SonAngles}} & Observed & \multicolumn{4}{c|}{{\sc Predictions of idiolect}} \\
+         & \multicolumn{3}{c|}{{\sc Son$\measuredangle$s}} & Observed & \multicolumn{4}{c|}{{\sc Predictions of idiolect}} \\
  Cluster & C\textsubscript{1},C\textsubscript{2} & C\textsubscript{2},C\textsubscript{3} & C\textsubscript{3},C\textsubscript{4} &  outcomes & \ref{defaultCCCidiolect} & \ref{CRNidiolect} & \ref{C1CCidiolect} & \ref{wizfidiolect} \\ \hline 
  a. \textipa{sdBn} & 2.11 & 0.18 & 1.66 & \textipa{sd1Bn} & \multicolumn{4}{c|}{\textipa{sd1Bn}} \\ 
  b. \textipa{wzfn} & 2.03 & 1.33 & 0.54 & \textipa{wz1fn}, \textipa{w1zf1n} & \multicolumn{3}{c}{\textipa{wz1fn}} & \cellcolor{lightgray}  \textipa{w1zf1n} \\
@@ -2033,30 +2033,7 @@ This was an issue in clusters such as /rfk/, which emerge as [nf\textipa{1}k] du
 
 Several possibilities are possible: retain the sonority of the underlying C\textsubscript{1} for that of the output value; use the sonority of the output C\textsubscript{1} as the underlying value; or take the angle formed by the meeting of the two contours, wherever that occurs. 
 
-\begin{center}
-\begin{tikzpicture} [shorten >=1pt,scale=0.33]
-                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
-                      \node at (-3, 7.0) {Sonority}; % axis label
-					 % left diagram
-                      \draw (5,2) -- (0,4);
-                      \draw (0,3) -- (5,6) ; % rising sonority
-                      \node[left] at  (0,4) {r}; 
-                      \node[left] at  (0,3) {n}; 
-                      \node[right] at (5,2) {f};
-                      \node[right] at (5,6) {\textipa{1}};
-                      \draw [<-] (-3,6.5) -- (-3, 0.5) ; % axis
-                      \node at (-3, 7.0) {Sonority}; % axis label
-					 % right diagram
-                      \draw (15,2) -- (10,3);
-                      \draw (10,4) -- (15,6) ; % rising sonority
-                      \node[left] at  (10,3) {n}; 
-                      \node[left] at  (10,4) {r}; 
-                      \node[right] at (15,2) {f};
-                      \node[right] at (15,6) {\textipa{1}};
-\end{tikzpicture}
-\end{center}
-
-The case studies here constitute insufficient data to conclude if any of these interpretations is correct. It is worth noting, however, that alternative approaches such as {\sc Sonority Rise} do not face this issue, as computing the gradients of the underlying contour /C\textsubscript{1}C\textsubscript{2}/ and the surface contour [C\textsubscript{1}V] does not depend on the two C\textsubscript{1}'s being the same.
+The two case studies examined above present insufficient data to conclude if any of these interpretations is correct. It is worth noting, however, that alternative approaches such as {\sc Sonority Rise} do not face this issue, as computing the gradients of the underlying contour /C\textsubscript{1}C\textsubscript{2}/ and the surface contour [C\textsubscript{1}V] does not depend on the two C\textsubscript{1}'s being the same.
 
 \bigskip
 
@@ -2086,7 +2063,7 @@ The case studies here constitute insufficient data to conclude if any of these i
   \node (axisend)   at (0.06*300,-0.5) {};
   \draw (axisstart) -- (axisend);
   \node  (0point) at (0.0,0) {};
-  \node (xaxislabel) at (0.06*300,-0.8) {\textsc{SonAngle}};
+  \node (xaxislabel) at (0.06*300,-0.8) {{\sc Son$\measuredangle$}};
 \end{tikzpicture}
 
 Notice that we cannot achieve a clean separation of the rising versus level versus falling sonority clusters, as before. Compare this with {\sc Sonority Rise} which, being dimensionless (since it is the ratio of two vectors in the same plane), does not have to take into account such units.
@@ -2099,7 +2076,7 @@ Additionally, since this horizontal distance is along the dimension of time, the
 
 Perhaps the closest thing we have to a phonetic sonority scale comes from \citet{parker.2002}, who measured various acoustic correlates of sonority and showed that phonological sonority correlates to a very high degree with intensity ({\it r} = .97--.99).
 
-\ex. Intensity data for English males (in dB) \citep[Table 5.13]{parker.2002}\footnote{The intensity values measured for the three vowel classes are reversed from what one would expect according to phonological sonority \citep[214]{parker.2002}}, but overall this shows a good correlation with scales of phonological sonority. The distinction between some of these classes is not significant, including between the high and mid vowels.
+\ex. Intensity data for English males (in dB) \citep[Table 5.13]{parker.2002}\footnote{The intensity values measured for the three vowel classes are reversed from what one would expect according to phonological sonority \citep[214]{parker.2002}, but overall this shows a good correlation with scales of phonological sonority. The distinction between some of these classes is not significant, including between the high and mid vowels.}
 
 \begin{center}
 \begin{tabular}{cc}
@@ -2161,7 +2138,7 @@ Plugging these numbers into the {\sc Sonority Angle} metric and using an average
   \node (0pointlabel) at (0.0,-0.5) {0};
   \node (1pointlabel) at (1.0*8,-0.5) {1};
   \node (2pointlabel) at (2.0*8,-0.5) {2};
-  \node (xaxislabel) at (2.7*8,-0.5) {\textsc{SonAngle}};
+  \node (xaxislabel) at (2.7*8,-0.5) {{\sc Son$\measuredangle$}};
 \end{tikzpicture}
 }
 
@@ -2233,15 +2210,13 @@ Consider the kan-krand case. The sonority contours to be considered are /kr/-[ka
 
 \ex. {\sc Ident(Son$\measuredangle$)}$<$2.0 $\gg$ {\sc Left-Anchor}
 
+\vspace{-0.5em}
 \begin{center} \renewcommand*\arraystretch{1.2}
 \scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
 \multicolumn{3}{|c||}{Input:~/\textipa{krand}/} & {\sc Ident(Son$\measuredangle$)}$<$2.0 & {\sc Left-Anchor} \\[0.5ex]
 \hline \hline a. & \ding{43} & \textipa{kan} & 0.12 & \\
 \hline b. & & \textipa{ran} & & $\ast$! \\
-\hline \end{tabular}} \renewcommand*\arraystretch{1} \end{center}
-
-\begin{center} \renewcommand*\arraystretch{1.2}
-\scalebox{1}[1]{\begin{tabular}[t]{|rrl||c|c|} \hline 
+\hline \hline
 \multicolumn{3}{|c||}{Input:~/\textipa{stu}/} & {\sc Ident(Son$\measuredangle$)}$<$2.0 & {\sc Left-Anchor} \\[0.5ex]
 \hline \hline c. & \ding{43} & \textipa{su} & 2.11 $\ast$! & \\
 \hline d. & & \textipa{tu} & & $\ast$ \\
@@ -2300,13 +2275,13 @@ In addition, compared to the {\sc *Dis} metric \citep{gouskova.2002} for measuri
 
 In Chaha, we saw more generally that the family of {\sc Ident(Son$\measuredangle$)}$<$n constraints, coupled with standard syllabic markedness constraints and alignment/anchor constraints preferring epenthesis on the left or right, yielded the complex and variable system of epenthesis positioning in the language with only one error in predictions, making it comparably successful to the existing Syllable Contact-based analysis by \cite{rose.2000}.
 
-{\sc Sonority Angle} was offered here as a concrete instance of the class of metrics that conform to the two desiderata. In $\S$\ref{issues}, I discussed several issues regarding the assumptions that need to be incorporated into its formulation. More perceptual experiments and cross-linguistic investigation of sonority-driven epenthesis needs to be done to pin down the specifics of the metric. In addition, I discussed two other sonority-based phenomena that may shed additional light on the true nature of sonority contour faithfulness.
+{\sc Sonority Angle} was offered here as a concrete instance of the class of metrics that conform to the two desiderata. In $\S$\ref{issues}, I discussed several issues regarding the assumptions that need to be incorporated into its formulation. More perceptual experiments and cross-linguistic investigation of sonority-driven epenthesis needs to be done to pin down the specifics of the metric. In addition, I discussed three other sonority-based phenomena that may shed additional light on the true nature of sonority contour faithfulness.
 
 \section*{Acknowledgments}
 
 I would like to thank Donca Steriade, Adam Albright, Michael Kenstowicz, Edward Flemming, Suyeon Yun, Gretchen Kern, Hrayr Khanjian, and audiences at the MIT Phonology Circle and Manchester Phonology Meeting for valuable feedback on this project. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. 1122374.
 
-\bibliographystyle{apalike}
+\bibliographystyle{unified}
 \bibliography{sonangle}
 
 
